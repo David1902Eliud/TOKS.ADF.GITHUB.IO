@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:form id="f1">
+        <af:pageTemplate viewId="/Template_index.jspx" id="pt1">
+          <f:facet name="Body_principal">
+            <af:panelBox text="Bienvenida" id="pb1" titleHalign="center"
+                         background="dark">
+              <af:outputText value="Bienvenido al sistema Caja de Ahorro" id="ot1"
+                             inlineStyle="width:100%; height:100%; font-size:large; text-align:center; vertical-align:middle;"/>
+            </af:panelBox>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

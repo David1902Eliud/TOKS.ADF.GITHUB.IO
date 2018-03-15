@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:messages id="m1"/>
+      <af:form id="f1">
+        <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
+          <f:facet name="Body_Menus">
+            <af:panelBox text="Catalogo de tasas" id="pb1" background="dark"
+                         ramp="highlight" showDisclosure="false"
+                         inlineStyle="color:White;">
+              <f:facet name="toolbar">
+                <af:group id="g1">
+                  <af:commandButton actionListener="#{bindings.CreateInsert.execute}"
+                                    text="Nuevo"
+                                    disabled="#{!bindings.CreateInsert.enabled}"
+                                    id="cb1"/>
+                  <af:commandButton actionListener="#{bindings.Delete.execute}"
+                                    text="Eliminar"
+                                    disabled="#{!bindings.Delete.enabled}"
+                                    id="cb2"/>
+                  <af:commandButton actionListener="#{bindings.Commit.execute}"
+                                    text="Guardar"
+                                    disabled="#{!bindings.Commit.enabled}"
+                                    id="cb3"/>
+                  <af:commandButton actionListener="#{bindings.Rollback.execute}"
+                                    text="Cancelar"
+                                    disabled="#{!bindings.Rollback.enabled}"
+                                    immediate="true" id="cb4">
+                    <af:resetActionListener/>
+                  </af:commandButton>
+                </af:group>
+              </f:facet>
+              <af:panelGridLayout id="pgl1">
+                <af:gridRow marginTop="20px" height="auto" marginBottom="20px"
+                            id="gr1">
+                  <af:gridCell marginStart="20px" width="20%" id="gc2"/>
+                  <af:gridCell marginStart="5px" width="60%" id="gc3">
+                    <af:table value="#{bindings.ToksCaCatTasasView1.collectionModel}"
+                              var="row"
+                              rows="#{bindings.ToksCaCatTasasView1.rangeSize}"
+                              emptyText="#{bindings.ToksCaCatTasasView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              fetchSize="#{bindings.ToksCaCatTasasView1.rangeSize}"
+                              rowBandingInterval="0"
+                              filterModel="#{bindings.ToksCaCatTasasView1Query.queryDescriptor}"
+                              queryListener="#{bindings.ToksCaCatTasasView1Query.processQuery}"
+                              filterVisible="true" varStatus="vs"
+                              selectedRowKeys="#{bindings.ToksCaCatTasasView1.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.ToksCaCatTasasView1.collectionModel.makeCurrent}"
+                              rowSelection="single" id="t1"
+                              inlineStyle="width:100%;"
+                              partialTriggers="::cb1 ::cb2">
+                      <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.IdTasa.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="#{bindings.ToksCaCatTasasView1.hints.IdTasa.label}"
+                                 id="c9" visible="false">
+                        <af:inputText value="#{row.bindings.IdTasa.inputValue}"
+                                      label="#{bindings.ToksCaCatTasasView1.hints.IdTasa.label}"
+                                      required="#{bindings.ToksCaCatTasasView1.hints.IdTasa.mandatory}"
+                                      columns="#{bindings.ToksCaCatTasasView1.hints.IdTasa.displayWidth}"
+                                      maximumLength="#{bindings.ToksCaCatTasasView1.hints.IdTasa.precision}"
+                                      shortDesc="#{bindings.ToksCaCatTasasView1.hints.IdTasa.tooltip}"
+                                      id="it4">
+                          <f:validator binding="#{row.bindings.IdTasa.validator}"/>
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.ToksCaCatTasasView1.hints.IdTasa.format}"/>
+                        </af:inputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.Tasa.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="Tasa" id="c8"
+                                 styleClass="AFFieldNumberMarker">
+                        <af:inputText value="#{row.bindings.Tasa.inputValue}"
+                                      label="#{bindings.ToksCaCatTasasView1.hints.Tasa.label}"
+                                      required="#{bindings.ToksCaCatTasasView1.hints.Tasa.mandatory}"
+                                      columns="#{bindings.ToksCaCatTasasView1.hints.Tasa.displayWidth}"
+                                      maximumLength="#{bindings.ToksCaCatTasasView1.hints.Tasa.precision}"
+                                      shortDesc="#{bindings.ToksCaCatTasasView1.hints.Tasa.tooltip}"
+                                      id="it1"
+                                      styleClass="AFFieldNumberMarker">
+                          <f:validator binding="#{row.bindings.Tasa.validator}"/>
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.ToksCaCatTasasView1.hints.Tasa.format}"/>
+                        </af:inputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.FechaInicio.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="Fecha de Inicio" id="c1">
+                        <f:facet name="filter">
+                          <af:inputDate value="#{vs.filterCriteria.FechaInicio}"
+                                        id="id5"/>
+                        </f:facet>
+                        <af:inputDate value="#{row.bindings.FechaInicio.inputValue}"
+                                      label="#{bindings.ToksCaCatTasasView1.hints.FechaInicio.label}"
+                                      required="#{bindings.ToksCaCatTasasView1.hints.FechaInicio.mandatory}"
+                                      shortDesc="#{bindings.ToksCaCatTasasView1.hints.FechaInicio.tooltip}"
+                                      id="id1">
+                          <f:validator binding="#{row.bindings.FechaInicio.validator}"/>
+                          <af:convertDateTime pattern="#{bindings.ToksCaCatTasasView1.hints.FechaInicio.format}"/>
+                        </af:inputDate>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.FechaFin.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="Fecha de Fin" id="c3">
+                        <f:facet name="filter">
+                          <af:inputDate value="#{vs.filterCriteria.FechaFin}"
+                                        id="id6"/>
+                        </f:facet>
+                        <af:inputDate value="#{row.bindings.FechaFin.inputValue}"
+                                      label="#{bindings.ToksCaCatTasasView1.hints.FechaFin.label}"
+                                      required="#{bindings.ToksCaCatTasasView1.hints.FechaFin.mandatory}"
+                                      shortDesc="#{bindings.ToksCaCatTasasView1.hints.FechaFin.tooltip}"
+                                      id="id2">
+                          <f:validator binding="#{row.bindings.FechaFin.validator}"/>
+                          <af:convertDateTime pattern="#{bindings.ToksCaCatTasasView1.hints.FechaFin.format}"/>
+                        </af:inputDate>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.Estatus.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="Estatus" id="c2">
+                        <af:inputText value="#{row.bindings.Estatus.inputValue}"
+                                      label="#{bindings.ToksCaCatTasasView1.hints.Estatus.label}"
+                                      required="#{bindings.ToksCaCatTasasView1.hints.Estatus.mandatory}"
+                                      columns="#{bindings.ToksCaCatTasasView1.hints.Estatus.displayWidth}"
+                                      maximumLength="#{bindings.ToksCaCatTasasView1.hints.Estatus.precision}"
+                                      shortDesc="#{bindings.ToksCaCatTasasView1.hints.Estatus.tooltip}"
+                                      id="it5"
+                                      contentStyle="min-width: 100%;">
+                          <f:validator binding="#{row.bindings.Estatus.validator}"/>
+                        </af:inputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.Periodo.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="Periodos" id="c5">
+                        <af:inputText value="#{row.bindings.Periodo.inputValue}"
+                                      label="#{bindings.ToksCaCatTasasView1.hints.Periodo.label}"
+                                      required="#{bindings.ToksCaCatTasasView1.hints.Periodo.mandatory}"
+                                      columns="#{bindings.ToksCaCatTasasView1.hints.Periodo.displayWidth}"
+                                      maximumLength="#{bindings.ToksCaCatTasasView1.hints.Periodo.precision}"
+                                      shortDesc="#{bindings.ToksCaCatTasasView1.hints.Periodo.tooltip}"
+                                      id="it2" styleClass="AFFieldTextMarker"
+                                      simple="true"
+                                      contentStyle="min-width: 100%;">
+                          <f:validator binding="#{row.bindings.Periodo.validator}"/>
+                        </af:inputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.CreadoPor.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="#{bindings.ToksCaCatTasasView1.hints.CreadoPor.label}"
+                                 id="c7" visible="false">
+                        <af:inputText value="#{row.bindings.CreadoPor.inputValue}"
+                                      label="#{bindings.ToksCaCatTasasView1.hints.CreadoPor.label}"
+                                      required="#{bindings.ToksCaCatTasasView1.hints.CreadoPor.mandatory}"
+                                      columns="#{bindings.ToksCaCatTasasView1.hints.CreadoPor.displayWidth}"
+                                      maximumLength="#{bindings.ToksCaCatTasasView1.hints.CreadoPor.precision}"
+                                      shortDesc="#{bindings.ToksCaCatTasasView1.hints.CreadoPor.tooltip}"
+                                      id="it3">
+                          <f:validator binding="#{row.bindings.CreadoPor.validator}"/>
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.ToksCaCatTasasView1.hints.CreadoPor.format}"/>
+                        </af:inputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.FechaCreacion.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="#{bindings.ToksCaCatTasasView1.hints.FechaCreacion.label}"
+                                 id="c6" visible="false">
+                        <f:facet name="filter">
+                          <af:inputDate value="#{vs.filterCriteria.FechaCreacion}"
+                                        id="id3"/>
+                        </f:facet>
+                        <af:inputDate value="#{row.bindings.FechaCreacion.inputValue}"
+                                      label="#{bindings.ToksCaCatTasasView1.hints.FechaCreacion.label}"
+                                      required="#{bindings.ToksCaCatTasasView1.hints.FechaCreacion.mandatory}"
+                                      shortDesc="#{bindings.ToksCaCatTasasView1.hints.FechaCreacion.tooltip}"
+                                      id="id4">
+                          <f:validator binding="#{row.bindings.FechaCreacion.validator}"/>
+                          <af:convertDateTime pattern="#{bindings.ToksCaCatTasasView1.hints.FechaCreacion.format}"/>
+                        </af:inputDate>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.ActualizadoPor.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="#{bindings.ToksCaCatTasasView1.hints.ActualizadoPor.label}"
+                                 id="c4" visible="false">
+                        <af:inputText value="#{row.bindings.ActualizadoPor.inputValue}"
+                                      label="#{bindings.ToksCaCatTasasView1.hints.ActualizadoPor.label}"
+                                      required="#{bindings.ToksCaCatTasasView1.hints.ActualizadoPor.mandatory}"
+                                      columns="#{bindings.ToksCaCatTasasView1.hints.ActualizadoPor.displayWidth}"
+                                      maximumLength="#{bindings.ToksCaCatTasasView1.hints.ActualizadoPor.precision}"
+                                      shortDesc="#{bindings.ToksCaCatTasasView1.hints.ActualizadoPor.tooltip}"
+                                      id="it6">
+                          <f:validator binding="#{row.bindings.ActualizadoPor.validator}"/>
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.ToksCaCatTasasView1.hints.ActualizadoPor.format}"/>
+                        </af:inputText>
+                      </af:column>
+                    </af:table>
+                  </af:gridCell>
+                  <af:gridCell marginStart="5px" width="20%" marginEnd="20px"
+                               id="gc1"/>
+                </af:gridRow>
+              </af:panelGridLayout>
+            </af:panelBox>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

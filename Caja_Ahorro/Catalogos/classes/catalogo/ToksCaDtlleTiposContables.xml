@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ToksCaDtlleTiposContables"
+  Version="11.1.1.66.73"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TOKS_CA_DTLLE_TIPOS_CONTABLES"
+  AliasName="ToksCaDtlleTiposContables"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+  </DesignTime>
+  <Attribute
+    Name="DetalleId"
+    IsNotNull="true"
+    ColumnName="DETALLE_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_DTLLE_TIPOS_CONTABLES"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="OrganizationId"
+    IsNotNull="true"
+    ColumnName="ORGANIZATION_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_DTLLE_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="OrganizationName"
+    Precision="300"
+    ColumnName="ORGANIZATION_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_DTLLE_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="300"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CodeCombinationIdCargo"
+    ColumnName="CODE_COMBINATION_ID_CARGO"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_DTLLE_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CodeCombinationCargo"
+    Precision="1000"
+    ColumnName="CODE_COMBINATION_CARGO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_DTLLE_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1000"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CodeCombinationIdAbono"
+    ColumnName="CODE_COMBINATION_ID_ABONO"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_DTLLE_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CodeCombinationAbono"
+    Precision="1000"
+    ColumnName="CODE_COMBINATION_ABONO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_DTLLE_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1000"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Estatus"
+    IsNotNull="true"
+    ColumnName="ESTATUS"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_DTLLE_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="IdTiposContables"
+    IsNotNull="true"
+    ColumnName="ID_TIPOS_CONTABLES"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_DTLLE_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="SetOfBooksId"
+    IsNotNull="true"
+    ColumnName="SET_OF_BOOKS_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_DTLLE_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DescBooks"
+    Precision="250"
+    ColumnName="DESC_BOOKS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_DTLLE_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="250"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreatedBy"
+    IsNotNull="true"
+    ColumnName="CREATED_BY"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_DTLLE_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreationDate"
+    IsNotNull="true"
+    ColumnName="CREATION_DATE"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="TOKS_CA_DTLLE_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdatedBy"
+    IsNotNull="true"
+    ColumnName="LAST_UPDATED_BY"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_DTLLE_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdateDate"
+    IsNotNull="true"
+    ColumnName="LAST_UPDATE_DATE"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="TOKS_CA_DTLLE_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdateLogin"
+    ColumnName="LAST_UPDATE_LOGIN"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_DTLLE_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="SysC008115">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008115"/>
+      <Attr Name="_checkCondition" Value='"LAST_UPDATE_DATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaDtlleTiposContables.LastUpdateDate"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008116">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008116"/>
+      <Attr Name="_checkCondition" Value='"LAST_UPDATED_BY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaDtlleTiposContables.LastUpdatedBy"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008117">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008117"/>
+      <Attr Name="_checkCondition" Value='"CREATION_DATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaDtlleTiposContables.CreationDate"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008118">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008118"/>
+      <Attr Name="_checkCondition" Value='"CREATED_BY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaDtlleTiposContables.CreatedBy"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008119">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008119"/>
+      <Attr Name="_checkCondition" Value='"SET_OF_BOOKS_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaDtlleTiposContables.SetOfBooksId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008120">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008120"/>
+      <Attr Name="_checkCondition" Value='"ID_TIPOS_CONTABLES" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaDtlleTiposContables.IdTiposContables"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008121">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008121"/>
+      <Attr Name="_checkCondition" Value='"ESTATUS" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaDtlleTiposContables.Estatus"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008122">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008122"/>
+      <Attr Name="_checkCondition" Value='"ORGANIZATION_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaDtlleTiposContables.OrganizationId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008123">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008123"/>
+      <Attr Name="_checkCondition" Value='"DETALLE_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaDtlleTiposContables.DetalleId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="ToksCaDtlleTiposContaPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="TOKS_CA_DTLLE_TIPOS_CONTA_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaDtlleTiposContables.DetalleId"/>
+    </AttrArray>
+  </Key>
+</Entity>

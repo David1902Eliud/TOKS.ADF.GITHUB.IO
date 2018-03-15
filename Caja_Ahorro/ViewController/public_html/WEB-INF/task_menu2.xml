@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="M1"></view>
+  <view id="M2"></view>
+  <view id="M3"></view>
+  <view id="M4"></view>
+  <view id="M5"></view>
+  <view id="M6"></view>
+  <view id="M7"></view>
+  <view id="M1_P1">
+    <page>/Menu1/M1_P1.jspx</page>
+  </view>
+  <view id="M1_P2">
+    <page>/Menu1/M1_P2.jspx</page>
+  </view>
+  <view id="M1_P3">
+    <page>/Menu1/M1_P3.jspx</page>
+  </view>
+  <view id="M1_P4">
+    <page>/Menu1/M1_P4.jspx</page>
+  </view>
+  <view id="M2_P1">
+    <page>/Menu2/M2_P1.jspx</page>
+  </view>
+  <view id="M2_P2">
+    <page>/Menu2/M2_P2.jspx</page>
+  </view>
+  <view id="M2_P3">
+    <page>/Menu2/M2_P3.jspx</page>
+  </view>
+  <view id="M2_P4">
+    <page>/Menu2/M2_P4.jspx</page>
+  </view>
+  <view id="M3_P01">
+    <page>/Menu3/M3_P01.jspx</page>
+  </view>
+  <view id="M3_P02">
+    <page>/Menu3/M3_P02.jspx</page>
+  </view>
+  <view id="M3_P03">
+    <page>/Menu3/M3_P03.jspx</page>
+  </view>
+  <view id="M3_P04">
+    <page>/Menu3/M3_P04.jspx</page>
+  </view>
+  <view id="M3_P05">
+    <page>/Menu3/M3_P05.jspx</page>
+  </view>
+  <view id="M3_P06">
+    <page>/Menu3/M3_P06.jspx</page>
+  </view>
+  <view id="M3_P07">
+    <page>/Menu3/M3_P07.jspx</page>
+  </view>
+  <view id="M3_P08">
+    <page>/Menu3/M3_P08.jspx</page>
+  </view>
+  <view id="M3_P09">
+    <page>/Menu3/M3_P09.jspx</page>
+  </view>
+  <view id="M3_P10">
+    <page>/Menu3/M3_P10.jspx</page>
+  </view>
+  <view id="M3_P11">
+    <page>/Menu3/M3_P11.jspx</page>
+    <bookmark id="__116"/>
+    <input-page-parameter></input-page-parameter>
+  </view>
+  <view id="M3_P12">
+    <page>/Menu3/M3_P12.jspx</page>
+  </view>
+  <view id="M4_P1"></view>
+  <view id="M5_P1"></view>
+  <view id="M5_P2"></view>
+  <view id="M5_P3"></view>
+  <view id="M6_P1"></view>
+  <view id="M6_P2"></view>
+  <view id="M7_P1"></view>
+  <control-flow-rule id="__1">
+    <from-activity-id id="__2">*</from-activity-id>
+    <control-flow-case id="__4">
+      <from-outcome id="__5">m1</from-outcome>
+      <to-activity-id id="__3">M1</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__7">
+      <from-outcome id="__8">m2</from-outcome>
+      <to-activity-id id="__6">M2</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__9">
+      <from-outcome id="__11">m3</from-outcome>
+      <to-activity-id id="__10">M3</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__12">
+      <from-outcome id="__14">m4</from-outcome>
+      <to-activity-id id="__13">M4</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__15">
+      <from-outcome id="__17">m5</from-outcome>
+      <to-activity-id id="__16">M5</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__18">
+      <from-outcome id="__20">m6</from-outcome>
+      <to-activity-id id="__19">M6</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__21">
+      <from-outcome id="__23">m7</from-outcome>
+      <to-activity-id id="__22">M7</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__25">
+      <from-outcome id="__26">m1p1</from-outcome>
+      <to-activity-id id="__24">M1_P1</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__28">
+      <from-outcome id="__29">m1p2</from-outcome>
+      <to-activity-id id="__27">M1_P2</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__31">
+      <from-outcome id="__32">m1p3</from-outcome>
+      <to-activity-id id="__30">M1_P3</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__34">
+      <from-outcome id="__35">m1p4</from-outcome>
+      <to-activity-id id="__33">M1_P4</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__37">
+      <from-outcome id="__38">m2p1</from-outcome>
+      <to-activity-id id="__36">M2_P1</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__39">
+      <from-outcome id="__41">m2p2</from-outcome>
+      <to-activity-id id="__40">M2_P2</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__43">
+      <from-outcome id="__44">m2p3</from-outcome>
+      <to-activity-id id="__42">M2_P3</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__45">
+      <from-outcome id="__47">m2p4</from-outcome>
+      <to-activity-id id="__46">M2_P4</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__48">
+      <from-outcome id="__50">m3p1</from-outcome>
+      <to-activity-id id="__49">M3_P01</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__52">
+      <from-outcome id="__53">m3p2</from-outcome>
+      <to-activity-id id="__51">M3_P02</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__54">
+      <from-outcome id="__56">m3p3</from-outcome>
+      <to-activity-id id="__55">M3_P03</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__57">
+      <from-outcome id="__59">m3p4</from-outcome>
+      <to-activity-id id="__58">M3_P04</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__61">
+      <from-outcome id="__62">m3p5</from-outcome>
+      <to-activity-id id="__60">M3_P05</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__63">
+      <from-outcome id="__65">m3p6</from-outcome>
+      <to-activity-id id="__64">M3_P06</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__66">
+      <from-outcome id="__68">m3p7</from-outcome>
+      <to-activity-id id="__67">M3_P07</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__69">
+      <from-outcome id="__71">m3p8</from-outcome>
+      <to-activity-id id="__70">M3_P08</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__73">
+      <from-outcome id="__74">m3p9</from-outcome>
+      <to-activity-id id="__72">M3_P09</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__76">
+      <from-outcome id="__77">m3p10</from-outcome>
+      <to-activity-id id="__75">M3_P10</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__79">
+      <from-outcome id="__80">m3p11</from-outcome>
+      <to-activity-id id="__78">M3_P11</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__81">
+      <from-outcome id="__83">m3p12</from-outcome>
+      <to-activity-id id="__82">M3_P12</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__85">
+      <from-outcome id="__86">m4p1</from-outcome>
+      <to-activity-id id="__84">M4_P1</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__87">
+      <from-outcome id="__89">m5p1</from-outcome>
+      <to-activity-id id="__88">M5_P1</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__91">
+      <from-outcome id="__92">m5p2</from-outcome>
+      <to-activity-id id="__90">M5_P2</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__94">
+      <from-outcome id="__95">m5p3</from-outcome>
+      <to-activity-id id="__93">M5_P3</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__96">
+      <from-outcome id="__98">m6p1</from-outcome>
+      <to-activity-id id="__97">M6_P1</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__100">
+      <from-outcome id="__101">m6p2</from-outcome>
+      <to-activity-id id="__99">M6_P2</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__102">
+      <from-outcome id="__104">m7p1</from-outcome>
+      <to-activity-id id="__103">M7_P1</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <managed-bean id="__105">
+    <description id="__107">Menu Model Managed Bean</description>
+    <managed-bean-name id="__106">menu_menus</managed-bean-name>
+    <managed-bean-class>oracle.adf.view.rich.model.MDSMenuModel</managed-bean-class>
+    <managed-bean-scope id="__108">request</managed-bean-scope>
+    <managed-property id="__109">
+      <property-name id="__111">createHiddenNodes</property-name>
+      <value id="__110">false</value>
+    </managed-property>
+    <managed-property id="__114">
+      <property-name id="__112">source</property-name>
+      <property-class id="__115">java.lang.String</property-class>
+      <value id="__113">/WEB-INF/menu_menus.xml</value>
+    </managed-property>
+  </managed-bean>
+</adfc-config>

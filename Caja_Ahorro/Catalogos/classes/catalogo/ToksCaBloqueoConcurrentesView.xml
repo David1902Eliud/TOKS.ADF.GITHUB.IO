@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ToksCaBloqueoConcurrentesView"
+  Version="11.1.1.66.73"
+  InheritPersonalization="merge"
+  SelectList="ToksCaBloqueoConcurrentes.SHORT_NAME_CONC, 
+       ToksCaBloqueoConcurrentes.BLOQUEADO, 
+       ToksCaBloqueoConcurrentes.CREATED_BY, 
+       ToksCaBloqueoConcurrentes.CREATION_DATE, 
+       ToksCaBloqueoConcurrentes.LAST_UPDATED_BY, 
+       ToksCaBloqueoConcurrentes.LAST_UPDATE_DATE, 
+       ToksCaBloqueoConcurrentes.LAST_UPDATE_LOGIN, 
+       ToksCaBloqueoConcurrentes.ROWID"
+  FromList="TOKS_CA_BLOQUEO_CONCURRENTES ToksCaBloqueoConcurrentes"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+  </DesignTime>
+  <EntityUsage
+    Name="ToksCaBloqueoConcurrentes"
+    Entity="catalogo.ToksCaBloqueoConcurrentes"/>
+  <ViewAttribute
+    Name="ShortNameConc"
+    PrecisionRule="true"
+    EntityAttrName="ShortNameConc"
+    EntityUsage="ToksCaBloqueoConcurrentes"
+    AliasName="SHORT_NAME_CONC"/>
+  <ViewAttribute
+    Name="Bloqueado"
+    PrecisionRule="true"
+    EntityAttrName="Bloqueado"
+    EntityUsage="ToksCaBloqueoConcurrentes"
+    AliasName="BLOQUEADO"/>
+  <ViewAttribute
+    Name="CreatedBy"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="CreatedBy"
+    EntityUsage="ToksCaBloqueoConcurrentes"
+    AliasName="CREATED_BY"/>
+  <ViewAttribute
+    Name="CreationDate"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="CreationDate"
+    EntityUsage="ToksCaBloqueoConcurrentes"
+    AliasName="CREATION_DATE"/>
+  <ViewAttribute
+    Name="LastUpdatedBy"
+    PrecisionRule="true"
+    EntityAttrName="LastUpdatedBy"
+    EntityUsage="ToksCaBloqueoConcurrentes"
+    AliasName="LAST_UPDATED_BY"/>
+  <ViewAttribute
+    Name="LastUpdateDate"
+    PrecisionRule="true"
+    EntityAttrName="LastUpdateDate"
+    EntityUsage="ToksCaBloqueoConcurrentes"
+    AliasName="LAST_UPDATE_DATE"/>
+  <ViewAttribute
+    Name="LastUpdateLogin"
+    PrecisionRule="true"
+    EntityAttrName="LastUpdateLogin"
+    EntityUsage="ToksCaBloqueoConcurrentes"
+    AliasName="LAST_UPDATE_LOGIN"/>
+  <ViewAttribute
+    Name="RowID"
+    IsUpdateable="false"
+    PrecisionRule="true"
+    EntityAttrName="RowID"
+    EntityUsage="ToksCaBloqueoConcurrentes"
+    AliasName="ROWID"/>
+</ViewObject>

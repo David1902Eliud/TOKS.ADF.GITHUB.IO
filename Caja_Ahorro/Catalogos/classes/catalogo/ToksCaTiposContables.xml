@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ToksCaTiposContables"
+  Version="11.1.1.66.73"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TOKS_CA_TIPOS_CONTABLES"
+  AliasName="ToksCaTiposContables"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+  </DesignTime>
+  <Attribute
+    Name="IdTiposContables"
+    IsNotNull="true"
+    ColumnName="ID_TIPOS_CONTABLES"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_TIPOS_CONTABLES"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TipoMovimiento"
+    IsNotNull="true"
+    Precision="100"
+    ColumnName="TIPO_MOVIMIENTO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Descripcion"
+    IsNotNull="true"
+    Precision="500"
+    ColumnName="DESCRIPCION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Estatus"
+    IsNotNull="true"
+    ColumnName="ESTATUS"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Referencia1"
+    Precision="600"
+    ColumnName="REFERENCIA1"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="600"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Referencia2"
+    Precision="500"
+    ColumnName="REFERENCIA2"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Naturaleza"
+    Precision="1"
+    ColumnName="NATURALEZA"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Categoria"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="CATEGORIA"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Source"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="SOURCE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreatedBy"
+    IsNotNull="true"
+    ColumnName="CREATED_BY"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreationDate"
+    IsNotNull="true"
+    ColumnName="CREATION_DATE"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="TOKS_CA_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdatedBy"
+    IsNotNull="true"
+    ColumnName="LAST_UPDATED_BY"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdateDate"
+    IsNotNull="true"
+    ColumnName="LAST_UPDATE_DATE"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="TOKS_CA_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdateLogin"
+    ColumnName="LAST_UPDATE_LOGIN"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_TIPOS_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="SysC008104">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008104"/>
+      <Attr Name="_checkCondition" Value='"LAST_UPDATE_DATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaTiposContables.LastUpdateDate"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008105">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008105"/>
+      <Attr Name="_checkCondition" Value='"LAST_UPDATED_BY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaTiposContables.LastUpdatedBy"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008106">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008106"/>
+      <Attr Name="_checkCondition" Value='"CREATION_DATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaTiposContables.CreationDate"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008107">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008107"/>
+      <Attr Name="_checkCondition" Value='"CREATED_BY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaTiposContables.CreatedBy"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008108">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008108"/>
+      <Attr Name="_checkCondition" Value='"SOURCE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaTiposContables.Source"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008109">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008109"/>
+      <Attr Name="_checkCondition" Value='"CATEGORIA" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaTiposContables.Categoria"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008110">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008110"/>
+      <Attr Name="_checkCondition" Value='"ESTATUS" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaTiposContables.Estatus"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008111">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008111"/>
+      <Attr Name="_checkCondition" Value='"DESCRIPCION" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaTiposContables.Descripcion"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008112">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008112"/>
+      <Attr Name="_checkCondition" Value='"TIPO_MOVIMIENTO" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaTiposContables.TipoMovimiento"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008113">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008113"/>
+      <Attr Name="_checkCondition" Value='"ID_TIPOS_CONTABLES" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaTiposContables.IdTiposContables"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="ToksCaTiposContablesPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="TOKS_CA_TIPOS_CONTABLES_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaTiposContables.IdTiposContables"/>
+    </AttrArray>
+  </Key>
+</Entity>

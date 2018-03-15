@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AppModule"
+  Version="11.1.1.66.73"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <DesignTime>
+    <Attr Name="_deployType" Value="0"/>
+  </DesignTime>
+  <ViewUsage
+    Name="ToksCaBloqueoConcurrentesView1"
+    ViewObjectName="catalogo.ToksCaBloqueoConcurrentesView"/>
+  <ViewUsage
+    Name="ToksCaCatTasasView1"
+    ViewObjectName="catalogo.ToksCaCatTasasView"/>
+  <ViewUsage
+    Name="ToksCaCierresNominaView1"
+    ViewObjectName="catalogo.ToksCaCierresNominaView"/>
+  <ViewUsage
+    Name="ToksCaDescuentosView1"
+    ViewObjectName="catalogo.ToksCaDescuentosView"/>
+  <ViewUsage
+    Name="ToksCaDtlleTiposContablesView1"
+    ViewObjectName="catalogo.ToksCaDtlleTiposContablesView"/>
+  <ViewUsage
+    Name="ToksCaEmpleadosBloqueadosView1"
+    ViewObjectName="catalogo.ToksCaEmpleadosBloqueadosView"/>
+  <ViewUsage
+    Name="ToksCaInteresMovContablesView1"
+    ViewObjectName="catalogo.ToksCaInteresMovContablesView"/>
+  <ViewUsage
+    Name="ToksCaPeriodoCajaView1"
+    ViewObjectName="catalogo.ToksCaPeriodoCajaView"/>
+  <ViewUsage
+    Name="ToksCaTiposContablesView1"
+    ViewObjectName="catalogo.ToksCaTiposContablesView"/>
+</AppModule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<menu xmlns="http://myfaces.apache.org/trinidad/menu">
+  <itemNode id="itemNode_Inicio" label="Inicio" action="inicio"
+            focusViewId="/Inicio"/>
+  <itemNode id="itemNode_Caja_Ahorro" label="Caja de Ahorro" action="ca"
+            focusViewId="/Caja_Ahorro"/>
+  <itemNode id="itemNode_Ayuda" label="Ayuda" action="ayuda"
+            focusViewId="/Ayuda"/>
+</menu>

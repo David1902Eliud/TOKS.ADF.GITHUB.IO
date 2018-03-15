@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.66.73" id="M3_P02PageDef" Package="Menu3">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ToksCaDescuentosView1" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="ToksCaDescuentosView1Iterator"/>
+    <searchRegion Binds="ToksCaDescuentosView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="ToksCaDescuentosView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="ToksCaDescuentosView1Iterator"
+          id="ToksCaDescuentosView1">
+      <nodeDefinition DefName="catalogo.ToksCaDescuentosView"
+                      Name="ToksCaDescuentosView10">
+        <AttrNames>
+          <Item Value="NoDescuento"/>
+          <Item Value="Descuento"/>
+          <Item Value="CreadoPor"/>
+          <Item Value="FechaCreacion"/>
+          <Item Value="ActualizadoPor"/>
+          <Item Value="FechaActualizacion"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

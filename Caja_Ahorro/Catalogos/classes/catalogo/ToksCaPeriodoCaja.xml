@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ToksCaPeriodoCaja"
+  Version="11.1.1.66.73"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TOKS_CA_PERIODO_CAJA"
+  AliasName="ToksCaPeriodoCaja"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+  </DesignTime>
+  <Attribute
+    Name="IdPeriodo"
+    IsNotNull="true"
+    ColumnName="ID_PERIODO"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_PERIODO_CAJA"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RangoInicial"
+    IsNotNull="true"
+    ColumnName="RANGO_INICIAL"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="TOKS_CA_PERIODO_CAJA"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RangoFinal"
+    IsNotNull="true"
+    ColumnName="RANGO_FINAL"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="TOKS_CA_PERIODO_CAJA"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Estatus"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="ESTATUS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_PERIODO_CAJA"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreadoPor"
+    Precision="5"
+    Scale="0"
+    ColumnName="CREADO_POR"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_PERIODO_CAJA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="6"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="FechaCreacion"
+    ColumnName="FECHA_CREACION"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="TOKS_CA_PERIODO_CAJA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ActualizadoPor"
+    Precision="5"
+    Scale="0"
+    ColumnName="ACTUALIZADO_POR"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_PERIODO_CAJA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="6"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="FechaActualizacion"
+    ColumnName="FECHA_ACTUALIZACION"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="TOKS_CA_PERIODO_CAJA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xchar1"
+    Precision="250"
+    ColumnName="XCHAR1"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_PERIODO_CAJA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="250"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xchar2"
+    Precision="250"
+    ColumnName="XCHAR2"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_PERIODO_CAJA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="250"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xchar3"
+    Precision="250"
+    ColumnName="XCHAR3"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_PERIODO_CAJA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="250"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xchar4"
+    Precision="250"
+    ColumnName="XCHAR4"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_PERIODO_CAJA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="250"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xchar5"
+    Precision="250"
+    ColumnName="XCHAR5"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_PERIODO_CAJA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="250"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xnumber1"
+    ColumnName="XNUMBER1"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_PERIODO_CAJA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xnumber2"
+    ColumnName="XNUMBER2"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_PERIODO_CAJA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xnumber3"
+    ColumnName="XNUMBER3"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_PERIODO_CAJA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xnumber4"
+    ColumnName="XNUMBER4"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_PERIODO_CAJA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xnumber5"
+    ColumnName="XNUMBER5"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_PERIODO_CAJA">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="SysC008095"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008095"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaPeriodoCaja.IdPeriodo"/>
+      <Item Value="catalogo.ToksCaPeriodoCaja.RangoInicial"/>
+      <Item Value="catalogo.ToksCaPeriodoCaja.RangoFinal"/>
+      <Item Value="catalogo.ToksCaPeriodoCaja.Estatus"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008096">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008096"/>
+      <Attr Name="_checkCondition" Value='"ESTATUS" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaPeriodoCaja.Estatus"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008097">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008097"/>
+      <Attr Name="_checkCondition" Value='"RANGO_FINAL" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaPeriodoCaja.RangoFinal"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008098">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008098"/>
+      <Attr Name="_checkCondition" Value='"RANGO_INICIAL" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaPeriodoCaja.RangoInicial"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008099">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008099"/>
+      <Attr Name="_checkCondition" Value='"ID_PERIODO" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaPeriodoCaja.IdPeriodo"/>
+    </AttrArray>
+  </Key>
+</Entity>

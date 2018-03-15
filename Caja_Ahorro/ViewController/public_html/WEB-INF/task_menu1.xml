@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="Inicio">
+    <page>/Inicio.jspx</page>
+  </view>
+  <view id="Caja_Ahorro">
+    <page>/Caja_Ahorro.jspx</page>
+  </view>
+  <view id="Ayuda">
+    <page>/Ayuda.jspx</page>
+  </view>
+  <control-flow-rule id="__1">
+    <from-activity-id id="__2">*</from-activity-id>
+    <control-flow-case id="__3">
+      <from-outcome id="__5">inicio</from-outcome>
+      <to-activity-id id="__4">Inicio</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__6">
+      <from-outcome id="__8">ca</from-outcome>
+      <to-activity-id id="__7">Caja_Ahorro</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__9">
+      <from-outcome id="__11">ayuda</from-outcome>
+      <to-activity-id id="__10">Ayuda</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <managed-bean id="__12">
+    <description id="__14">Menu Model Managed Bean</description>
+    <managed-bean-name id="__13">menu_principal</managed-bean-name>
+    <managed-bean-class>oracle.adf.view.rich.model.MDSMenuModel</managed-bean-class>
+    <managed-bean-scope id="__15">request</managed-bean-scope>
+    <managed-property id="__16">
+      <property-name id="__17">createHiddenNodes</property-name>
+      <value id="__18">false</value>
+    </managed-property>
+    <managed-property id="__20">
+      <property-name id="__22">source</property-name>
+      <property-class id="__21">java.lang.String</property-class>
+      <value id="__19">/WEB-INF/menu_principal.xml</value>
+    </managed-property>
+  </managed-bean>
+</adfc-config>

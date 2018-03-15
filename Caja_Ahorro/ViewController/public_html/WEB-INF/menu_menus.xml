@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<menu xmlns="http://myfaces.apache.org/trinidad/menu">
+  <groupNode id="itemNode_M1" label="Alta" idref="itemNode_M1_P1">
+    <itemNode id="itemNode_M1_P1" label="PreAlta Socios" action="m1p1"
+              focusViewId="/M1_P1"/>
+    <itemNode id="itemNode_M1_P2" label="Alta de Socios" action="m1p2"
+              focusViewId="/M1_P2"/>
+    <itemNode id="itemNode_M1_P3" label="Autorización de Beneficiarios" action="m1p3"
+              focusViewId="/M1_P3"/>
+    <itemNode id="itemNode_M1_P4" label="Actualización de Beneficiarios" action="m1p4"
+              focusViewId="/M1_P4"/>
+  </groupNode>
+  <groupNode id="itemNode_M2" label="Préstamos" idref="itemNode_M2_P1">
+    <itemNode id="itemNode_M2_P1" label="Simulador de Préstamos" action="m2p1"
+              focusViewId="/M2_P1"/>
+    <itemNode id="itemNode_M2_P2" label="Autorización de Préstamos" action="m2p2"
+              focusViewId="/M2_P2"/>
+    <itemNode id="itemNode_M2_P3" label="Aumento de Prestamos" action="m2p3"
+              focusViewId="/M2_P3"/>
+    <itemNode id="itemNode_M2_P4" label="Descuentos Especiales Autorizados" action="m2p4"
+              focusViewId="/M2_P4"/>
+  </groupNode>
+  <groupNode id="itemNode_M3" label="Catálogos" idref="itemNode_M3_P01">
+    <itemNode id="itemNode_M3_P01" label="Catálogo de Tasas para Préstamos" action="m3p1"
+              focusViewId="/M3_P01"/>
+    <itemNode id="itemNode_M3_P02" label="Catálogo de Descuentos" action="m3p2"
+              focusViewId="/M3_P02"/>
+    <itemNode id="itemNode_M3_P03" label="Período de Caja de Ahorro" action="m3p3"
+              focusViewId="/M3_P03"/>
+    <itemNode id="itemNode_M3_P04" label="Catálogo de Cierres de Nómina" action="m3p4"
+              focusViewId="/M3_P04"/>
+    <itemNode id="itemNode_M3_P05"
+              label="Catálogo de Antigüedad para Descuentos Especiales" action="m3p5"
+              focusViewId="/M3_P05"/>
+    <itemNode id="itemNode_M3_P06"
+              label="Catálogo de Porcentajes de Descuentos Especiales" action="m3p6"
+              focusViewId="/M3_P06"/>
+    <itemNode id="itemNode_M3_P07" label="Catálogo de empleados a anexar" action="m3p7"
+              focusViewId="/M3_P07"/>
+    <itemNode id="itemNode_M3_P08"
+              label="Parametrización de pagos y montos de prestámos" action="m3p8"
+              focusViewId="/M3_P08"/>
+    <itemNode id="itemNode_M3_P09"
+              label="Catálogo de Conceptos de Caja de Ahorro - Descuento" action="m3p9"
+              focusViewId="/M3_P09"/>
+    <itemNode id="itemNode_M3_P10" label="Tipos de Movimientos Contables" action="m3p10"
+              focusViewId="/M3_P10"/>
+    <itemNode id="itemNode_M3_P11" label="Bloqueos - Caja de Ahorro" action="m3p11"
+              focusViewId="/M3_P11"/>
+    <itemNode id="itemNode_M3_P12" label="Tipos para Distribucion de Intereses" action="m3p12"
+              focusViewId="/M3_P12"/>
+  </groupNode>
+  <groupNode id="itemNode_M4" label="Retiros y Bajas" idref="itemNode_M4_P1">
+    <itemNode id="itemNode_M4_P1" label="Retiros y Baja" action="m4p1"
+              focusViewId="/M4_P1"/>
+  </groupNode>
+  <groupNode id="itemNode_M5" label="Incidencias para Nominas" idref="itemNode_M5_P1">
+    <itemNode id="itemNode_M5_P1"
+              label="Carga de Incidencias - Descuentos Especiales" action="m5p1"
+              focusViewId="/M5_P1"/>
+    <itemNode id="itemNode_M5_P2" label="Devolución de Incidencias - Nómina" action="m5p2"
+              focusViewId="/M5_P2"/>
+    <itemNode id="itemNode_M5_P3" label="TEF - Cheques" action="m5p3"
+              focusViewId="/M5_P3"/>
+  </groupNode>
+  <groupNode id="itemNode_M6" label="Cierre Anual de Cajas" idref="itemNode_M6_P1">
+    <itemNode id="itemNode_M6_P1" label="Cierre Anual de Caja de Ahorro" action="m6p1"
+              focusViewId="/M6_P1"/>
+    <itemNode id="itemNode_M6_P2" label="Pre-Captura Cierre Anual" action="m6p2"
+              focusViewId="/M6_P2"/>
+  </groupNode>
+  <groupNode id="itemNode_M7" label="Descuentos especiales" idref="itemNode_M7_P1">
+    <itemNode id="itemNode_M7_P1" label="Aportaciones Voluntarias" action="m7p1"
+              focusViewId="/M7_P1"/>
+  </groupNode>
+</menu>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <af:pageTemplateDef var="attrs">
+    <af:decorativeBox id="pt_db1">
+      <f:facet name="center">
+        <af:facetRef facetName="Body_principal"/>
+      </f:facet>
+      <f:facet name="top">
+        <af:panelHeader text="Caja de Ahorro" id="pt_ph1"
+                        inlineStyle="background-color:ActiveCaption;">
+          <f:facet name="context"/>
+          <f:facet name="menuBar">
+            <af:navigationPane hint="buttons" id="pt_np1"
+                               value="#{menu_principal}" var="p">
+              <f:facet name="nodeStamp">
+                <af:commandNavigationItem id="ni1" text="#{p.label}"
+                                          action="#{p.doAction}"/>
+              </f:facet>
+            </af:navigationPane>
+          </f:facet>
+        </af:panelHeader>
+      </f:facet>
+    </af:decorativeBox>
+    <af:xmlContent>
+      <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+        <display-name>Template_index</display-name>
+        <facet>
+          <facet-name>Body_principal</facet-name>
+        </facet>
+        <attribute>
+          <attribute-name>PageName</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+          <default-value>Caja de Ahorro</default-value>
+        </attribute>
+        <attribute>
+          <attribute-name>attr2</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+        </attribute>
+        <attribute>
+          <attribute-name>attr3</attribute-name>
+          <attribute-class>java.lang.String</attribute-class>
+        </attribute>
+      </component>
+    </af:xmlContent>
+  </af:pageTemplateDef>
+</jsp:root>

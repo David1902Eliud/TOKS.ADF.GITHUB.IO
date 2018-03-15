@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ToksCaInteresMovContables"
+  Version="11.1.1.66.73"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TOKS_CA_INTERES_MOV_CONTABLES"
+  AliasName="ToksCaInteresMovContables"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+  </DesignTime>
+  <Attribute
+    Name="IdInteresMovContable"
+    IsNotNull="true"
+    ColumnName="ID_INTERES_MOV_CONTABLE"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_INTERES_MOV_CONTABLES"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Naturaleza"
+    IsNotNull="true"
+    Precision="10"
+    ColumnName="NATURALEZA"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_INTERES_MOV_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="TipoMovimiento"
+    Precision="500"
+    ColumnName="TIPO_MOVIMIENTO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_INTERES_MOV_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Activo"
+    ColumnName="ACTIVO"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_INTERES_MOV_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="IdTiposInteres"
+    IsNotNull="true"
+    ColumnName="ID_TIPOS_INTERES"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_INTERES_MOV_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreatedBy"
+    IsNotNull="true"
+    ColumnName="CREATED_BY"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_INTERES_MOV_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreationDate"
+    IsNotNull="true"
+    ColumnName="CREATION_DATE"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="TOKS_CA_INTERES_MOV_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdatedBy"
+    IsNotNull="true"
+    ColumnName="LAST_UPDATED_BY"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_INTERES_MOV_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdateDate"
+    IsNotNull="true"
+    ColumnName="LAST_UPDATE_DATE"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="TOKS_CA_INTERES_MOV_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdateLogin"
+    ColumnName="LAST_UPDATE_LOGIN"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_INTERES_MOV_CONTABLES">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="SysC008128">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008128"/>
+      <Attr Name="_checkCondition" Value='"LAST_UPDATE_DATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaInteresMovContables.LastUpdateDate"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008129">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008129"/>
+      <Attr Name="_checkCondition" Value='"LAST_UPDATED_BY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaInteresMovContables.LastUpdatedBy"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008130">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008130"/>
+      <Attr Name="_checkCondition" Value='"CREATION_DATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaInteresMovContables.CreationDate"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008131">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008131"/>
+      <Attr Name="_checkCondition" Value='"CREATED_BY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaInteresMovContables.CreatedBy"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008132">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008132"/>
+      <Attr Name="_checkCondition" Value='"ID_TIPOS_INTERES" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaInteresMovContables.IdTiposInteres"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008133">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008133"/>
+      <Attr Name="_checkCondition" Value='"NATURALEZA" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaInteresMovContables.Naturaleza"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC008134">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C008134"/>
+      <Attr Name="_checkCondition"
+        Value='"ID_INTERES_MOV_CONTABLE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaInteresMovContables.IdInteresMovContable"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="ToksCaInteresMovContaPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="TOKS_CA_INTERES_MOV_CONTA_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaInteresMovContables.IdInteresMovContable"/>
+    </AttrArray>
+  </Key>
+</Entity>
