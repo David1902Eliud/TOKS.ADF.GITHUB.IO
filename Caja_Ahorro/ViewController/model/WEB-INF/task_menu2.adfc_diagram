@@ -407,6 +407,8 @@
       <property
          name="activityId">M4_P1</property>
       <property
+         name="page">/Menu4/M4_P1.jspx</property>
+      <property
          name="description">&lt;html>&lt;p>&lt;b>M4_P1&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="exceptionHandler">false</property>
@@ -419,6 +421,8 @@
       id="View31">
       <property
          name="activityId">M5_P1</property>
+      <property
+         name="page">/Menu5/M5_P1.jspx</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>M5_P1&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
@@ -433,6 +437,8 @@
       <property
          name="activityId">M5_P2</property>
       <property
+         name="page">/Menu5/M5_P2.jspx</property>
+      <property
          name="description">&lt;html>&lt;p>&lt;b>M5_P2&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="exceptionHandler">false</property>
@@ -445,6 +451,8 @@
       id="View33">
       <property
          name="activityId">M5_P3</property>
+      <property
+         name="page">/Menu5/M5_P3.jspx</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>M5_P3&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
@@ -459,6 +467,8 @@
       <property
          name="activityId">M6_P1</property>
       <property
+         name="page">/Menu6/M6_P1.jspx</property>
+      <property
          name="description">&lt;html>&lt;p>&lt;b>M6_P1&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="exceptionHandler">false</property>
@@ -472,6 +482,8 @@
       <property
          name="activityId">M6_P2</property>
       <property
+         name="page">/Menu6/M6_P2.jspx</property>
+      <property
          name="description">&lt;html>&lt;p>&lt;b>M6_P2&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="exceptionHandler">false</property>
@@ -484,6 +496,8 @@
       id="View36">
       <property
          name="activityId">M7_P1</property>
+      <property
+         name="page">/Menu7/M7_P1.jspx</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>M7_P1&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property

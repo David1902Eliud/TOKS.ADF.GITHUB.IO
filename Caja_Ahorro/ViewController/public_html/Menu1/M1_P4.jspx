@@ -8,7 +8,106 @@
     <af:document id="d1">
       <af:form id="f1">
         <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
-          <f:facet name="Body_Menus"/>
+          <f:facet name="Body_Menus">
+            <af:panelGridLayout id="pgl1">
+              <af:gridRow marginTop="5px" height="auto" id="gr2">
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                             id="gc2">
+                  <af:activeOutputText value="Datos del Empleado " id="aot1"
+                                       inlineStyle="color:Black; font-size:medium;"/>
+                  <af:panelFormLayout id="pfl1">
+                    <af:inputText
+                                  label="No Empleado"
+                                  id="it4">
+                      <f:validator binding="#{bindings.NoEmpleado.validator}"/>
+                    </af:inputText>
+                    <af:inputText
+                                  label="Nombre"
+                                  id="it3">
+                      <f:validator binding="#{bindings.NombreEmpleado.validator}"/>
+                    </af:inputText>
+                    <af:inputText
+                                  label="Clave Sucursal "
+                                  id="it7">
+                      <f:validator binding="#{bindings.ClaveSucursal.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.ClaveSucursal.format}"/>
+                    </af:inputText>
+                    <af:inputText
+                                  label="Sucursal "
+                                  id="it6">
+                      <f:validator binding="#{bindings.NombreSucursal.validator}"/>
+                    </af:inputText>
+                    <af:inputText
+                                  label="Departamento"
+                                  id="it1">
+                      <f:validator binding="#{bindings.Depto.validator}"/>
+                    </af:inputText>
+                    <af:inputText
+                                  label="Empresa"
+                                  id="it2">
+                      <f:validator binding="#{bindings.EmpresaLabora.validator}"/>
+                    </af:inputText>
+                    <af:inputText
+                                  label="Puesto"
+                                  id="it5">
+                      <f:validator binding="#{bindings.Puesto.validator}"/>
+                    </af:inputText>
+                  </af:panelFormLayout>
+                </af:gridCell>
+              </af:gridRow>
+              <af:gridRow marginTop="5px" height="auto" marginBottom="5px"
+                          id="gr1">
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                             id="gc1">
+                  <af:activeOutputText value="Beneficiarios" id="aot2"
+                                       inlineStyle="color:Black; font-size:medium;"/>
+                  <af:table
+                            var="row"
+                            rows="#{bindings.BkpToksCaBenavalesView1.rangeSize}"
+                            rowBandingInterval="0"
+                            filterVisible="true" varStatus="vs"
+                            rowSelection="multiple" id="t1" width="622"
+                            inlineStyle="height:80px;">
+                    <af:column sortProperty="#{bindings.BkpToksCaBenavalesView1.hints.Nombre.name}"
+                               filterable="true" sortable="true"
+                               headerText="Nombre" id="c1" width="200">
+                      <af:inputText
+                                    id="it9">
+                        <f:validator binding="#{row.bindings.Nombre.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.BkpToksCaBenavalesView1.hints.Nombre.format}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.BkpToksCaBenavalesView1.hints.Parentesco.name}"
+                               filterable="true" sortable="true"
+                               headerText="Parentesco" id="c2" width="200">
+                      <af:inputText
+                                    id="it8">
+                        <f:validator binding="#{row.bindings.Parentesco.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.BkpToksCaBenavalesView1.hints.Parentesco.format}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.BkpToksCaBenavalesView1.hints.Porcentaje.name}"
+                               filterable="true" sortable="true"
+                               headerText="Porcentaje" id="c3" width="200">
+                      <af:inputText
+                                    id="it10">
+                        <f:validator binding="#{row.bindings.Porcentaje.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.BkpToksCaBenavalesView1.hints.Porcentaje.format}"/>
+                      </af:inputText>
+                    </af:column>
+                  </af:table>
+                  <af:panelGroupLayout id="pgl2"
+                                       inlineStyle="border-color:transparent;">
+                    <af:commandButton text="Actualizar" id="cb1"/>
+                  </af:panelGroupLayout>
+                </af:gridCell>
+              </af:gridRow>
+            </af:panelGridLayout>
+          </f:facet>
         </af:pageTemplate>
       </af:form>
     </af:document>

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:form id="f1">
+        <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
+          <f:facet name="Body_Menus">
+            <af:panelGridLayout id="pgl1">
+              <af:gridRow marginTop="5px" height="auto" id="gr2">
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                             id="gc2">
+                  <af:panelGroupLayout id="pgl2"
+                                       inlineStyle="border-color:transparent;">
+                    <af:inputDate label="Fecha Deposito (DD/MM/YYYY)" id="id1"/>
+                    <af:table var="row" rowBandingInterval="0" id="t1"
+                              width="625">
+                      <af:column sortable="false" headerText="Num Empleado "
+                                 id="c4">
+                        <af:outputText value="#{row.col1}" id="ot6"/>
+                      </af:column>
+                      <af:column sortable="false" headerText="Nombre " id="c3">
+                        <af:outputText value="#{row.col2}" id="ot2"/>
+                      </af:column>
+                      <af:column sortable="false"
+                                 headerText="Importe del Deposito " id="c1">
+                        <af:outputText value="#{row.col3}" id="ot5"/>
+                      </af:column>
+                      <af:column sortable="false" headerText="Aport Voluntario "
+                                 id="c2" align="center">
+                        <af:selectBooleanRadio value="#{row.col4}" id="ot1"/>
+                      </af:column>
+                      <af:column sortable="false" headerText="Abono a Prestamo"
+                                 id="c6" align="center">
+                        <af:selectBooleanRadio value="#{row.col5}" id="ot3"
+                                               label="Label 1"/>
+                      </af:column>
+                      <af:column sortable="false" headerText="No.Prestamo "
+                                 id="c5">
+                        <af:outputText value="#{row.col6}" id="ot4"/>
+                      </af:column>
+                    </af:table>
+                    <af:panelGroupLayout id="pgl3">
+                      <af:activeCommandToolbarButton text="Actualiza" id="actb1"
+                                                     inlineStyle="width:5%;"/>
+                    </af:panelGroupLayout>
+                  </af:panelGroupLayout>
+                </af:gridCell>
+              </af:gridRow>
+            </af:panelGridLayout>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

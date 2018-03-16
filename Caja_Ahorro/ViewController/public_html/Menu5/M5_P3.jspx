@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:form id="f1">
+        <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
+          <f:facet name="Body_Menus">
+            <af:panelGridLayout id="pgl1">
+              <af:gridRow marginTop="5px" height="auto" id="gr3">
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                             id="gc1">
+                  <af:panelGroupLayout id="pgl2"
+                                       valign="bottom" halign="center">
+                    <af:panelGroupLayout id="pgl3" layout="horizontal">
+                      <af:outputText value="Fecha:" id="ot1"
+                                     inlineStyle="font-size:medium;"/>
+                      <af:spacer width="10" height="10" id="s1"/>
+                      <af:inputText label="Label 1" id="it1" simple="true"
+                                    columns="15"/>
+                      <af:spacer width="40" height="10" id="s2"/>
+                      <af:outputText value="Movimientos:" id="ot2"
+                                     inlineStyle="font-size:medium;"/>
+                      <af:spacer width="10" height="10" id="s3"/>
+                      <af:selectBooleanRadio text=" PRESTAMOS" id="sbr1"
+                                             contentStyle="font-size:medium;"/>
+                      <af:spacer width="10" height="10" id="s4"/>
+                      <af:selectBooleanRadio text=" BAJAS" id="sbr2"
+                                             contentStyle="font-size:medium;"/>
+                      <af:spacer width="10" height="10" id="s5"/>
+                      <af:selectBooleanRadio text=" FINIQUITOS" id="sbr3"
+                                             contentStyle="font-size:medium;"/>
+                      <af:spacer width="10" height="10" id="s6"/>
+                      <af:selectBooleanRadio text=" LIQUIDACION CAJA DE AHORRO" id="sbr4"
+                                             contentStyle="font-size:medium;"/>
+                      <af:spacer width="10" height="10" id="s7"/>
+                      <af:selectBooleanRadio text=" RETIROS" id="sbr5"
+                                             contentStyle="font-size:medium;"/>
+                      <af:spacer width="100" height="10" id="s11"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl4" layout="vertical">
+                      <af:spacer width="10" height="10" id="s8"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl13" layout="horizontal">
+                      <af:outputText value="TEF - CHEQUES (DETALLE)" id="ot3"
+                                     inlineStyle="font-size:medium;"/>
+                      <af:spacer width="10" height="20" id="s12"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl5" layout="horizontal"
+                                         valign="baseline"
+                                         inlineStyle="height:172px;">
+                      <af:table var="row" rowBandingInterval="0" id="t1"
+                                width="935" inlineStyle="height:178px;">
+                        <af:column sortable="false" headerText="N°" id="c4"
+                                   align="center" width="50"
+                                   inlineStyle="font-size:medium;">
+                          <af:outputText value="#{row.col1}" id="ot10"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Empleado"
+                                   id="c2" align="center" width="150"
+                                   inlineStyle="font-size:medium;">
+                          <af:outputText value="#{row.col2}" id="ot9"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Nombre" id="c5"
+                                   width="300" align="center"
+                                   inlineStyle="font-size:medium;"
+                                   noWrap="true" headerNoWrap="true">
+                          <af:outputText value="#{row.col3}" id="ot5"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Periodo"
+                                   id="c3" align="center"
+                                   inlineStyle="font-size:medium;">
+                          <af:outputText value="#{row.col4}" id="ot7"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="N° Prestamo"
+                                   id="c7" align="center"
+                                   inlineStyle="font-size:medium;">
+                          <af:outputText value="#{row.col5}" id="ot6"/>
+                        </af:column>
+                        <af:column sortable="false"
+                                   headerText="Monto Solicitado" id="c1"
+                                   align="center"
+                                   inlineStyle="font-size:medium;">
+                          <af:outputText value="#{row.col6}" id="ot4"/>
+                        </af:column>
+                        <af:column sortable="false"
+                                   headerText="Monto Aportación" id="c6"
+                                   align="center"
+                                   inlineStyle="font-size:medium;">
+                          <af:outputText value="#{row.col7}" id="ot8"/>
+                        </af:column>
+                        <af:column id="c14" headerText="Monto Intereses"
+                                   align="center"
+                                   inlineStyle="font-size:medium;"/>
+                        <af:column id="c15" headerText="Tipo" align="center"
+                                   inlineStyle="font-size:medium;"/>
+                        <af:column id="c16" headerText="Fecha Inicio"
+                                   align="center"
+                                   inlineStyle="font-size:medium;"/>
+                      </af:table>
+                      <af:panelGroupLayout id="pgl6">
+                        <af:panelGridLayout id="pgl7">
+                          <af:gridRow marginTop="5px" height="auto"
+                                      marginBottom="5px" id="gr5">
+                            <af:gridCell marginStart="10px" width="50%" id="gc5"
+                                         marginEnd="50px">
+                              <af:outputText value="TEF" id="ot11"
+                                             inlineStyle="font-size:medium;"/>
+                              <af:selectBooleanRadio id="sbr6"
+                                                     contentStyle="font-size:medium;"/>
+                              <af:selectBooleanRadio id="sbr7"
+                                                     contentStyle="font-size:medium;"/>
+                              <af:selectBooleanRadio id="sbr8"
+                                                     contentStyle="font-size:medium;"/>
+                              <af:selectBooleanRadio id="sbr9"/>
+                              <af:selectBooleanRadio id="sbr10"
+                                                     contentStyle="font-size:medium;"/>
+                              <af:selectBooleanRadio id="sbr11"
+                                                     contentStyle="font-size:medium;"/>
+                              <af:selectBooleanRadio id="sbr12"
+                                                     contentStyle="font-size:medium;"/>
+                            </af:gridCell>
+                            <af:gridCell id="gc6" columnSpan="1" width="auto"
+                                         rowSpan="1">
+                              <af:outputText value="CHEQUE" id="ot12"
+                                             inlineStyle="font-size:medium;"/>
+                              <af:selectBooleanRadio
+                                                     id="sbr13"
+                                                     inlineStyle="font-size:medium;"/>
+                              <af:selectBooleanRadio
+                                                     id="sbr14"/>
+                              <af:selectBooleanRadio
+                                                     id="sbr15"/>
+                              <af:selectBooleanRadio
+                                                     id="sbr16"/>
+                              <af:selectBooleanRadio
+                                                     id="sbr17"/>
+                              <af:selectBooleanRadio
+                                                     id="sbr18"/>
+                              <af:selectBooleanRadio
+                                                     id="sbr19"/>
+                            </af:gridCell>
+                          </af:gridRow>
+                        </af:panelGridLayout>
+                      </af:panelGroupLayout>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl14" layout="vertical">
+                      <af:spacer width="10" height="10" id="s13"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl8" layout="horizontal">
+                      <af:commandButton text="Renovaciones" id="cb1"
+                                        inlineStyle="font-size:medium;"/>
+                      <af:spacer width="150" height="10" id="s9"/>
+                      <af:commandButton text="Generar Reporte" id="cb2"
+                                        inlineStyle="font-size:medium;"/>
+                      <af:spacer width="420" height="10" id="s10"/>
+                      <af:commandButton text="Importar Facturas" id="cb3"
+                                        inlineStyle="font-size:medium;"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl15" layout="vertical">
+                      <af:spacer width="10" height="10" id="s14"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl9" layout="horizontal">
+                      <af:outputText value="TEF - CHEQUES (TOTAL)" id="ot13"
+                                     inlineStyle="font-size:medium;"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl10" layout="horizontal"
+                                         inlineStyle="height:158px;">
+                      <af:table var="row" rowBandingInterval="0" id="t2"
+                                inlineStyle="height:150px;" width="935">
+                        <af:column sortable="false" headerText="N°" id="c9"
+                                   width="50" align="center">
+                          <af:outputText value="#{row.col1}" id="ot16"
+                                         inlineStyle="font-size:medium;"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Empleado"
+                                   id="c10" width="150" align="center"
+                                   inlineStyle="font-size:medium;">
+                          <af:outputText value="#{row.col2}" id="ot15"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Nombre" id="c8"
+                                   width="300" align="center">
+                          <af:outputText value="#{row.col3}" id="ot17"
+                                         inlineStyle="font-size:medium;"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="Periodo"
+                                   id="c11" align="center" width="100"
+                                   inlineStyle="font-size:medium;">
+                          <af:outputText value="#{row.col4}" id="ot18"/>
+                        </af:column>
+                        <af:column sortable="false" headerText="N° Prestamo"
+                                   id="c13" align="center"
+                                   inlineStyle="font-size:medium;">
+                          <af:outputText value="#{row.col5}" id="ot19"/>
+                        </af:column>
+                        <af:column sortable="false"
+                                   headerText="Total x Empleado" id="c12"
+                                   align="center" width="200"
+                                   inlineStyle="font-size:medium;">
+                          <af:outputText value="#{row.col6}" id="ot14"/>
+                        </af:column>
+                      </af:table>
+                      <af:panelGroupLayout id="pgl11">
+                        <af:panelGridLayout id="panelGridLayout1">
+                          <af:gridRow marginTop="5px" height="auto"
+                                      marginBottom="5px" id="gridRow1">
+                            <af:gridCell marginStart="5px" width="50%"
+                                         id="gridCell1" marginEnd="50px">
+                              <af:selectBooleanRadio id="selectBooleanRadio1"
+                                                     contentStyle="font-size:medium;"/>
+                              <af:selectBooleanRadio id="selectBooleanRadio2"
+                                                     contentStyle="font-size:medium;"/>
+                              <af:selectBooleanRadio id="selectBooleanRadio3"
+                                                     contentStyle="font-size:medium;"/>
+                              <af:selectBooleanRadio id="selectBooleanRadio4"/>
+                              <af:selectBooleanRadio id="selectBooleanRadio5"
+                                                     contentStyle="font-size:medium;"/>
+                              <af:selectBooleanRadio id="selectBooleanRadio6"
+                                                     contentStyle="font-size:medium;"/>
+                              <af:selectBooleanRadio id="selectBooleanRadio7"
+                                                     contentStyle="font-size:medium;"/>
+                            </af:gridCell>
+                            <af:gridCell marginStart="5px" width="50%"
+                                         marginEnd="5px" id="gridCell2"
+                                         rowSpan="1" columnSpan="2">
+                              <af:selectBooleanRadio id="selectBooleanRadio8"
+                                                     contentStyle="font-size:medium;"/>
+                              <af:selectBooleanRadio id="selectBooleanRadio9"
+                                                     contentStyle="font-size:medium;"/>
+                              <af:selectBooleanRadio id="selectBooleanRadio10"
+                                                     contentStyle="font-size:medium;"/>
+                              <af:selectBooleanRadio id="selectBooleanRadio11"/>
+                              <af:selectBooleanRadio id="selectBooleanRadio12"/>
+                              <af:selectBooleanRadio id="selectBooleanRadio13"/>
+                              <af:selectBooleanRadio id="selectBooleanRadio14"/>
+                            </af:gridCell>
+                          </af:gridRow>
+                        </af:panelGridLayout>
+                      </af:panelGroupLayout>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl16" layout="vertical">
+                      <af:spacer width="10" height="10" id="s15"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl12" layout="horizontal">
+                      <af:commandButton text="Genera Total por Empleado" id="cb4"
+                                        inlineStyle="font-size:medium;"/>
+                    </af:panelGroupLayout>
+                  </af:panelGroupLayout>
+                </af:gridCell>
+              </af:gridRow>
+              <af:gridRow marginTop="5px" height="auto" marginBottom="5px"
+                          id="gr1">
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                             id="gc2"/>
+              </af:gridRow>
+              <af:gridRow id="gr4">
+                <af:gridCell id="gc4"/>
+              </af:gridRow>
+            </af:panelGridLayout>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

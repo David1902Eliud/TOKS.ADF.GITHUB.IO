@@ -8,7 +8,41 @@
     <af:document id="d1">
       <af:form id="f1">
         <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
-          <f:facet name="Body_Menus"/>
+          <f:facet name="Body_Menus">
+            <af:panelGridLayout id="pgl3">
+              <af:gridRow marginTop="5px" height="auto" marginBottom="5px"
+                          id="gr1">
+                <af:gridCell marginStart="5px" width="20%" id="gc5"
+                             halign="stretch">
+                  <af:inputDate label="Fecha Aumento de Prestamo (DD/MM/YYYY)" id="id1"/>
+                  <af:table var="row" rowBandingInterval="0" id="t1"
+                            inlineStyle="height:67px;" width="640">
+                    <af:column sortable="false" headerText="Num.  Empleado "
+                               id="c3" width="115">
+                      <af:outputText value="#{row.col1}" id="ot1"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Nombre" id="c1"
+                               width="265">
+                      <af:outputText value="#{row.col2}" id="ot4"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Monto Aumentar"
+                               id="c4" width="102">
+                      <af:outputText value="#{row.col3}" id="ot2"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="No. Prestamo"
+                               id="c2" width="128">
+                      <af:outputText value="#{row.col4}" id="ot3"/>
+                    </af:column>
+                  </af:table>
+                  <af:panelGroupLayout id="pgl2">
+                    <af:activeCommandToolbarButton text="Actualiza"
+                                                   id="actb1"
+                                                   inlineStyle="width:20%;"/>
+                  </af:panelGroupLayout>
+                </af:gridCell>
+              </af:gridRow>
+            </af:panelGridLayout>
+          </f:facet>
         </af:pageTemplate>
       </af:form>
     </af:document>

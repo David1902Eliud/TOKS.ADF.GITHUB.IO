@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:form id="f1">
+        <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
+          <f:facet name="Body_Menus">
+            <af:panelGridLayout id="pgl1" landmark="complementary">
+            <af:gridRow marginTop="100px" height="auto" id="gr2">
+              <af:gridCell marginStart="5px" width="34%" id="gc8"/>
+              <af:gridCell marginStart="5px" width="33%" id="gc7">
+                <af:panelGroupLayout id="pgl12" layout="vertical">
+                  <af:panelGroupLayout id="pgl2" layout="vertical"
+                                       inlineStyle="border-color:Black; border-style:outset; border-width:thin;">
+                    <af:panelGroupLayout id="pgl3" layout="horizontal">
+                      <af:spacer width="10" height="30" id="s3"/>
+                      <af:outputText value="Descuento" id="ot1" noWrap="true"
+                                     inlineStyle="font-size:medium;"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl4" layout="horizontal"
+                                         inlineStyle="width:158px;">
+                      <af:spacer width="10" height="50" id="s1"/>
+                      <af:selectOneChoice id="soc1" simple="true"
+                                          contentStyle="width:500px;font-size:medium;">
+                        <af:selectItem label="Descuento del 5%" value="5"
+                                       id="si2"/>
+                        <af:selectItem label="Descuento del 10%" value="10"
+                                       id="si1"/>
+                      </af:selectOneChoice>
+                      <af:spacer width="10" height="10" id="s14"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl5" layout="horizontal">
+                      <af:spacer width="200" height="40" id="s2"/>
+                      <af:commandButton text="Genera Incidencias" id="cb1"
+                                        inlineStyle="font-size:medium;"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl6" layout="vertical">
+                      <af:separator id="s4" styleClass="font-size:large;"
+                                    inlineStyle="border-style:solid; border-width:thin; width:80.0%;"/>
+                      <af:spacer width="20" height="10" id="s12"/>
+                      <af:separator id="s5" styleClass="font-size:large;"
+                                    inlineStyle="border-style:solid; border-width:thin; width:80.0%;"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl7" layout="horizontal">
+                      <af:spacer width="70" height="20" id="s6"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl8" layout="horizontal">
+                      <af:spacer width="5" height="30" id="s8"/>
+                      <af:outputText value="Descuentos Cargados:" id="ot2"
+                                     inlineStyle="font-size:medium;"
+                                     noWrap="true"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl9" layout="horizontal">
+                      <af:spacer width="5" height="30" id="s7"/>
+                      <af:inputText label="Label 1" id="it1" rows="1"
+                                    simple="true" columns="40"
+                                    contentStyle="font-size:medium;"/>
+                      <af:spacer width="10" height="10" id="s9"/>
+                      <af:inputText label="Label 2" id="it2" simple="true"
+                                    contentStyle="font-size:medium;"/>
+                      <af:spacer width="10" height="10" id="s15"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl11" layout="horizontal">
+                      <af:spacer width="10" height="20" id="s11"/>
+                    </af:panelGroupLayout>
+                    <af:panelGroupLayout id="pgl10" layout="vertical">
+                      <af:separator id="s10"
+                                    inlineStyle="border-style:solid; border-width:thin; width:80.0%;"/>
+                      <af:spacer width="10" height="20" id="s13"/>
+                    </af:panelGroupLayout>
+                  </af:panelGroupLayout>
+                </af:panelGroupLayout>
+              </af:gridCell>
+              <af:gridCell marginStart="5px" width="33%" marginEnd="5px"
+                           id="gc1"/>
+            </af:gridRow>
+            <af:gridRow marginTop="5px" height="auto" marginBottom="5px"
+                        id="gr3">
+              <af:gridCell marginStart="5px" width="34%" id="gc9"/>
+              <af:gridCell marginStart="5px" width="33%" id="gc3"/>
+              <af:gridCell marginStart="5px" width="33%" marginEnd="5px"
+                           id="gc4"/>
+            </af:gridRow>
+          </af:panelGridLayout>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

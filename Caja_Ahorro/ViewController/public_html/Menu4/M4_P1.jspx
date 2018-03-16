@@ -8,9 +8,7 @@
     <af:document id="d1">
       <af:form id="f1">
         <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
-          <f:facet name="Body_Menus">
-            
-          </f:facet>
+          <f:facet name="Body_Menus"/>
         </af:pageTemplate>
       </af:form>
     </af:document>

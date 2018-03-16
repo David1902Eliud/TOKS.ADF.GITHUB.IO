@@ -8,7 +8,278 @@
     <af:document id="d1">
       <af:form id="f1">
         <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
-          <f:facet name="Body_Menus"/>
+          <f:facet name="Body_Menus">
+            <af:group id="g1">
+              <af:panelGroupLayout id="pgl30" layout="scroll">
+                <af:panelGridLayout id="pgl1">
+                  <af:gridRow marginTop="5px" height="auto" id="gr3">
+                    <af:gridCell marginStart="400px" width="100%"
+                                 marginEnd="5px" id="gc1">
+                      <af:panelGroupLayout id="pgl2">
+                        <af:panelGroupLayout id="pgl3" layout="horizontal"
+                                             inlineStyle="font-size:medium;">
+                          <af:outputText value="Datos del Empleado" id="ot1"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl4" layout="vertical">
+                          <af:spacer width="10" height="5" id="s1"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl5" layout="horizontal">
+                          <af:outputText value="N° Empleado" id="ot2"
+                                         inlineStyle="font-size:medium;"
+                                         noWrap="true"/>
+                          <af:spacer width="10" height="10" id="s20"/>
+                          <af:inputText label="N° Empleado" id="it1" rows="1"
+                                        columns="10"
+                                        contentStyle="font-size:medium;"
+                                        simple="true"/>
+                          <af:spacer width="50" height="10" id="s2"/>
+                          <af:outputText value="Socio" id="ot3"
+                                         inlineStyle="font-size:medium;"/>
+                          <af:spacer width="10" height="10" id="s21"/>
+                          <af:inputText label="Label 1" id="it2" simple="true"
+                                        contentStyle="font-size:medium;"
+                                        columns="27"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl7" layout="vertical">
+                          <af:spacer width="10" height="5" id="s4"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl6" layout="horizontal">
+                          <af:outputText value="Clave Sucursal" id="ot4"
+                                         inlineStyle="font-size:medium;"
+                                         noWrap="true"/>
+                          <af:spacer width="10" height="10" id="s22"/>
+                          <af:inputText label="Label 2" id="it3" simple="true"
+                                        columns="7"
+                                        contentStyle="font-size:medium;"/>
+                          <af:spacer width="28" height="10" id="s3"/>
+                          <af:inputText label="Label 3" id="it4" simple="true"
+                                        contentStyle="font-size:medium;"
+                                        columns="38"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl8" layout="vertical">
+                          <af:spacer width="10" height="5" id="s5"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl9" layout="horizontal">
+                          <af:outputText value="Depto" id="ot5"
+                                         inlineStyle="font-size:medium;"
+                                         noWrap="true"/>
+                          <af:spacer width="10" height="10" id="s23"/>
+                          <af:inputText label="Label 4" id="it5" simple="true"
+                                        contentStyle="font-size:medium;"
+                                        columns="62"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl10" layout="vertical">
+                          <af:spacer width="10" height="5" id="s6"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl11" layout="horizontal">
+                          <af:outputText value="Empresa Labora" id="ot6"
+                                         inlineStyle="font-size:medium;"
+                                         noWrap="true"/>
+                          <af:spacer width="26" height="10" id="s24"/>
+                          <af:inputText label="Label 5" id="it6"
+                                        contentStyle="font-size:medium;"
+                                        simple="true" columns="50"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl13" layout="vertical">
+                          <af:spacer width="10" height="5" id="s8"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl12"
+                                             inlineStyle="font-size:medium;"
+                                             layout="horizontal">
+                          <af:outputText value="Puesto" id="ot7"
+                                         inlineStyle="font-size:medium;"/>
+                          <af:spacer width="10" height="10" id="s25"/>
+                          <af:inputText label="Label 6" id="it7" simple="true"
+                                        columns="18"
+                                        contentStyle="font-size:medium;"/>
+                          <af:spacer width="28" height="10" id="s7"/>
+                          <af:outputText value="Fecha Ingreso" id="ot8"
+                                         inlineStyle="font-size:medium;"
+                                         noWrap="true"/>
+                          <af:spacer width="10" height="10" id="s26"/>
+                          <af:inputDate id="id1"
+                                        contentStyle="font-size:medium;"
+                                        columns="18"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl14" layout="vertical">
+                          <af:spacer width="10" height="5" id="s9"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl15" layout="horizontal">
+                          <af:spacer width="250" height="10" id="s10"/>
+                          <af:outputText value="Fecha Baja" id="ot9"
+                                         noWrap="true"
+                                         inlineStyle="font-size:medium;"/>
+                          <af:spacer width="29" height="10" id="s27"/>
+                          <af:inputDate id="id4" columns="18"
+                                        contentStyle="font-size:medium;"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl26" layout="vertical">
+                          <af:spacer width="10" height="10" id="s28"/>
+                        </af:panelGroupLayout>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" id="gr2">
+                    <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                                 id="gc3">
+                      <af:panelGroupLayout id="pgl16">
+                        <af:panelGroupLayout id="pgl17" layout="horizontal">
+                          <af:outputText value="Datos del Préstamo" id="ot10"
+                                         inlineStyle="font-size:medium;"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl18" layout="vertical">
+                          <af:spacer width="10" height="5" id="s11"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl19" layout="horizontal">
+                          <af:outputText value="Tipo" id="ot11"
+                                         inlineStyle="font-size:medium;"/>
+                          <af:spacer width="10" height="10" id="s29"/>
+                          <af:selectOneChoice label="Label 1" id="soc1"
+                                              simple="true"
+                                              contentStyle="width:150px;font-size:medium;">
+                            <af:selectItem label="1" value="1" id="si1"/>
+                          </af:selectOneChoice>
+                          <af:spacer width="60" height="10" id="s12"/>
+                          <af:outputText value="Fecha Ingreso" id="ot12"
+                                         inlineStyle="font-size:medium;"
+                                         noWrap="true"/>
+                          <af:spacer width="10" height="10" id="s30"/>
+                          <af:inputDate id="id2" simple="true" columns="18"
+                                        contentStyle="font-size:medium;"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl20" layout="vertical">
+                          <af:spacer width="10" height="10" id="s13"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl21" layout="horizontal">
+                          <af:outputText value="N° Solicitud" id="ot13"
+                                         inlineStyle="font-size:medium;"/>
+                          <af:spacer width="10" height="10" id="s31"/>
+                          <af:inputText label="Label 8" id="it9" simple="true"
+                                        contentStyle="font-size:medium;"
+                                        columns="5"/>
+                          <af:spacer width="10" height="10" id="s14"/>
+                          <af:outputText value="Numero Pagos" id="ot14"
+                                         inlineStyle="font-size:medium;"
+                                         noWrap="true"/>
+                          <af:spacer width="10" height="10" id="s32"/>
+                          <af:inputText id="it10" simple="true" columns="2"
+                                        contentStyle="font-size:medium;"/>
+                          <af:spacer width="15" height="10" id="s15"/>
+                          <af:outputText value="Tasa" id="ot15"
+                                         inlineStyle="font-size:medium;"/>
+                          <af:spacer width="5" height="10" id="s33"/>
+                          <af:inputText id="it11" rows="1" columns="3"
+                                        contentStyle="font-size:medium;"/>
+                          <af:outputText value="% mensual" id="ot16"
+                                         noWrap="true"
+                                         inlineStyle="font-size:medium;"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl22" layout="vertical">
+                          <af:spacer width="10" height="10" id="s16"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl23" layout="horizontal">
+                          <af:outputText value="Monto Solicitado" id="ot17"
+                                         inlineStyle="font-size:medium;"/>
+                          <af:spacer width="10" height="10" id="s34"/>
+                          <af:inputText id="it12" simple="true" columns="12"
+                                        contentStyle="font-size:medium;"/>
+                          <af:spacer width="20" height="10" id="s17"/>
+                          <af:outputText value="Fecha Inicio" id="ot18"
+                                         inlineStyle="font-size:medium;"/>
+                          <af:spacer width="10" height="10" id="s35"/>
+                          <af:inputDate id="id3" columns="17"
+                                        contentStyle="font-size:medium;"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl24" layout="vertical">
+                          <af:spacer width="10" height="10" id="s18"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl25" layout="horizontal">
+                          <af:outputText value="Monto Actual" id="ot19"
+                                         inlineStyle="font-size:medium;"/>
+                          <af:spacer width="10" height="10" id="s36"/>
+                          <af:inputText id="it13" simple="true"
+                                        contentStyle="font-size:medium;"
+                                        columns="12"/>
+                          <af:spacer width="46" height="10" id="s19"/>
+                          <af:outputText value="Estatus" id="ot20"
+                                         inlineStyle="font-size:medium;"/>
+                          <af:spacer width="10" height="10" id="s37"/>
+                          <af:inputText id="it14" simple="true"
+                                        contentStyle="font-size:medium;"
+                                        columns="22"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl27" layout="vertical">
+                          <af:spacer width="10" height="10" id="s38"/>
+                        </af:panelGroupLayout>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                  <af:gridRow marginTop="5px" height="auto" marginBottom="5px"
+                              id="gr1">
+                    <af:gridCell id="gc4">
+                      <af:panelGroupLayout id="pgl28" layout="horizontal">
+                        <af:panelGroupLayout id="pgl29" layout="vertical">
+                          <af:panelGroupLayout id="pgl32" layout="vertical">
+                            <af:outputText value="Datos del aval" id="ot21"
+                                           inlineStyle="font-size:medium;"/>
+                          </af:panelGroupLayout>
+                          <af:panelGroupLayout id="pgl36" layout="vertical">
+                            <af:spacer width="10" height="10" id="s39"/>
+                          </af:panelGroupLayout>
+                          <af:panelGroupLayout id="pgl33" layout="horizontal"
+                                               inlineStyle="height:137px;">
+                            <af:table var="row" rowBandingInterval="0" id="t1"
+                                      inlineStyle="height:137px;" width="250">
+                              <af:column sortable="false"
+                                         headerText="N° Empleado"
+                                         id="c1" width="50" align="center"
+                                         inlineStyle="font-size:medium;">
+                                <af:outputText value="#{row.col1}" id="ot24"/>
+                              </af:column>
+                              <af:column sortable="false" headerText="Nombre"
+                                         id="c5" width="200" align="center"
+                                         inlineStyle="font-size:medium;">
+                                <af:outputText value="#{row.col2}" id="ot23"/>
+                              </af:column>
+                            </af:table>
+                          </af:panelGroupLayout>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl38">
+                          <af:spacer width="20" height="10" id="s41"/>
+                        </af:panelGroupLayout>
+                        <af:panelGroupLayout id="pgl31" layout="vertical">
+                          <af:panelGroupLayout id="pgl34" layout="vertical">
+                            <af:outputText value="Descuentos Propuestos"
+                                           id="ot22"
+                                           inlineStyle="font-size:medium;"/>
+                          </af:panelGroupLayout>
+                          <af:panelGroupLayout id="pgl37" layout="vertical">
+                            <af:spacer width="10" height="10" id="s40"/>
+                          </af:panelGroupLayout>
+                          <af:panelGroupLayout id="pgl35" layout="horizontal">
+                            <af:table var="row" rowBandingInterval="0" id="t2"
+                                      inlineStyle="height:137px;" width="250">
+                              <af:column sortable="false" headerText="Descuento"
+                                         id="c8" align="center"
+                                         inlineStyle="font-size:medium;"
+                                         width="125">
+                                <af:outputText value="#{row.col1}" id="ot30"/>
+                              </af:column>
+                              <af:column sortable="false" headerText="Monto"
+                                         id="c6" width="125" align="center"
+                                         inlineStyle="font-size:medium;">
+                                <af:outputText value="#{row.col2}" id="ot28"/>
+                              </af:column>
+                            </af:table>
+                          </af:panelGroupLayout>
+                        </af:panelGroupLayout>
+                      </af:panelGroupLayout>
+                    </af:gridCell>
+                  </af:gridRow>
+                </af:panelGridLayout>
+              </af:panelGroupLayout>
+            </af:group>
+          </f:facet>
         </af:pageTemplate>
       </af:form>
     </af:document>

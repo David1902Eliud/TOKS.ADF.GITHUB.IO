@@ -8,7 +8,55 @@
     <af:document id="d1">
       <af:form id="f1">
         <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
-          <f:facet name="Body_Menus"/>
+          <f:facet name="Body_Menus">
+            <af:panelGridLayout id="pgl1">
+              <af:gridRow marginTop="5px" height="auto" id="gr1">
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                             id="gc1">
+                  <af:table var="row" rowBandingInterval="0" id="t1"
+                            width="743" inlineStyle="height:109px;">
+                    <af:column sortable="false" headerText="No Unidad" id="c3">
+                      <af:outputText value="#{row.col1}" id="ot6"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Unidad" id="c4">
+                      <af:outputText value="#{row.col2}" id="ot4"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Estafeta" id="c1">
+                      <af:outputText value="#{row.col3}" id="ot7"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Nombre" id="c2">
+                      <af:outputText value="#{row.col4}" id="ot1"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Beneficiario"
+                               id="c7">
+                      <af:outputText value="#{row.col5}" id="ot3"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="Parentesco" id="c6">
+                      <af:outputText value="#{row.col6}" id="ot2"/>
+                    </af:column>
+                    <af:column sortable="false" headerText="%" id="c5">
+                      <af:outputText value="#{row.col7}" id="ot5"/>
+                    </af:column>
+                  </af:table>
+                </af:gridCell>
+              </af:gridRow>
+              <af:gridRow marginTop="5px" height="auto" marginBottom="5px"
+                          id="gr2">
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                             id="gc2">
+                  <af:panelGroupLayout id="pgl2"
+                                       inlineStyle="border-color:transparent; width:716px;"
+                                       layout="horizontal">
+                    <af:activeCommandToolbarButton text="Guardar"
+                                                   id="actb1"
+                                                   inlineStyle="width:25%;"/>
+                    <af:activeCommandToolbarButton text="Autorizar" id="actb2"
+                                                   inlineStyle="width:25%;"/>
+                  </af:panelGroupLayout>
+                </af:gridCell>
+              </af:gridRow>
+            </af:panelGridLayout>
+          </f:facet>
         </af:pageTemplate>
       </af:form>
     </af:document>

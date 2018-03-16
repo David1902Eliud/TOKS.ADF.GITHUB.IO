@@ -69,13 +69,27 @@
   <view id="M3_P12">
     <page>/Menu3/M3_P12.jspx</page>
   </view>
-  <view id="M4_P1"></view>
-  <view id="M5_P1"></view>
-  <view id="M5_P2"></view>
-  <view id="M5_P3"></view>
-  <view id="M6_P1"></view>
-  <view id="M6_P2"></view>
-  <view id="M7_P1"></view>
+  <view id="M4_P1">
+    <page>/Menu4/M4_P1.jspx</page>
+  </view>
+  <view id="M5_P1">
+    <page>/Menu5/M5_P1.jspx</page>
+  </view>
+  <view id="M5_P2">
+    <page>/Menu5/M5_P2.jspx</page>
+  </view>
+  <view id="M5_P3">
+    <page>/Menu5/M5_P3.jspx</page>
+  </view>
+  <view id="M6_P1">
+    <page>/Menu6/M6_P1.jspx</page>
+  </view>
+  <view id="M6_P2">
+    <page>/Menu6/M6_P2.jspx</page>
+  </view>
+  <view id="M7_P1">
+    <page>/Menu7/M7_P1.jspx</page>
+  </view>
   <control-flow-rule id="__1">
     <from-activity-id id="__2">*</from-activity-id>
     <control-flow-case id="__4">
