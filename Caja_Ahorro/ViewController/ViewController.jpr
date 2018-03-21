@@ -174,6 +174,28 @@
       <value n="j2eeWebAppName" v="Caja_Ahorro-ViewController-webapp"/>
       <value n="j2eeWebContextRoot" v="Caja_Ahorro-ViewController-context-root"/>
    </hash>
+   <hash n="oracle.jdeveloper.model.PathsConfiguration">
+      <hash n="javaContentSet">
+         <list n="constituent-sets">
+            <hash>
+               <url n="content-folder-url" path="adfmsrc/view/"/>
+               <list n="pattern-filters">
+                  <string v="+view/Puesto.java"/>
+                  <string v="+view/CatalogoAntiguedad.java"/>
+               </list>
+               <list n="url-path">
+                  <url path="adfmsrc/"/>
+               </list>
+            </hash>
+         </list>
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="src/"/>
+         </list>
+      </hash>
+   </hash>
    <hash n="oracle.jdeveloper.runner.RunConfigurations">
       <hash n="runConfigurationDefinitions">
          <hash n="Default">

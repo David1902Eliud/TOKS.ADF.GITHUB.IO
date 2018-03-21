@@ -9,7 +9,7 @@
   PackageName="catalogo">
   <DesignTime>
     <Attr Name="_jprName" Value="../../Catalogos.jpr"/>
-    <Attr Name="_NamedConnection" Value="HR"/>
+    <Attr Name="_NamedConnection" Value="Toks_Bolinf"/>
     <Attr Name="_appModuleNames0" Value="catalogo.AppModule"/>
   </DesignTime>
   <Containee
