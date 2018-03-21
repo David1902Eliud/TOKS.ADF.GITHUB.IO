@@ -11,150 +11,149 @@
         <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
           <f:facet name="Body_Menus">
             <af:panelBox text="Catálogo de Descuentos" id="pb1" background="dark"
-                         type="stretch" showDisclosure="false" ramp="core"
-                         inlineStyle="font-family:Arial, Helvetica, sans-serif; font-size:large; font-weight:bold;">
+                         type="stretch" showDisclosure="false" ramp="highlight">
               <f:facet name="toolbar">
                 <af:toolbar id="t1">
                   <af:commandButton actionListener="#{bindings.CreateInsert.execute}"
                                     text="Nuevo"
                                     disabled="#{!bindings.CreateInsert.enabled}"
-                                    id="cb1"
-                                    inlineStyle="font-family:Arial, Helvetica, sans-serif; font-size:small;">
-                    <af:autoSaveBehavior/>
-                  </af:commandButton>
+                                    id="cb1"/>
                   <af:commandButton actionListener="#{bindings.Delete.execute}"
                                     text="Eliminar"
                                     disabled="#{!bindings.Delete.enabled}"
-                                    id="cb2"
-                                    inlineStyle="font-family:Arial, Helvetica, sans-serif; font-size:small;"/>
+                                    id="cb2"/>
                   <af:commandButton actionListener="#{bindings.Commit.execute}"
                                     text="Guardar"
                                     disabled="#{!bindings.Commit.enabled}"
-                                    id="cb3"
-                                    inlineStyle="font-family:Arial, Helvetica, sans-serif; font-size:small;"/>
+                                    id="cb3"/>
                   <af:commandButton actionListener="#{bindings.Rollback.execute}"
                                     text="Eliminar"
                                     disabled="#{!bindings.Rollback.enabled}"
-                                    immediate="true" id="cb4"
-                                    inlineStyle="font-family:Arial, Helvetica, sans-serif; font-size:small;">
+                                    immediate="true" id="cb4">
                     <af:resetActionListener/>
                   </af:commandButton>
                 </af:toolbar>
               </f:facet>
-              <af:table value="#{bindings.ToksCaDescuentosView1.collectionModel}"
-                        var="row"
-                        rows="#{bindings.ToksCaDescuentosView1.rangeSize}"
-                        emptyText="#{bindings.ToksCaDescuentosView1.viewable ? 'No data to display.' : 'Access Denied.'}"
-                        fetchSize="#{bindings.ToksCaDescuentosView1.rangeSize}"
-                        rowBandingInterval="0"
-                        filterModel="#{bindings.ToksCaDescuentosView1Query.queryDescriptor}"
-                        queryListener="#{bindings.ToksCaDescuentosView1Query.processQuery}"
-                        filterVisible="true" varStatus="vs"
-                        selectedRowKeys="#{bindings.ToksCaDescuentosView1.collectionModel.selectedRow}"
-                        selectionListener="#{bindings.ToksCaDescuentosView1.collectionModel.makeCurrent}"
-                        rowSelection="single" id="t2"
-                        inlineStyle="width:100.0%;"
-                        partialTriggers="::cb1 ::cb2">
-                <af:column sortProperty="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.name}"
-                           filterable="true" sortable="true"
-                           headerText="Número de Descuento" id="c5" width="200"
-                           inlineStyle="font-family:Arial, Helvetica, sans-serif; font-size:large; font-weight:bold;">
-                  <af:inputText value="#{row.bindings.NoDescuento.inputValue}"
-                                label="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.label}"
-                                required="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.mandatory}"
-                                columns="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.displayWidth}"
-                                maximumLength="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.precision}"
-                                shortDesc="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.tooltip}"
-                                id="it1"
-                                inlineStyle="font-family:Arial, Helvetica, sans-serif; font-size:medium;">
-                    <f:validator binding="#{row.bindings.NoDescuento.validator}"/>
-                    <af:convertNumber groupingUsed="false"
-                                      pattern="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.format}"/>
-                  </af:inputText>
-                </af:column>
-                <af:column sortProperty="#{bindings.ToksCaDescuentosView1.hints.Descuento.name}"
-                           filterable="true" sortable="true"
-                           headerText="Nombre de Descuento" id="c4"
-                           minimumWidth="60" width="800"
-                           inlineStyle="font-family:Arial, Helvetica, sans-serif; font-size:large; font-weight:bold;">
-                  <af:inputText value="#{row.bindings.Descuento.inputValue}"
-                                label="#{bindings.ToksCaDescuentosView1.hints.Descuento.label}"
-                                required="#{bindings.ToksCaDescuentosView1.hints.Descuento.mandatory}"
-                                columns="#{bindings.ToksCaDescuentosView1.hints.Descuento.displayWidth}"
-                                maximumLength="#{bindings.ToksCaDescuentosView1.hints.Descuento.precision}"
-                                shortDesc="#{bindings.ToksCaDescuentosView1.hints.Descuento.tooltip}"
-                                id="it3" contentStyle="min-width:100%;"
-                                inlineStyle="font-family:Arial, Helvetica, sans-serif; font-size:medium;">
-                    <f:validator binding="#{row.bindings.Descuento.validator}"/>
-                  </af:inputText>
-                </af:column>
-                <af:column sortProperty="#{bindings.ToksCaDescuentosView1.hints.CreadoPor.name}"
-                           filterable="true" sortable="true"
-                           headerText="#{bindings.ToksCaDescuentosView1.hints.CreadoPor.label}"
-                           id="c6" visible="false">
-                  <af:inputText value="#{row.bindings.CreadoPor.inputValue}"
-                                label="#{bindings.ToksCaDescuentosView1.hints.CreadoPor.label}"
-                                required="#{bindings.ToksCaDescuentosView1.hints.CreadoPor.mandatory}"
-                                columns="#{bindings.ToksCaDescuentosView1.hints.CreadoPor.displayWidth}"
-                                maximumLength="#{bindings.ToksCaDescuentosView1.hints.CreadoPor.precision}"
-                                shortDesc="#{bindings.ToksCaDescuentosView1.hints.CreadoPor.tooltip}"
-                                id="it4">
-                    <f:validator binding="#{row.bindings.CreadoPor.validator}"/>
-                    <af:convertNumber groupingUsed="false"
-                                      pattern="#{bindings.ToksCaDescuentosView1.hints.CreadoPor.format}"/>
-                  </af:inputText>
-                </af:column>
-                <af:column sortProperty="#{bindings.ToksCaDescuentosView1.hints.FechaCreacion.name}"
-                           filterable="true" sortable="true"
-                           headerText="#{bindings.ToksCaDescuentosView1.hints.FechaCreacion.label}"
-                           id="c1" visible="false">
-                  <f:facet name="filter">
-                    <af:inputDate value="#{vs.filterCriteria.FechaCreacion}"
-                                  id="id2"/>
-                  </f:facet>
-                  <af:inputDate value="#{row.bindings.FechaCreacion.inputValue}"
-                                label="#{bindings.ToksCaDescuentosView1.hints.FechaCreacion.label}"
-                                required="#{bindings.ToksCaDescuentosView1.hints.FechaCreacion.mandatory}"
-                                shortDesc="#{bindings.ToksCaDescuentosView1.hints.FechaCreacion.tooltip}"
-                                id="id1">
-                    <f:validator binding="#{row.bindings.FechaCreacion.validator}"/>
-                    <af:convertDateTime pattern="#{bindings.ToksCaDescuentosView1.hints.FechaCreacion.format}"/>
-                  </af:inputDate>
-                </af:column>
-                <af:column sortProperty="#{bindings.ToksCaDescuentosView1.hints.ActualizadoPor.name}"
-                           filterable="true" sortable="true"
-                           headerText="#{bindings.ToksCaDescuentosView1.hints.ActualizadoPor.label}"
-                           id="c2" visible="false">
-                  <af:inputText value="#{row.bindings.ActualizadoPor.inputValue}"
-                                label="#{bindings.ToksCaDescuentosView1.hints.ActualizadoPor.label}"
-                                required="#{bindings.ToksCaDescuentosView1.hints.ActualizadoPor.mandatory}"
-                                columns="#{bindings.ToksCaDescuentosView1.hints.ActualizadoPor.displayWidth}"
-                                maximumLength="#{bindings.ToksCaDescuentosView1.hints.ActualizadoPor.precision}"
-                                shortDesc="#{bindings.ToksCaDescuentosView1.hints.ActualizadoPor.tooltip}"
-                                id="it2">
-                    <f:validator binding="#{row.bindings.ActualizadoPor.validator}"/>
-                    <af:convertNumber groupingUsed="false"
-                                      pattern="#{bindings.ToksCaDescuentosView1.hints.ActualizadoPor.format}"/>
-                  </af:inputText>
-                </af:column>
-                <af:column sortProperty="#{bindings.ToksCaDescuentosView1.hints.FechaActualizacion.name}"
-                           filterable="true" sortable="true"
-                           headerText="#{bindings.ToksCaDescuentosView1.hints.FechaActualizacion.label}"
-                           id="c3" visible="false">
-                  <f:facet name="filter">
-                    <af:inputDate value="#{vs.filterCriteria.FechaActualizacion}"
-                                  id="id3"/>
-                  </f:facet>
-                  <af:inputDate value="#{row.bindings.FechaActualizacion.inputValue}"
-                                label="#{bindings.ToksCaDescuentosView1.hints.FechaActualizacion.label}"
-                                required="#{bindings.ToksCaDescuentosView1.hints.FechaActualizacion.mandatory}"
-                                shortDesc="#{bindings.ToksCaDescuentosView1.hints.FechaActualizacion.tooltip}"
-                                id="id4">
-                    <f:validator binding="#{row.bindings.FechaActualizacion.validator}"/>
-                    <af:convertDateTime pattern="#{bindings.ToksCaDescuentosView1.hints.FechaActualizacion.format}"/>
-                  </af:inputDate>
-                </af:column>
-              </af:table>
+              <af:panelGridLayout id="pgl1">
+                <af:gridRow marginTop="20px" height="auto" marginBottom="20px"
+                            id="gr1">
+                  <af:gridCell marginStart="20px" width="20%" id="gc1"/>
+                  <af:gridCell marginStart="5px" width="60%" id="gc2">
+                    <af:table value="#{bindings.ToksCaDescuentosView1.collectionModel}"
+                              var="row"
+                              rows="#{bindings.ToksCaDescuentosView1.rangeSize}"
+                              emptyText="#{bindings.ToksCaDescuentosView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              fetchSize="#{bindings.ToksCaDescuentosView1.rangeSize}"
+                              rowBandingInterval="0"
+                              filterModel="#{bindings.ToksCaDescuentosView1Query.queryDescriptor}"
+                              queryListener="#{bindings.ToksCaDescuentosView1Query.processQuery}"
+                              filterVisible="true" varStatus="vs"
+                              selectedRowKeys="#{bindings.ToksCaDescuentosView1.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.ToksCaDescuentosView1.collectionModel.makeCurrent}"
+                              rowSelection="single" id="t2"
+                              inlineStyle="width:100.0%;"
+                              partialTriggers="::cb1 ::cb2">
+                      <af:column sortProperty="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="Número de Descuento" id="c5">
+                        <af:inputText value="#{row.bindings.NoDescuento.inputValue}"
+                                      label="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.label}"
+                                      required="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.mandatory}"
+                                      columns="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.displayWidth}"
+                                      maximumLength="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.precision}"
+                                      shortDesc="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.tooltip}"
+                                      id="it1">
+                          <f:validator binding="#{row.bindings.NoDescuento.validator}"/>
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.format}"/>
+                        </af:inputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.ToksCaDescuentosView1.hints.Descuento.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="Nombre de Descuento" id="c4"
+                                 minimumWidth="60" width="400">
+                        <af:inputText value="#{row.bindings.Descuento.inputValue}"
+                                      label="#{bindings.ToksCaDescuentosView1.hints.Descuento.label}"
+                                      required="#{bindings.ToksCaDescuentosView1.hints.Descuento.mandatory}"
+                                      columns="#{bindings.ToksCaDescuentosView1.hints.Descuento.displayWidth}"
+                                      maximumLength="#{bindings.ToksCaDescuentosView1.hints.Descuento.precision}"
+                                      shortDesc="#{bindings.ToksCaDescuentosView1.hints.Descuento.tooltip}"
+                                      id="it3" contentStyle="min-width:100%;">
+                          <f:validator binding="#{row.bindings.Descuento.validator}"/>
+                        </af:inputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.ToksCaDescuentosView1.hints.CreadoPor.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="#{bindings.ToksCaDescuentosView1.hints.CreadoPor.label}"
+                                 id="c6" visible="false">
+                        <af:inputText value="#{row.bindings.CreadoPor.inputValue}"
+                                      label="#{bindings.ToksCaDescuentosView1.hints.CreadoPor.label}"
+                                      required="#{bindings.ToksCaDescuentosView1.hints.CreadoPor.mandatory}"
+                                      columns="#{bindings.ToksCaDescuentosView1.hints.CreadoPor.displayWidth}"
+                                      maximumLength="#{bindings.ToksCaDescuentosView1.hints.CreadoPor.precision}"
+                                      shortDesc="#{bindings.ToksCaDescuentosView1.hints.CreadoPor.tooltip}"
+                                      id="it4">
+                          <f:validator binding="#{row.bindings.CreadoPor.validator}"/>
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.ToksCaDescuentosView1.hints.CreadoPor.format}"/>
+                        </af:inputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.ToksCaDescuentosView1.hints.FechaCreacion.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="#{bindings.ToksCaDescuentosView1.hints.FechaCreacion.label}"
+                                 id="c1" visible="false">
+                        <f:facet name="filter">
+                          <af:inputDate value="#{vs.filterCriteria.FechaCreacion}"
+                                        id="id2"/>
+                        </f:facet>
+                        <af:inputDate value="#{row.bindings.FechaCreacion.inputValue}"
+                                      label="#{bindings.ToksCaDescuentosView1.hints.FechaCreacion.label}"
+                                      required="#{bindings.ToksCaDescuentosView1.hints.FechaCreacion.mandatory}"
+                                      shortDesc="#{bindings.ToksCaDescuentosView1.hints.FechaCreacion.tooltip}"
+                                      id="id1">
+                          <f:validator binding="#{row.bindings.FechaCreacion.validator}"/>
+                          <af:convertDateTime pattern="#{bindings.ToksCaDescuentosView1.hints.FechaCreacion.format}"/>
+                        </af:inputDate>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.ToksCaDescuentosView1.hints.ActualizadoPor.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="#{bindings.ToksCaDescuentosView1.hints.ActualizadoPor.label}"
+                                 id="c2" visible="false">
+                        <af:inputText value="#{row.bindings.ActualizadoPor.inputValue}"
+                                      label="#{bindings.ToksCaDescuentosView1.hints.ActualizadoPor.label}"
+                                      required="#{bindings.ToksCaDescuentosView1.hints.ActualizadoPor.mandatory}"
+                                      columns="#{bindings.ToksCaDescuentosView1.hints.ActualizadoPor.displayWidth}"
+                                      maximumLength="#{bindings.ToksCaDescuentosView1.hints.ActualizadoPor.precision}"
+                                      shortDesc="#{bindings.ToksCaDescuentosView1.hints.ActualizadoPor.tooltip}"
+                                      id="it2">
+                          <f:validator binding="#{row.bindings.ActualizadoPor.validator}"/>
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.ToksCaDescuentosView1.hints.ActualizadoPor.format}"/>
+                        </af:inputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.ToksCaDescuentosView1.hints.FechaActualizacion.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="#{bindings.ToksCaDescuentosView1.hints.FechaActualizacion.label}"
+                                 id="c3" visible="false">
+                        <f:facet name="filter">
+                          <af:inputDate value="#{vs.filterCriteria.FechaActualizacion}"
+                                        id="id3"/>
+                        </f:facet>
+                        <af:inputDate value="#{row.bindings.FechaActualizacion.inputValue}"
+                                      label="#{bindings.ToksCaDescuentosView1.hints.FechaActualizacion.label}"
+                                      required="#{bindings.ToksCaDescuentosView1.hints.FechaActualizacion.mandatory}"
+                                      shortDesc="#{bindings.ToksCaDescuentosView1.hints.FechaActualizacion.tooltip}"
+                                      id="id4">
+                          <f:validator binding="#{row.bindings.FechaActualizacion.validator}"/>
+                          <af:convertDateTime pattern="#{bindings.ToksCaDescuentosView1.hints.FechaActualizacion.format}"/>
+                        </af:inputDate>
+                      </af:column>
+                    </af:table>
+                  </af:gridCell>
+                  <af:gridCell marginStart="5px" width="20%" marginEnd="20px"
+                               id="gc3"/>
+                </af:gridRow>
+              </af:panelGridLayout>
             </af:panelBox>
           </f:facet>
         </af:pageTemplate>

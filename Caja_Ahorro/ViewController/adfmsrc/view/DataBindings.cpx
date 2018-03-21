@@ -5,20 +5,12 @@
   <pageMap>
     <page path="/Menu3/M3_P01.jspx" usageId="view_M3_P01PageDef"/>
     <page path="/Menu3/M3_P02.jspx" usageId="view_M3_P02PageDef"/>
-<<<<<<< HEAD
-    <page path="/Menu3/M3_P03.jspx" usageId="view_M3_P03PageDef"/>
-=======
     <page path="/Menu3/M3_P05.jspx" usageId="view_M3_P05PageDef"/>
->>>>>>> 9c4620884fcd6a0d2ed645e485e02c193fd29ef4
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_M3_P01PageDef" path="Menu3.M3_P01PageDef"/>
     <page id="view_M3_P02PageDef" path="Menu3.M3_P02PageDef"/>
-<<<<<<< HEAD
-    <page id="view_M3_P03PageDef" path="Menu3.M3_P03PageDef"/>
-=======
     <page id="view_M3_P05PageDef" path="Menu3.M3_P05PageDef"/>
->>>>>>> 9c4620884fcd6a0d2ed645e485e02c193fd29ef4
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="catalogo"

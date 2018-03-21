@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <menu xmlns="http://myfaces.apache.org/trinidad/menu">
-  <groupNode id="itemNode_M1" label="Alta" idref="itemNode_M1_P1"
-             icon="../Img/icons/registros.png">
+  <groupNode id="itemNode_M1" label="Alta" idref="itemNode_M1_P1">
     <itemNode id="itemNode_M1_P1" label="PreAlta Socios" action="m1p1"
               focusViewId="/M1_P1"/>
     <itemNode id="itemNode_M1_P2" label="Alta de Socios" action="m1p2"
@@ -11,8 +10,7 @@
     <itemNode id="itemNode_M1_P4" label="Actualización de Beneficiarios" action="m1p4"
               focusViewId="/M1_P4"/>
   </groupNode>
-  <groupNode id="itemNode_M2" label="Préstamos" idref="itemNode_M2_P1"
-             icon="../Img/icons/pedir_dinero.png">
+  <groupNode id="itemNode_M2" label="Préstamos" idref="itemNode_M2_P1">
     <itemNode id="itemNode_M2_P1" label="Simulador de Préstamos" action="m2p1"
               focusViewId="/M2_P1"/>
     <itemNode id="itemNode_M2_P2" label="Autorización de Préstamos" action="m2p2"
@@ -22,8 +20,7 @@
     <itemNode id="itemNode_M2_P4" label="Descuentos Especiales Autorizados" action="m2p4"
               focusViewId="/M2_P4"/>
   </groupNode>
-  <groupNode id="itemNode_M3" label="Catálogos" idref="itemNode_M3_P01"
-             icon="../Img/icons/catalogo.png">
+  <groupNode id="itemNode_M3" label="Catálogos" idref="itemNode_M3_P01">
     <itemNode id="itemNode_M3_P01" label="Catálogo de Tasas para Préstamos" action="m3p1"
               focusViewId="/M3_P01"/>
     <itemNode id="itemNode_M3_P02" label="Catálogo de Descuentos" action="m3p2"
@@ -53,13 +50,11 @@
     <itemNode id="itemNode_M3_P12" label="Tipos para Distribucion de Intereses" action="m3p12"
               focusViewId="/M3_P12"/>
   </groupNode>
-  <groupNode id="itemNode_M4" label="Retiros y Bajas" idref="itemNode_M4_P1"
-             icon="../Img/icons/retiros_y_bajas.png">
+  <groupNode id="itemNode_M4" label="Retiros y Bajas" idref="itemNode_M4_P1">
     <itemNode id="itemNode_M4_P1" label="Retiros y Baja" action="m4p1"
               focusViewId="/M4_P1"/>
   </groupNode>
-  <groupNode id="itemNode_M5" label="Incidencias para Nominas" idref="itemNode_M5_P1"
-             icon="../Img/icons/incidencias_nomina.png">
+  <groupNode id="itemNode_M5" label="Incidencias para Nominas" idref="itemNode_M5_P1">
     <itemNode id="itemNode_M5_P1"
               label="Carga de Incidencias - Descuentos Especiales" action="m5p1"
               focusViewId="/M5_P1"/>
@@ -68,15 +63,13 @@
     <itemNode id="itemNode_M5_P3" label="TEF - Cheques" action="m5p3"
               focusViewId="/M5_P3"/>
   </groupNode>
-  <groupNode id="itemNode_M6" label="Cierre Anual de Cajas" idref="itemNode_M6_P1"
-             icon="../Img/icons/cierre_anual_caja.png">
+  <groupNode id="itemNode_M6" label="Cierre Anual de Cajas" idref="itemNode_M6_P1">
     <itemNode id="itemNode_M6_P1" label="Cierre Anual de Caja de Ahorro" action="m6p1"
               focusViewId="/M6_P1"/>
     <itemNode id="itemNode_M6_P2" label="Pre-Captura Cierre Anual" action="m6p2"
               focusViewId="/M6_P2"/>
   </groupNode>
-  <groupNode id="itemNode_M7" label="Aportaciones y Anticipos" idref="itemNode_M7_P1"
-             icon="../Img/icons/aportaciones_anticipos.png">
+  <groupNode id="itemNode_M7" label="Descuentos especiales" idref="itemNode_M7_P1">
     <itemNode id="itemNode_M7_P1" label="Aportaciones Voluntarias" action="m7p1"
               focusViewId="/M7_P1"/>
   </groupNode>
