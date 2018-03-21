@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ToksCaAntiguedadView"
+  Version="11.1.1.66.73"
+  InheritPersonalization="merge"
+  SelectList="ToksCaAntiguedad.ID_ANTIGUEDAD, 
+       ToksCaAntiguedad.DIAS_PRESTACION, 
+       ToksCaAntiguedad.RANGO_INICIAL, 
+       ToksCaAntiguedad.RANGO_FINAL, 
+       ToksCaAntiguedad.CREADO_POR, 
+       ToksCaAntiguedad.FECHA_CREACION, 
+       ToksCaAntiguedad.ACTUALIZADO_POR, 
+       ToksCaAntiguedad.FECHA_ACTUALIZACION"
+  FromList="TOKS_CA_ANTIGUEDAD ToksCaAntiguedad"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+  </DesignTime>
+  <EntityUsage
+    Name="ToksCaAntiguedad"
+    Entity="catalogo.ToksCaAntiguedad"/>
+  <ViewAttribute
+    Name="IdAntiguedad"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="IdAntiguedad"
+    EntityUsage="ToksCaAntiguedad"
+    AliasName="ID_ANTIGUEDAD"/>
+  <ViewAttribute
+    Name="DiasPrestacion"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="DiasPrestacion"
+    EntityUsage="ToksCaAntiguedad"
+    AliasName="DIAS_PRESTACION"/>
+  <ViewAttribute
+    Name="RangoInicial"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="RangoInicial"
+    EntityUsage="ToksCaAntiguedad"
+    AliasName="RANGO_INICIAL"/>
+  <ViewAttribute
+    Name="RangoFinal"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="RangoFinal"
+    EntityUsage="ToksCaAntiguedad"
+    AliasName="RANGO_FINAL"/>
+  <ViewAttribute
+    Name="CreadoPor"
+    PrecisionRule="true"
+    EntityAttrName="CreadoPor"
+    EntityUsage="ToksCaAntiguedad"
+    AliasName="CREADO_POR"/>
+  <ViewAttribute
+    Name="FechaCreacion"
+    PrecisionRule="true"
+    EntityAttrName="FechaCreacion"
+    EntityUsage="ToksCaAntiguedad"
+    AliasName="FECHA_CREACION"/>
+  <ViewAttribute
+    Name="ActualizadoPor"
+    PrecisionRule="true"
+    EntityAttrName="ActualizadoPor"
+    EntityUsage="ToksCaAntiguedad"
+    AliasName="ACTUALIZADO_POR"/>
+  <ViewAttribute
+    Name="FechaActualizacion"
+    PrecisionRule="true"
+    EntityAttrName="FechaActualizacion"
+    EntityUsage="ToksCaAntiguedad"
+    AliasName="FECHA_ACTUALIZACION"/>
+</ViewObject>

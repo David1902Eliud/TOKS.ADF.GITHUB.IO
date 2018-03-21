@@ -244,4 +244,9 @@
       <value id="__113">/WEB-INF/menu_menus.xml</value>
     </managed-property>
   </managed-bean>
+  <managed-bean id="__120">
+    <managed-bean-name id="__118">CATAntiguedadBean</managed-bean-name>
+    <managed-bean-class id="__119">view.CatalogoAntiguedad</managed-bean-class>
+    <managed-bean-scope id="__117">request</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

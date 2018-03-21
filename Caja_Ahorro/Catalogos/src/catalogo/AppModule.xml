@@ -37,4 +37,7 @@
   <ViewUsage
     Name="ToksCaTiposContablesView1"
     ViewObjectName="catalogo.ToksCaTiposContablesView"/>
+  <ViewUsage
+    Name="ToksCaAntiguedadView1"
+    ViewObjectName="catalogo.ToksCaAntiguedadView"/>
 </AppModule>

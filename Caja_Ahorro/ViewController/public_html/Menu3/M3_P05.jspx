@@ -6,10 +6,143 @@
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <f:view>
     <af:document id="d1">
+      <af:messages id="m1"/>
       <af:form id="f1">
         <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
-          <f:facet name="Body_Menus"/>
+          <f:facet name="Body_Menus">
+            <af:panelBox text="Catalogo de Antiguedad" id="pb1">
+              <f:facet name="toolbar">
+                <af:toolbar id="t1">
+                  <af:commandButton
+                                    text="Nuevo"
+                                    disabled="#{!bindings.CreateInsert.enabled}"
+                                    id="cb1"
+                                    actionListener="#{bindings.CreateInsert.execute}"/>
+                  <af:commandButton
+                                    text="Eliminar"
+                                    disabled="#{!bindings.Delete.enabled}"
+                                    id="cb2"
+                                    actionListener="#{bindings.Delete.execute}"/>
+                </af:toolbar>
+              </f:facet>
+              <af:panelGridLayout id="pgl1">
+                <af:gridRow marginTop="20px" height="auto" marginBottom="20px"
+                            id="gr1">
+                  <af:gridCell marginStart="20px" width="20%" id="gc1"/>
+                  <af:gridCell marginStart="5px" width="60%" id="gc2">
+                    <af:table value="#{bindings.ToksCaAntiguedadView11.collectionModel}"
+                              var="row"
+                              rows="#{bindings.ToksCaAntiguedadView11.rangeSize}"
+                              emptyText="#{bindings.ToksCaAntiguedadView11.viewable ? 'No data to display.' : 'Access Denied.'}"
+                              fetchSize="#{bindings.ToksCaAntiguedadView11.rangeSize}"
+                              rowBandingInterval="0"
+                              filterModel="#{bindings.ToksCaAntiguedadView11Query.queryDescriptor}"
+                              queryListener="#{bindings.ToksCaAntiguedadView11Query.processQuery}"
+                              filterVisible="true" id="t2"
+                              binding="#{CATAntiguedadBean.tablaAntiguedadDescuentos}"
+                              width="1100" rowSelection="single" varStatus="vs"
+                              selectedRowKeys="#{bindings.ToksCaAntiguedadView11.collectionModel.selectedRow}"
+                              selectionListener="#{bindings.ToksCaAntiguedadView11.collectionModel.makeCurrent}"
+                              partialTriggers="::cb1 ::cb2">
+                      <af:column sortProperty="#{bindings.ToksCaAntiguedadView11.hints.IdAntiguedad.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="Id "
+                                 id="c1" align="center" width="150">
+                        <af:commandLink id="ot4" text="#{row.IdAntiguedad}">
+                          <af:showPopupBehavior popupId=":::p1"
+                                                triggerType="action"/>
+                        </af:commandLink>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.ToksCaAntiguedadView11.hints.DiasPrestacion.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="Días Otorgados"
+                                 id="c3" align="center" width="150">
+                        <af:outputText value="#{row.DiasPrestacion}" id="ot3">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.ToksCaAntiguedadView11.hints.DiasPrestacion.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.ToksCaAntiguedadView11.hints.RangoInicial.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="De (Años)"
+                                 id="c4" align="center" width="150">
+                        <af:outputText value="#{row.RangoInicial}" id="ot2">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.ToksCaAntiguedadView11.hints.RangoInicial.format}"/>
+                        </af:outputText>
+                      </af:column>
+                      <af:column sortProperty="#{bindings.ToksCaAntiguedadView11.hints.RangoFinal.name}"
+                                 filterable="true" sortable="true"
+                                 headerText="Hasta (Años)"
+                                 id="c2" align="center" width="150">
+                        <af:outputText value="#{row.RangoFinal}" id="ot1">
+                          <af:convertNumber groupingUsed="false"
+                                            pattern="#{bindings.ToksCaAntiguedadView11.hints.RangoFinal.format}"/>
+                        </af:outputText>
+                      </af:column>
+                    </af:table>
+                  </af:gridCell>
+                  <af:gridCell marginStart="5px" width="20%" marginEnd="20px"
+                               id="gc3"/>
+                </af:gridRow>
+              </af:panelGridLayout>
+            </af:panelBox>
+          </f:facet>
         </af:pageTemplate>
+        <af:popup id="p1"
+                  popupFetchListener="#{CATAntiguedadBean.editPopupFetchListener}"
+                  contentDelivery="lazyUncached">
+          <af:dialog id="d2" modal="true"
+                     dialogListener="#{CATAntiguedadBean.editDialogListener}">
+            <af:panelFormLayout id="pfl1" partialTriggers="pt1:t2"
+                                inlineStyle="width:333px; height:182px;">
+              <af:inputText value="#{bindings.IdAntiguedad.inputValue}"
+                            label="Id"
+                            required="#{bindings.IdAntiguedad.hints.mandatory}"
+                            columns="#{bindings.IdAntiguedad.hints.displayWidth}"
+                            maximumLength="#{bindings.IdAntiguedad.hints.precision}"
+                            shortDesc="#{bindings.IdAntiguedad.hints.tooltip}"
+                            id="it4">
+                <f:validator binding="#{bindings.IdAntiguedad.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.IdAntiguedad.format}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.DiasPrestacion.inputValue}"
+                            label="Días Otorgados"
+                            required="#{bindings.DiasPrestacion.hints.mandatory}"
+                            columns="#{bindings.DiasPrestacion.hints.displayWidth}"
+                            maximumLength="#{bindings.DiasPrestacion.hints.precision}"
+                            shortDesc="#{bindings.DiasPrestacion.hints.tooltip}"
+                            id="it2">
+                <f:validator binding="#{bindings.DiasPrestacion.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.DiasPrestacion.format}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.RangoInicial.inputValue}"
+                            label="De (Años)"
+                            required="#{bindings.RangoInicial.hints.mandatory}"
+                            columns="#{bindings.RangoInicial.hints.displayWidth}"
+                            maximumLength="#{bindings.RangoInicial.hints.precision}"
+                            shortDesc="#{bindings.RangoInicial.hints.tooltip}"
+                            id="it3">
+                <f:validator binding="#{bindings.RangoInicial.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.RangoInicial.format}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.RangoFinal.inputValue}"
+                            label="Hasta (Años)"
+                            required="#{bindings.RangoFinal.hints.mandatory}"
+                            columns="#{bindings.RangoFinal.hints.displayWidth}"
+                            maximumLength="#{bindings.RangoFinal.hints.precision}"
+                            shortDesc="#{bindings.RangoFinal.hints.tooltip}"
+                            id="it1">
+                <f:validator binding="#{bindings.RangoFinal.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.RangoFinal.format}"/>
+              </af:inputText>
+            </af:panelFormLayout>
+          </af:dialog>
+        </af:popup>
       </af:form>
     </af:document>
   </f:view>
