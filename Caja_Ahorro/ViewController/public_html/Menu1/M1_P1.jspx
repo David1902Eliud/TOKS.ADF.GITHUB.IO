@@ -9,7 +9,10 @@
       <af:form id="f1">
         <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
           <f:facet name="Body_Menus">
-            
+            <af:group id="g1">
+              <af:commandButton text="commandButton 1" id="cb1"/>
+              <af:commandButton text="commandButton 2" id="cb2"/>
+            </af:group>
           </f:facet>
         </af:pageTemplate>
       </af:form>

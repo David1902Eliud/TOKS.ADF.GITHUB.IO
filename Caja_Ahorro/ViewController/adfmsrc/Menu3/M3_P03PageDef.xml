@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.66.73" id="M3_P03PageDef" Package="Menu3">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ToksCaPeriodoCajaView1" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="ToksCaPeriodoCajaView1Iterator"/>
+    <searchRegion Binds="ToksCaPeriodoCajaView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="ToksCaPeriodoCajaView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="ToksCaPeriodoCajaView1Iterator"
+          id="ToksCaPeriodoCajaView1">
+      <nodeDefinition DefName="catalogo.ToksCaPeriodoCajaView"
+                      Name="ToksCaPeriodoCajaView10">
+        <AttrNames>
+          <Item Value="IdPeriodo"/>
+          <Item Value="RangoInicial"/>
+          <Item Value="RangoFinal"/>
+          <Item Value="Estatus"/>
+          <Item Value="CreadoPor"/>
+          <Item Value="FechaCreacion"/>
+          <Item Value="ActualizadoPor"/>
+          <Item Value="FechaActualizacion"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
