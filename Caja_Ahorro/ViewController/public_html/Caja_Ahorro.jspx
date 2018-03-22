@@ -16,7 +16,8 @@
                 <f:facet name="nodeStamp">
                   <af:commandNavigationItem id="ni1" text="#{m.label}"
                                             action="#{m.doAction}"
-                                            inlineStyle="color:White; width:30%; height:30%; text-align:center; vertical-align:sub; font-size:medium;"/>
+                                            inlineStyle="color:White; width:30%; height:30%; text-align:center; vertical-align:sub; font-size:medium;"
+                                            icon="#{m.icon}"/>
                 </f:facet>
               </af:navigationPane>
             </af:panelBox>
