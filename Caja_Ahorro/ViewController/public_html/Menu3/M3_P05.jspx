@@ -18,11 +18,6 @@
                                     disabled="#{!bindings.CreateInsert.enabled}"
                                     id="cb1"
                                     actionListener="#{bindings.CreateInsert.execute}"/>
-                  <af:commandButton
-                                    text="Eliminar"
-                                    disabled="#{!bindings.Delete.enabled}"
-                                    id="cb2"
-                                    actionListener="#{bindings.Delete.execute}"/>
                 </af:toolbar>
               </f:facet>
               <af:panelGridLayout id="pgl1">
@@ -43,7 +38,7 @@
                               width="1100" rowSelection="single" varStatus="vs"
                               selectedRowKeys="#{bindings.ToksCaAntiguedadView11.collectionModel.selectedRow}"
                               selectionListener="#{bindings.ToksCaAntiguedadView11.collectionModel.makeCurrent}"
-                              partialTriggers="::cb1 ::cb2">
+                              partialTriggers="::cb1">
                       <af:column sortProperty="#{bindings.ToksCaAntiguedadView11.hints.IdAntiguedad.name}"
                                  filterable="true" sortable="true"
                                  headerText="Id "
