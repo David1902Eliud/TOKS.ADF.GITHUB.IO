@@ -40,4 +40,7 @@
   <ViewUsage
     Name="ToksCaAntiguedadView1"
     ViewObjectName="catalogo.ToksCaAntiguedadView"/>
+  <ViewUsage
+    Name="ContadorAntiguedad1"
+    ViewObjectName="catalogo.ContadorAntiguedad"/>
 </AppModule>

@@ -20,6 +20,8 @@ import oracle.binding.OperationBinding;
 import oracle.jbo.ViewObject;
 import oracle.jbo.domain.Number;
 
+// Clase de Inserción
+
 public class Antiguedad {
   
     private Number idAntiguedad;
