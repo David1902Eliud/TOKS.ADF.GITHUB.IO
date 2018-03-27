@@ -14,6 +14,8 @@
               taskFlowId="${CATAntiguedadBean.dynamicTaskFlowId}"
               activation="deferred"
               xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <iterator id="ContadorAntiguedad1Iterator" Binds="ContadorAntiguedad1"
+              DataControl="AppModuleDataControl" RangeSize="25"/>
   </executables>
   <bindings>
     <tree IterBinding="ToksCaAntiguedadView1Iterator"
