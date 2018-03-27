@@ -46,4 +46,7 @@
   <ViewUsage
     Name="CA_Tasas_ID1"
     ViewObjectName="catalogo.CA_Tasas_ID"/>
+  <ViewUsage
+    Name="CA_Periodo_ID1"
+    ViewObjectName="catalogo.CA_Periodo_ID"/>
 </AppModule>

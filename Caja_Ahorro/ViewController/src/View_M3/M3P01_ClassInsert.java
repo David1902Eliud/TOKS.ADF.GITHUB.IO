@@ -21,7 +21,7 @@ public class M3P01_ClassInsert {
 
     public String CommitAction() {
         BindingContainer bindings = getBindings();
-        OperationBinding operationBinding = bindings.getOperationBinding("Commit");
+        OperationBinding operationBinding = bindings.getOperationBinding("Create");
         Object result = operationBinding.execute();
         if (!operationBinding.getErrors().isEmpty()) {
             return null;

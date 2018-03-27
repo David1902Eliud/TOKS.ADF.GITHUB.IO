@@ -6,10 +6,19 @@
   Name="ToksCaPeriodoCajaView"
   Version="11.1.1.66.73"
   InheritPersonalization="merge"
-  SelectList="ToksCaPeriodoCaja.ID_PERIODO, 
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <SQLQuery>
+    <![CDATA[SELECT ToksCaPeriodoCaja.ID_PERIODO, 
        ToksCaPeriodoCaja.RANGO_INICIAL, 
        ToksCaPeriodoCaja.RANGO_FINAL, 
-       ToksCaPeriodoCaja.ESTATUS, 
+       DECODE(ToksCaPeriodoCaja.ESTATUS, 'A', 'ACTIVO', 'I', 'INACTIVO') ESTATUS, 
        ToksCaPeriodoCaja.CREADO_POR, 
        ToksCaPeriodoCaja.FECHA_CREACION, 
        ToksCaPeriodoCaja.ACTUALIZADO_POR, 
@@ -23,15 +32,10 @@
        ToksCaPeriodoCaja.XNUMBER2, 
        ToksCaPeriodoCaja.XNUMBER3, 
        ToksCaPeriodoCaja.XNUMBER4, 
-       ToksCaPeriodoCaja.XNUMBER5"
-  FromList="TOKS_CA_PERIODO_CAJA ToksCaPeriodoCaja"
-  BindingStyle="OracleName"
-  CustomQuery="false"
-  PageIterMode="Full"
-  UseGlueCode="false">
-  <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
-  </DesignTime>
+       ToksCaPeriodoCaja.XNUMBER5
+FROM TOKS_CA_PERIODO_CAJA ToksCaPeriodoCaja
+ORDER BY ToksCaPeriodoCaja.ID_PERIODO ASC]]>
+  </SQLQuery>
   <EntityUsage
     Name="ToksCaPeriodoCaja"
     Entity="catalogo.ToksCaPeriodoCaja"/>

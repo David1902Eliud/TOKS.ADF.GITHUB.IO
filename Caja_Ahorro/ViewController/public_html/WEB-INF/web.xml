@@ -127,4 +127,7 @@
       <is-xml>true</is-xml>
     </jsp-property-group>
   </jsp-config>
+  <welcome-file-list>     
+  <welcome-file>/faces/Inicio.jspx</welcome-file>  
+  </welcome-file-list>
 </web-app>

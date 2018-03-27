@@ -21,6 +21,7 @@
     <page path="/WEB-INF/Menu3_Task_Insert_P2.xml#Menu3_Task_Insert_P2@CreateInsert"
           usageId="view_Menu3_Task_Insert_P2_Menu3_Task_Insert_P2_CreateInsertPageDef"/>
     <page path="/Menu3/Ins_M3_P02.jsff" usageId="view_Ins_M3_P02PageDef"/>
+    <page path="/Menu3/M3_P03.jspx" usageId="view_M3_P03PageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_M3_P01PageDef" path="Menu3.M3_P01PageDef"/>
@@ -36,6 +37,7 @@
     <page id="view_Menu3_Task_Insert_P2_Menu3_Task_Insert_P2_CreateInsertPageDef"
           path="view.pageDefs.Menu3_Task_Insert_P2_Menu3_Task_Insert_P2_CreateInsertPageDef"/>
     <page id="view_Ins_M3_P02PageDef" path="Menu3.Ins_M3_P02PageDef"/>
+    <page id="view_M3_P03PageDef" path="Menu3.M3_P03PageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="catalogo"
