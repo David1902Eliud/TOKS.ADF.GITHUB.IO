@@ -1,11 +1,11 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
    <AppModuleConfigBag ApplicationName="catalogo.AppModule">
-      <AppModuleConfig name="16241A62DE8" DeployPlatform="LOCAL" BC4JConfigName="AppModuleLocal" ApplicationName="catalogo.AppModule" JDBCName="Toks_Bolinf" IsLazyLoadingTrue="true" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" jbo.project="catalogo.Catalogos" DBconnection="java:comp/env/jdbc/Toks_BolinfDS">
+      <AppModuleConfig name="1626487021F" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" DBconnection="java:comp/env/jdbc/HRDS" IsLazyLoadingTrue="true" JDBCName="HrConnection" jbo.project="catalogo.Catalogos" BC4JConfigName="AppModuleLocal" DeployPlatform="LOCAL" ApplicationName="catalogo.AppModule">
          <Database jbo.SQLBuilder="Oracle" jbo.TypeMapEntries="Oracle"/>
          <Security AppModuleJndiName="catalogo.AppModule"/>
          <Tester FullProxyInterfaceName="catalogo.common.AppModule"/>
-         <Custom JDBCDataSource="java:comp/env/jdbc/Toks_BolinfDS"/>
+         <Custom LastUsedConfiguration="AppModuleLocal" JDBCDataSource="java:comp/env/jdbc/HRDS"/>
       </AppModuleConfig>
    </AppModuleConfigBag>
 </BC4JConfig>

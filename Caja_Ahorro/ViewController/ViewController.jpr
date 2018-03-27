@@ -69,6 +69,11 @@
             <url n="sourceOwnerURL" path="../Caja_Ahorro.jws"/>
             <url n="sourceURL" path="../Catalogos/Catalogos.jpr"/>
          </hash>
+         <hash>
+            <value n="class" v="oracle.jdeveloper.library.ProjectLibrary"/>
+            <url n="sourceOwnerURL" path="../Caja_Ahorro.jws"/>
+            <url n="sourceURL" path="../../../../../Proyectos JDeveloper/Proyecto GIT Completo/ca_catalogo/Catalogos/Catalogos.jpr"/>
+         </hash>
       </list>
    </hash>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">

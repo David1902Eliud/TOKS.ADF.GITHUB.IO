@@ -15,12 +15,15 @@
           usageId="view_insertar_antiguedad_definition_insertar_antiguedad_definition_CreateInsertPageDef"/>
     <page path="/InsertarAntiguedad.jsff"
           usageId="view_InsertarAntiguedadPageDef"/>
+<<<<<<< HEAD
     <page path="/WEB-INF/Menu3_Task_Insert_P1.xml#Menu3_Task_Insert_P1@CreateInsert"
           usageId="view_Menu3_Task_Insert_P1_Menu3_Task_Insert_P1_CreateInsertPageDef"/>
     <page path="/Menu3/Ins_M3_P01.jsff" usageId="view_Ins_M3_P01PageDef"/>
     <page path="/WEB-INF/Menu3_Task_Insert_P2.xml#Menu3_Task_Insert_P2@CreateInsert"
           usageId="view_Menu3_Task_Insert_P2_Menu3_Task_Insert_P2_CreateInsertPageDef"/>
     <page path="/Menu3/Ins_M3_P02.jsff" usageId="view_Ins_M3_P02PageDef"/>
+=======
+>>>>>>> 24d6e3eb533095bd03a74e6a711673d9ba64bf1a
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_M3_P01PageDef" path="Menu3.M3_P01PageDef"/>
@@ -30,15 +33,25 @@
           path="view.pageDefs.insertar_antiguedad_definition_insertar_antiguedad_definition_CreateInsertPageDef"/>
     <page id="view_InsertarAntiguedadPageDef"
           path="view.pageDefs.InsertarAntiguedadPageDef"/>
+<<<<<<< HEAD
     <page id="view_Menu3_Task_Insert_P1_Menu3_Task_Insert_P1_CreateInsertPageDef"
           path="view.pageDefs.Menu3_Task_Insert_P1_Menu3_Task_Insert_P1_CreateInsertPageDef"/>
     <page id="view_Ins_M3_P01PageDef" path="Menu3.Ins_M3_P01PageDef"/>
     <page id="view_Menu3_Task_Insert_P2_Menu3_Task_Insert_P2_CreateInsertPageDef"
           path="view.pageDefs.Menu3_Task_Insert_P2_Menu3_Task_Insert_P2_CreateInsertPageDef"/>
     <page id="view_Ins_M3_P02PageDef" path="Menu3.Ins_M3_P02PageDef"/>
+=======
+>>>>>>> 24d6e3eb533095bd03a74e6a711673d9ba64bf1a
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="catalogo"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true"
+                     Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+    <BC4JDataControl id="AppModuleDataControl1" Package="model"
                      FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
                      SupportsTransactions="true" SupportsFindMode="true"
                      SupportsRangesize="true" SupportsResetState="true"

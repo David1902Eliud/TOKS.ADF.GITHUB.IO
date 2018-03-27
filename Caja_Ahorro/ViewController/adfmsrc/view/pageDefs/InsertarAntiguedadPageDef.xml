@@ -8,6 +8,8 @@
     <iterator Binds="ToksCaAntiguedadView1" RangeSize="25"
               DataControl="AppModuleDataControl"
               id="ToksCaAntiguedadView1Iterator"/>
+    <iterator id="ContadorAntiguedad1Iterator" Binds="ContadorAntiguedad1"
+              DataControl="AppModuleDataControl" RangeSize="25"/>
   </executables>
   <bindings>
     <attributeValues IterBinding="ToksCaAntiguedadView1Iterator"
@@ -32,6 +34,12 @@
                      id="RangoFinal">
       <AttrNames>
         <Item Value="RangoFinal"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ContadorAntiguedad1Iterator"
+                     id="Contador">
+      <AttrNames>
+        <Item Value="Contadorantiguedad"/>
       </AttrNames>
     </attributeValues>
   </bindings>
