@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <MethodCall
+      id="MethodCall2">
+      <property
+         name="activityId">CreateInsert</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>CreateInsert&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">337.5</property>
+      <property
+         name="x">216.01465</property>
+   </MethodCall>
+   <View
+      id="View3">
+      <property
+         name="activityId">Ins_M3_P02</property>
+      <property
+         name="page">/Menu3/Ins_M3_P02.jsff</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Ins_M3_P02&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">339.39062</property>
+      <property
+         name="x">430.0</property>
+      <property
+         name="pageFragment">true</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="MethodCall2"
+      to="View3">
+      <property
+         name="fromOutcome">CreateInsert</property>
+      <property
+         name="sdm:polyPoints">R50,257.01465,337.1494,389.0,339.04004,L50</property>
+   </ControlFlowCase>
+</SDM>

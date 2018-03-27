@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="Menu3_Task_Insert_P1">
+    <default-activity id="__1">CreateInsert</default-activity>
+    <managed-bean id="__11">
+      <managed-bean-name id="__8">M3P01_Ins_B</managed-bean-name>
+      <managed-bean-class id="__10">View_M3.M3P01_Ins_Class</managed-bean-class>
+      <managed-bean-scope id="__9">backingBean</managed-bean-scope>
+    </managed-bean>
+    <method-call id="CreateInsert">
+      <method>#{bindings.CreateInsert.execute}</method>
+      <outcome id="__2">
+        <fixed-outcome>CreateInsert</fixed-outcome>
+      </outcome>
+    </method-call>
+    <view id="Ins_M3_P01">
+      <page>/Menu3/Ins_M3_P01.jsff</page>
+    </view>
+    <control-flow-rule id="__3">
+      <from-activity-id id="__4">CreateInsert</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome id="__7">CreateInsert</from-outcome>
+        <to-activity-id id="__6">Ins_M3_P01</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

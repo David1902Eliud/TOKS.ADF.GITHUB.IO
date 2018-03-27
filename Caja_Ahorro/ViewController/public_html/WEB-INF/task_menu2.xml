@@ -249,4 +249,14 @@
     <managed-bean-class id="__119">view.CatalogoAntiguedad</managed-bean-class>
     <managed-bean-scope id="__117">request</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__121">
+    <managed-bean-name id="__124">M3P01_Insert</managed-bean-name>
+    <managed-bean-class id="__123">View_M3.M3P01_ClassInsert</managed-bean-class>
+    <managed-bean-scope id="__122">backingBean</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__127">
+    <managed-bean-name id="__125">M3P02</managed-bean-name>
+    <managed-bean-class id="__128">view.M3P02_Class</managed-bean-class>
+    <managed-bean-scope id="__126">backingBean</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

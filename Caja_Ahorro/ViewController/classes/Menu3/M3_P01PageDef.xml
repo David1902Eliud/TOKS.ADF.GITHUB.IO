@@ -4,6 +4,10 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
+    <taskFlow id="dynamicRegion1"
+              taskFlowId="${backingBeanScope.M3P01_Insert.dynamicTaskFlowId}"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <iterator Binds="ToksCaCatTasasView1" RangeSize="25"
               DataControl="AppModuleDataControl"
               id="ToksCaCatTasasView1Iterator"/>
@@ -12,6 +16,10 @@
                   id="ToksCaCatTasasView1Query"/>
   </executables>
   <bindings>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction"
+            DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false"
+            Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
     <tree IterBinding="ToksCaCatTasasView1Iterator" id="ToksCaCatTasasView1">
       <nodeDefinition DefName="catalogo.ToksCaCatTasasView"
                       Name="ToksCaCatTasasView10">
@@ -25,16 +33,62 @@
           <Item Value="CreadoPor"/>
           <Item Value="FechaCreacion"/>
           <Item Value="ActualizadoPor"/>
+          <Item Value="FechaActualizacion"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <action IterBinding="ToksCaCatTasasView1Iterator" id="CreateInsert"
-            RequiresUpdateModel="true" Action="createInsertRow"/>
-    <action IterBinding="ToksCaCatTasasView1Iterator" id="Delete"
-            RequiresUpdateModel="false" Action="removeCurrentRow"/>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction"
-            DataControl="AppModuleDataControl"/>
-    <action id="Rollback" RequiresUpdateModel="false"
-            Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <attributeValues IterBinding="ToksCaCatTasasView1Iterator" id="IdTasa">
+      <AttrNames>
+        <Item Value="IdTasa"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaCatTasasView1Iterator" id="Tasa">
+      <AttrNames>
+        <Item Value="Tasa"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaCatTasasView1Iterator" id="FechaInicio">
+      <AttrNames>
+        <Item Value="FechaInicio"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaCatTasasView1Iterator" id="FechaFin">
+      <AttrNames>
+        <Item Value="FechaFin"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaCatTasasView1Iterator" id="Estatus">
+      <AttrNames>
+        <Item Value="Estatus"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaCatTasasView1Iterator" id="Periodo">
+      <AttrNames>
+        <Item Value="Periodo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaCatTasasView1Iterator" id="CreadoPor">
+      <AttrNames>
+        <Item Value="CreadoPor"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaCatTasasView1Iterator"
+                     id="FechaCreacion">
+      <AttrNames>
+        <Item Value="FechaCreacion"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaCatTasasView1Iterator"
+                     id="ActualizadoPor">
+      <AttrNames>
+        <Item Value="ActualizadoPor"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaCatTasasView1Iterator"
+                     id="FechaActualizacion">
+      <AttrNames>
+        <Item Value="FechaActualizacion"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

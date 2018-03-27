@@ -14,24 +14,26 @@
                          type="stretch" showDisclosure="false" ramp="highlight">
               <f:facet name="toolbar">
                 <af:toolbar id="t1">
-                  <af:commandButton actionListener="#{bindings.CreateInsert.execute}"
-                                    text="Nuevo"
-                                    disabled="#{!bindings.CreateInsert.enabled}"
-                                    id="cb1"/>
-                  <af:commandButton actionListener="#{bindings.Delete.execute}"
-                                    text="Eliminar"
-                                    disabled="#{!bindings.Delete.enabled}"
-                                    id="cb2"/>
+                  <af:commandButton text="Nuevo" id="cb1">
+                    <af:showPopupBehavior popupId="p1" triggerType="action"
+                                          align="afterEnd"/>
+                  </af:commandButton>
                   <af:commandButton actionListener="#{bindings.Commit.execute}"
                                     text="Guardar"
                                     disabled="#{!bindings.Commit.enabled}"
                                     id="cb3"/>
                   <af:commandButton actionListener="#{bindings.Rollback.execute}"
-                                    text="Eliminar"
+                                    text="Cancelar"
                                     disabled="#{!bindings.Rollback.enabled}"
                                     immediate="true" id="cb4">
                     <af:resetActionListener/>
                   </af:commandButton>
+                  <af:popup id="p1">
+                    <af:panelWindow id="pw1">
+                      <af:region value="#{bindings.dynamicRegion1.regionModel}"
+                                 id="r1"/>
+                    </af:panelWindow>
+                  </af:popup>
                 </af:toolbar>
               </f:facet>
               <af:panelGridLayout id="pgl1">
@@ -62,7 +64,7 @@
                                       columns="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.displayWidth}"
                                       maximumLength="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.precision}"
                                       shortDesc="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.tooltip}"
-                                      id="it1">
+                                      id="it1" readOnly="true">
                           <f:validator binding="#{row.bindings.NoDescuento.validator}"/>
                           <af:convertNumber groupingUsed="false"
                                             pattern="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.format}"/>
@@ -78,7 +80,8 @@
                                       columns="#{bindings.ToksCaDescuentosView1.hints.Descuento.displayWidth}"
                                       maximumLength="#{bindings.ToksCaDescuentosView1.hints.Descuento.precision}"
                                       shortDesc="#{bindings.ToksCaDescuentosView1.hints.Descuento.tooltip}"
-                                      id="it3" contentStyle="min-width:100%;">
+                                      id="it3" contentStyle="min-width:100%;"
+                                      readOnly="true">
                           <f:validator binding="#{row.bindings.Descuento.validator}"/>
                         </af:inputText>
                       </af:column>
