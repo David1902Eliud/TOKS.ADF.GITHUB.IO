@@ -23,7 +23,7 @@ import oracle.jbo.domain.Number;
 // Clase de Inserción
 
 public class Antiguedad {
-  
+
     private Number idAntiguedad;
     private RichInputText InputTextIdAntiguedad = new RichInputText();
 
@@ -35,8 +35,9 @@ public class Antiguedad {
     public BindingContainer getBindings() {
         return BindingContext.getCurrent().getCurrentBindingsEntry();
     }
-    
+
     public void obtenerIndice() {
+        clearCache();
         BindingContainer bindings = getBindings();
         // Bindings para obtener valor del Id
         AttributeBinding contador =
@@ -45,18 +46,15 @@ public class Antiguedad {
         AttributeBinding idAntiguedad =
             (AttributeBinding)bindings.getControlBinding("IdAntiguedad");
 
-    System.out.println("Datos: " + contador);
 
-        System.out.println("Datos1: " + idAntiguedad);
-    /*       idAntiguedad = contador;
-        IdPuesto.setInputValue(atributo);
-        InputTextIdPuestoPorc.setValueExpression("value",
+        System.out.println("Tam: " + contador);
+        System.out.println("Id: " + idAntiguedad);
+
+        idAntiguedad = contador;
+        //  idAntiguedad.setInputValue(contador);
+        InputTextIdAntiguedad.setValueExpression("value",
                                                  getValueExpression("#{bindings.IdPuestoPorc.inputValue}"));
 
-        InputTextIdPuesto.setValueExpression("value",
-                                             getValueExpressionModify("#{bindings.IdPuesto.inputValue}",
-                                                                      atributo));
-    */
     }
 
 

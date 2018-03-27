@@ -10,6 +10,10 @@
     <searchRegion Binds="ToksCaAntiguedadView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   id="ToksCaAntiguedadView11Query"/>
+    <taskFlow id="dynamicRegion1"
+              taskFlowId="${CATAntiguedadBean.dynamicTaskFlowId}"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>
     <tree IterBinding="ToksCaAntiguedadView1Iterator"

@@ -10,6 +10,10 @@
     <searchRegion Binds="ToksCaAntiguedadView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   id="ToksCaAntiguedadView11Query"/>
+    <taskFlow id="dynamicRegion1"
+              taskFlowId="${CATAntiguedadBean.dynamicTaskFlowId}"
+              activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
   </executables>
   <bindings>
     <tree IterBinding="ToksCaAntiguedadView1Iterator"
@@ -24,10 +28,6 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <action IterBinding="ToksCaAntiguedadView1Iterator" id="Delete"
-            InstanceName="AppModuleDataControl.ToksCaAntiguedadView1"
-            DataControl="AppModuleDataControl" RequiresUpdateModel="false"
-            Action="removeCurrentRow"/>
     <action IterBinding="ToksCaAntiguedadView1Iterator" id="CreateInsert"
             RequiresUpdateModel="true" Action="createInsertRow"/>
     <action id="Commit" DataControl="AppModuleDataControl"

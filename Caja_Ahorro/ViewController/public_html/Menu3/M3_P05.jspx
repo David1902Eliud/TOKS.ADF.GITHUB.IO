@@ -16,8 +16,9 @@
                   <af:commandButton
                                     text="Nuevo"
                                     disabled="#{!bindings.CreateInsert.enabled}"
-                                    id="cb1"
-                                    actionListener="#{bindings.CreateInsert.execute}"/>
+                                    id="cb1">
+                    <af:showPopupBehavior popupId="::p2" triggerType="action"/>
+                  </af:commandButton>
                 </af:toolbar>
               </f:facet>
               <af:panelGridLayout id="pgl1">
@@ -86,7 +87,8 @@
         </af:pageTemplate>
         <af:popup id="p1"
                   popupFetchListener="#{CATAntiguedadBean.editPopupFetchListener}"
-                  contentDelivery="lazyUncached">
+                  contentDelivery="lazyUncached"
+                  popupCanceledListener="#{CATAntiguedadBean.editPopupCancelListener}">
           <af:dialog id="d2" modal="true"
                      dialogListener="#{CATAntiguedadBean.editDialogListener}">
             <af:panelFormLayout id="pfl1" partialTriggers="pt1:t2"
@@ -137,6 +139,16 @@
               </af:inputText>
             </af:panelFormLayout>
           </af:dialog>
+        </af:popup>
+        <af:popup id="p2"
+                  popupFetchListener="#{CATAntiguedadBean.calcularIndice}">
+          <af:panelWindow id="pw1" modal="true">
+            <af:panelFormLayout id="pfl2">
+              <f:facet name="footer"/>
+              <af:region value="#{bindings.dynamicRegion1.regionModel}"
+                         id="r1"/>
+            </af:panelFormLayout>
+          </af:panelWindow>
         </af:popup>
       </af:form>
     </af:document>

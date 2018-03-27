@@ -18,7 +18,9 @@ import oracle.jbo.ViewObject;
 public class CatalogoAntiguedad {
 
     private RichTable tablaAntiguedadDescuentos;
-   
+    private String taskFlowId =
+        "/WEB-INF/insertar_antiguedad_definition.xml#insertar_antiguedad_definition";
+
     public CatalogoAntiguedad() {
 
     }
@@ -43,13 +45,13 @@ public class CatalogoAntiguedad {
             operationBinding.execute();
             backFromPopup();
         } else if (dialogEvent.getOutcome().name().equals("cancel")) {
-            System.out.println("Cancelar");
             BindingContainer bindings =
                 BindingContext.getCurrent().getCurrentBindingsEntry();
             OperationBinding operationBinding =
                 bindings.getOperationBinding("Rollback");
             operationBinding.execute();
         }
+        clearCache();
     }
 
     public void editPopupCancelListener(PopupCanceledEvent popupCanceledEvent) {
@@ -59,7 +61,6 @@ public class CatalogoAntiguedad {
             bindings.getOperationBinding("Rollback");
         operationBinding.execute();
         clearCache();
-
     }
 
     public void clearCache() {
@@ -88,5 +89,9 @@ public class CatalogoAntiguedad {
 
     public RichTable getTablaAntiguedadDescuentos() {
         return tablaAntiguedadDescuentos;
+    }
+
+    public TaskFlowId getDynamicTaskFlowId() {
+        return TaskFlowId.parse(taskFlowId);
     }
 }
