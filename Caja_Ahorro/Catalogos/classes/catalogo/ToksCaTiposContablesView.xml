@@ -6,10 +6,19 @@
   Name="ToksCaTiposContablesView"
   Version="11.1.1.66.73"
   InheritPersonalization="merge"
-  SelectList="ToksCaTiposContables.ID_TIPOS_CONTABLES, 
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <SQLQuery>
+    <![CDATA[SELECT ToksCaTiposContables.ID_TIPOS_CONTABLES, 
        ToksCaTiposContables.TIPO_MOVIMIENTO, 
        ToksCaTiposContables.DESCRIPCION, 
-       ToksCaTiposContables.ESTATUS, 
+       DECODE(ToksCaTiposContables.ESTATUS, '1', 'ACTIVO', '0','INACTIVO') ESTATUS, 
        ToksCaTiposContables.REFERENCIA1, 
        ToksCaTiposContables.REFERENCIA2, 
        ToksCaTiposContables.NATURALEZA, 
@@ -19,15 +28,10 @@
        ToksCaTiposContables.CREATION_DATE, 
        ToksCaTiposContables.LAST_UPDATED_BY, 
        ToksCaTiposContables.LAST_UPDATE_DATE, 
-       ToksCaTiposContables.LAST_UPDATE_LOGIN"
-  FromList="TOKS_CA_TIPOS_CONTABLES ToksCaTiposContables"
-  BindingStyle="OracleName"
-  CustomQuery="false"
-  PageIterMode="Full"
-  UseGlueCode="false">
-  <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
-  </DesignTime>
+       ToksCaTiposContables.LAST_UPDATE_LOGIN
+FROM TOKS_CA_TIPOS_CONTABLES ToksCaTiposContables
+ORDER BY ToksCaTiposContables.TIPO_MOVIMIENTO ASC]]>
+  </SQLQuery>
   <EntityUsage
     Name="ToksCaTiposContables"
     Entity="catalogo.ToksCaTiposContables"/>

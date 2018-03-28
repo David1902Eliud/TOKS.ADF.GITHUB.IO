@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.66.73" id="M3_P10PageDef" Package="Menu3">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ToksCaTiposContablesView1" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="ToksCaTiposContablesView1Iterator"/>
+    <searchRegion Binds="ToksCaTiposContablesView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="ToksCaTiposContablesView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="ToksCaTiposContablesView1Iterator"
+          id="ToksCaTiposContablesView1">
+      <nodeDefinition DefName="catalogo.ToksCaTiposContablesView"
+                      Name="ToksCaTiposContablesView10">
+        <AttrNames>
+          <Item Value="IdTiposContables"/>
+          <Item Value="TipoMovimiento"/>
+          <Item Value="Descripcion"/>
+          <Item Value="Estatus"/>
+          <Item Value="Referencia1"/>
+          <Item Value="Referencia2"/>
+          <Item Value="Naturaleza"/>
+          <Item Value="Categoria"/>
+          <Item Value="Source"/>
+          <Item Value="CreatedBy"/>
+          <Item Value="CreationDate"/>
+          <Item Value="LastUpdatedBy"/>
+          <Item Value="LastUpdateDate"/>
+          <Item Value="LastUpdateLogin"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

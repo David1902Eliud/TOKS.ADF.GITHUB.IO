@@ -6,9 +6,277 @@
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <f:view>
     <af:document id="d1">
+      <af:messages id="m1"/>
       <af:form id="f1">
         <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
-          <f:facet name="Body_Menus"/>
+          <f:facet name="Body_Menus">
+            <af:panelBox text="Tipos Contables - Caja de Ahorro" id="pb1" background="dark"
+                         showDisclosure="false" titleHalign="center">
+              <af:panelBox text="Tipos de Movimientos Contables" id="pb2" background="dark">
+                <f:facet name="toolbar"/>
+                <af:table value="#{bindings.ToksCaTiposContablesView1.collectionModel}"
+                          var="row"
+                          rows="#{bindings.ToksCaTiposContablesView1.rangeSize}"
+                          emptyText="#{bindings.ToksCaTiposContablesView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          fetchSize="#{bindings.ToksCaTiposContablesView1.rangeSize}"
+                          rowBandingInterval="0"
+                          filterModel="#{bindings.ToksCaTiposContablesView1Query.queryDescriptor}"
+                          queryListener="#{bindings.ToksCaTiposContablesView1Query.processQuery}"
+                          filterVisible="true" varStatus="vs"
+                          selectedRowKeys="#{bindings.ToksCaTiposContablesView1.collectionModel.selectedRow}"
+                          selectionListener="#{bindings.ToksCaTiposContablesView1.collectionModel.makeCurrent}"
+                          rowSelection="single" id="t1"
+                          inlineStyle="width:100%;">
+                  <af:column sortProperty="#{bindings.ToksCaTiposContablesView1.hints.IdTiposContables.name}"
+                             filterable="true" sortable="true"
+                             headerText="ID Tipos Contables"
+                             id="c10">
+                    <af:inputText value="#{row.bindings.IdTiposContables.inputValue}"
+                                  label="#{bindings.ToksCaTiposContablesView1.hints.IdTiposContables.label}"
+                                  required="#{bindings.ToksCaTiposContablesView1.hints.IdTiposContables.mandatory}"
+                                  columns="#{bindings.ToksCaTiposContablesView1.hints.IdTiposContables.displayWidth}"
+                                  maximumLength="#{bindings.ToksCaTiposContablesView1.hints.IdTiposContables.precision}"
+                                  shortDesc="#{bindings.ToksCaTiposContablesView1.hints.IdTiposContables.tooltip}"
+                                  id="it12">
+                      <f:validator binding="#{row.bindings.IdTiposContables.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.ToksCaTiposContablesView1.hints.IdTiposContables.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaTiposContablesView1.hints.TipoMovimiento.name}"
+                             filterable="true" sortable="true"
+                             headerText="Tipo de Movimiento"
+                             id="c12">
+                    <af:inputText value="#{row.bindings.TipoMovimiento.inputValue}"
+                                  label="#{bindings.ToksCaTiposContablesView1.hints.TipoMovimiento.label}"
+                                  required="#{bindings.ToksCaTiposContablesView1.hints.TipoMovimiento.mandatory}"
+                                  columns="#{bindings.ToksCaTiposContablesView1.hints.TipoMovimiento.displayWidth}"
+                                  maximumLength="#{bindings.ToksCaTiposContablesView1.hints.TipoMovimiento.precision}"
+                                  shortDesc="#{bindings.ToksCaTiposContablesView1.hints.TipoMovimiento.tooltip}"
+                                  id="it10">
+                      <f:validator binding="#{row.bindings.TipoMovimiento.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaTiposContablesView1.hints.Descripcion.name}"
+                             filterable="true" sortable="true"
+                             headerText="Descripción"
+                             id="c3">
+                    <af:inputText value="#{row.bindings.Descripcion.inputValue}"
+                                  label="#{bindings.ToksCaTiposContablesView1.hints.Descripcion.label}"
+                                  required="#{bindings.ToksCaTiposContablesView1.hints.Descripcion.mandatory}"
+                                  columns="#{bindings.ToksCaTiposContablesView1.hints.Descripcion.displayWidth}"
+                                  maximumLength="#{bindings.ToksCaTiposContablesView1.hints.Descripcion.precision}"
+                                  shortDesc="#{bindings.ToksCaTiposContablesView1.hints.Descripcion.tooltip}"
+                                  id="it4">
+                      <f:validator binding="#{row.bindings.Descripcion.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaTiposContablesView1.hints.Estatus.name}"
+                             filterable="true" sortable="true"
+                             headerText="Estatus"
+                             id="c11">
+                    <af:inputText value="#{row.bindings.Estatus.inputValue}"
+                                  label="#{bindings.ToksCaTiposContablesView1.hints.Estatus.label}"
+                                  required="#{bindings.ToksCaTiposContablesView1.hints.Estatus.mandatory}"
+                                  columns="#{bindings.ToksCaTiposContablesView1.hints.Estatus.displayWidth}"
+                                  maximumLength="#{bindings.ToksCaTiposContablesView1.hints.Estatus.precision}"
+                                  shortDesc="#{bindings.ToksCaTiposContablesView1.hints.Estatus.tooltip}"
+                                  id="it8">
+                      <f:validator binding="#{row.bindings.Estatus.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.ToksCaTiposContablesView1.hints.Estatus.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaTiposContablesView1.hints.Categoria.name}"
+                             filterable="true" sortable="true"
+                             headerText="Categoria"
+                             id="c4">
+                    <af:inputText value="#{row.bindings.Categoria.inputValue}"
+                                  label="#{bindings.ToksCaTiposContablesView1.hints.Categoria.label}"
+                                  required="#{bindings.ToksCaTiposContablesView1.hints.Categoria.mandatory}"
+                                  columns="#{bindings.ToksCaTiposContablesView1.hints.Categoria.displayWidth}"
+                                  maximumLength="#{bindings.ToksCaTiposContablesView1.hints.Categoria.precision}"
+                                  shortDesc="#{bindings.ToksCaTiposContablesView1.hints.Categoria.tooltip}"
+                                  id="it6">
+                      <f:validator binding="#{row.bindings.Categoria.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaTiposContablesView1.hints.Source.name}"
+                             filterable="true" sortable="true"
+                             headerText="Source"
+                             id="c8">
+                    <af:inputText value="#{row.bindings.Source.inputValue}"
+                                  label="#{bindings.ToksCaTiposContablesView1.hints.Source.label}"
+                                  required="#{bindings.ToksCaTiposContablesView1.hints.Source.mandatory}"
+                                  columns="#{bindings.ToksCaTiposContablesView1.hints.Source.displayWidth}"
+                                  maximumLength="#{bindings.ToksCaTiposContablesView1.hints.Source.precision}"
+                                  shortDesc="#{bindings.ToksCaTiposContablesView1.hints.Source.tooltip}"
+                                  id="it9">
+                      <f:validator binding="#{row.bindings.Source.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaTiposContablesView1.hints.Naturaleza.name}"
+                             filterable="true" sortable="true"
+                             headerText="Naturaleza"
+                             id="c2">
+                    <af:inputText value="#{row.bindings.Naturaleza.inputValue}"
+                                  label="#{bindings.ToksCaTiposContablesView1.hints.Naturaleza.label}"
+                                  required="#{bindings.ToksCaTiposContablesView1.hints.Naturaleza.mandatory}"
+                                  columns="#{bindings.ToksCaTiposContablesView1.hints.Naturaleza.displayWidth}"
+                                  maximumLength="#{bindings.ToksCaTiposContablesView1.hints.Naturaleza.precision}"
+                                  shortDesc="#{bindings.ToksCaTiposContablesView1.hints.Naturaleza.tooltip}"
+                                  id="it11">
+                      <f:validator binding="#{row.bindings.Naturaleza.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaTiposContablesView1.hints.Referencia1.name}"
+                             filterable="true" sortable="true"
+                             headerText="Referencia"
+                             id="c1">
+                    <af:inputText value="#{row.bindings.Referencia1.inputValue}"
+                                  label="#{bindings.ToksCaTiposContablesView1.hints.Referencia1.label}"
+                                  required="#{bindings.ToksCaTiposContablesView1.hints.Referencia1.mandatory}"
+                                  columns="#{bindings.ToksCaTiposContablesView1.hints.Referencia1.displayWidth}"
+                                  maximumLength="#{bindings.ToksCaTiposContablesView1.hints.Referencia1.precision}"
+                                  shortDesc="#{bindings.ToksCaTiposContablesView1.hints.Referencia1.tooltip}"
+                                  id="it7">
+                      <f:validator binding="#{row.bindings.Referencia1.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaTiposContablesView1.hints.Referencia2.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.ToksCaTiposContablesView1.hints.Referencia2.label}"
+                             id="c6" visible="false">
+                    <af:inputText value="#{row.bindings.Referencia2.inputValue}"
+                                  label="#{bindings.ToksCaTiposContablesView1.hints.Referencia2.label}"
+                                  required="#{bindings.ToksCaTiposContablesView1.hints.Referencia2.mandatory}"
+                                  columns="#{bindings.ToksCaTiposContablesView1.hints.Referencia2.displayWidth}"
+                                  maximumLength="#{bindings.ToksCaTiposContablesView1.hints.Referencia2.precision}"
+                                  shortDesc="#{bindings.ToksCaTiposContablesView1.hints.Referencia2.tooltip}"
+                                  id="it5">
+                      <f:validator binding="#{row.bindings.Referencia2.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaTiposContablesView1.hints.CreatedBy.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.ToksCaTiposContablesView1.hints.CreatedBy.label}"
+                             id="c14" visible="false">
+                    <af:inputText value="#{row.bindings.CreatedBy.inputValue}"
+                                  label="#{bindings.ToksCaTiposContablesView1.hints.CreatedBy.label}"
+                                  required="#{bindings.ToksCaTiposContablesView1.hints.CreatedBy.mandatory}"
+                                  columns="#{bindings.ToksCaTiposContablesView1.hints.CreatedBy.displayWidth}"
+                                  maximumLength="#{bindings.ToksCaTiposContablesView1.hints.CreatedBy.precision}"
+                                  shortDesc="#{bindings.ToksCaTiposContablesView1.hints.CreatedBy.tooltip}"
+                                  id="it2">
+                      <f:validator binding="#{row.bindings.CreatedBy.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.ToksCaTiposContablesView1.hints.CreatedBy.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaTiposContablesView1.hints.CreationDate.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.ToksCaTiposContablesView1.hints.CreationDate.label}"
+                             id="c7" visible="false">
+                    <f:facet name="filter">
+                      <af:inputDate value="#{vs.filterCriteria.CreationDate}"
+                                    id="id1"/>
+                    </f:facet>
+                    <af:inputDate value="#{row.bindings.CreationDate.inputValue}"
+                                  label="#{bindings.ToksCaTiposContablesView1.hints.CreationDate.label}"
+                                  required="#{bindings.ToksCaTiposContablesView1.hints.CreationDate.mandatory}"
+                                  shortDesc="#{bindings.ToksCaTiposContablesView1.hints.CreationDate.tooltip}"
+                                  id="id2">
+                      <f:validator binding="#{row.bindings.CreationDate.validator}"/>
+                      <af:convertDateTime pattern="#{bindings.ToksCaTiposContablesView1.hints.CreationDate.format}"/>
+                    </af:inputDate>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaTiposContablesView1.hints.Referencia2.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.ToksCaTiposContablesView1.hints.Referencia2.label}"
+                             id="column1" visible="false">
+                    <af:inputText value="#{row.bindings.Referencia2.inputValue}"
+                                  label="#{bindings.ToksCaTiposContablesView1.hints.Referencia2.label}"
+                                  required="#{bindings.ToksCaTiposContablesView1.hints.Referencia2.mandatory}"
+                                  columns="#{bindings.ToksCaTiposContablesView1.hints.Referencia2.displayWidth}"
+                                  maximumLength="#{bindings.ToksCaTiposContablesView1.hints.Referencia2.precision}"
+                                  shortDesc="#{bindings.ToksCaTiposContablesView1.hints.Referencia2.tooltip}"
+                                  id="inputText1">
+                      <f:validator binding="#{row.bindings.Referencia2.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaTiposContablesView1.hints.CreatedBy.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.ToksCaTiposContablesView1.hints.CreatedBy.label}"
+                             id="column2" visible="false">
+                    <af:inputText value="#{row.bindings.CreatedBy.inputValue}"
+                                  label="#{bindings.ToksCaTiposContablesView1.hints.CreatedBy.label}"
+                                  required="#{bindings.ToksCaTiposContablesView1.hints.CreatedBy.mandatory}"
+                                  columns="#{bindings.ToksCaTiposContablesView1.hints.CreatedBy.displayWidth}"
+                                  maximumLength="#{bindings.ToksCaTiposContablesView1.hints.CreatedBy.precision}"
+                                  shortDesc="#{bindings.ToksCaTiposContablesView1.hints.CreatedBy.tooltip}"
+                                  id="inputText2">
+                      <f:validator binding="#{row.bindings.CreatedBy.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.ToksCaTiposContablesView1.hints.CreatedBy.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaTiposContablesView1.hints.LastUpdatedBy.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.ToksCaTiposContablesView1.hints.LastUpdatedBy.label}"
+                             id="c9" visible="false">
+                    <af:inputText value="#{row.bindings.LastUpdatedBy.inputValue}"
+                                  label="#{bindings.ToksCaTiposContablesView1.hints.LastUpdatedBy.label}"
+                                  required="#{bindings.ToksCaTiposContablesView1.hints.LastUpdatedBy.mandatory}"
+                                  columns="#{bindings.ToksCaTiposContablesView1.hints.LastUpdatedBy.displayWidth}"
+                                  maximumLength="#{bindings.ToksCaTiposContablesView1.hints.LastUpdatedBy.precision}"
+                                  shortDesc="#{bindings.ToksCaTiposContablesView1.hints.LastUpdatedBy.tooltip}"
+                                  id="it1">
+                      <f:validator binding="#{row.bindings.LastUpdatedBy.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.ToksCaTiposContablesView1.hints.LastUpdatedBy.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaTiposContablesView1.hints.LastUpdateDate.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.ToksCaTiposContablesView1.hints.LastUpdateDate.label}"
+                             id="c5" visible="false">
+                    <f:facet name="filter">
+                      <af:inputDate value="#{vs.filterCriteria.LastUpdateDate}"
+                                    id="id4"/>
+                    </f:facet>
+                    <af:inputDate value="#{row.bindings.LastUpdateDate.inputValue}"
+                                  label="#{bindings.ToksCaTiposContablesView1.hints.LastUpdateDate.label}"
+                                  required="#{bindings.ToksCaTiposContablesView1.hints.LastUpdateDate.mandatory}"
+                                  shortDesc="#{bindings.ToksCaTiposContablesView1.hints.LastUpdateDate.tooltip}"
+                                  id="id3">
+                      <f:validator binding="#{row.bindings.LastUpdateDate.validator}"/>
+                      <af:convertDateTime pattern="#{bindings.ToksCaTiposContablesView1.hints.LastUpdateDate.format}"/>
+                    </af:inputDate>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaTiposContablesView1.hints.LastUpdateLogin.name}"
+                             filterable="true" sortable="true"
+                             headerText="#{bindings.ToksCaTiposContablesView1.hints.LastUpdateLogin.label}"
+                             id="c13" visible="false">
+                    <af:inputText value="#{row.bindings.LastUpdateLogin.inputValue}"
+                                  label="#{bindings.ToksCaTiposContablesView1.hints.LastUpdateLogin.label}"
+                                  required="#{bindings.ToksCaTiposContablesView1.hints.LastUpdateLogin.mandatory}"
+                                  columns="#{bindings.ToksCaTiposContablesView1.hints.LastUpdateLogin.displayWidth}"
+                                  maximumLength="#{bindings.ToksCaTiposContablesView1.hints.LastUpdateLogin.precision}"
+                                  shortDesc="#{bindings.ToksCaTiposContablesView1.hints.LastUpdateLogin.tooltip}"
+                                  id="it3">
+                      <f:validator binding="#{row.bindings.LastUpdateLogin.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.ToksCaTiposContablesView1.hints.LastUpdateLogin.format}"/>
+                    </af:inputText>
+                  </af:column>
+                </af:table>
+              </af:panelBox>
+              <af:panelBox text="Cuentas Contables por Empresa" id="pb3"
+                           background="dark">
+                <f:facet name="toolbar"/>
+              </af:panelBox>
+            </af:panelBox>
+          </f:facet>
         </af:pageTemplate>
       </af:form>
     </af:document>
