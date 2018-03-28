@@ -6,10 +6,166 @@
   <jsp:directive.page contentType="text/html;charset=UTF-8"/>
   <f:view>
     <af:document id="d1">
+      <af:messages id="m1"/>
       <af:form id="f1">
         <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
-          <f:facet name="Body_Menus"/>
+          <f:facet name="Body_Menus">
+            <af:panelBox text="Catalogo de Porcentajes de Descuento por Puesto" id="pb1">
+              <f:facet name="toolbar">
+                <af:toolbar id="t1">
+                  <af:commandButton text="Nuevo"
+                                    id="cb1"/>
+                </af:toolbar>
+              </f:facet>
+              <af:panelGridLayout id="pgl1">
+                <af:gridRow marginTop="20px" height="auto" marginBottom="20px"
+                            id="gr1">
+                  <af:gridCell marginStart="20px" width="20%" id="gc1"/>
+                  <af:gridCell marginStart="5px" width="60%" id="gc2">
+                    <af:panelGroupLayout id="pgl2" layout="horizontal">
+                      <af:table value="#{bindings.ToksCaPuestosPorcsView1.collectionModel}"
+                                var="row"
+                                rows="#{bindings.ToksCaPuestosPorcsView1.rangeSize}"
+                                emptyText="#{bindings.ToksCaPuestosPorcsView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                fetchSize="#{bindings.ToksCaPuestosPorcsView1.rangeSize}"
+                                rowBandingInterval="0"
+                                filterModel="#{bindings.ToksCaPuestosPorcsView1Query.queryDescriptor}"
+                                queryListener="#{bindings.ToksCaPuestosPorcsView1Query.processQuery}"
+                                filterVisible="true" varStatus="vs"
+                                selectedRowKeys="#{bindings.ToksCaPuestosPorcsView1.collectionModel.selectedRow}"
+                                selectionListener="#{bindings.ToksCaPuestosPorcsView1.collectionModel.makeCurrent}"
+                                rowSelection="single" id="t2" width="1000"
+                                binding="#{CATPorcentajeDescuentoBean.tablaPorcentajeDescuentos}">
+                        <af:column sortProperty="#{bindings.ToksCaPuestosPorcsView1.hints.IdPuestoPorc.name}"
+                                   filterable="true" sortable="true"
+                                   headerText="Id"
+                                   id="c6" align="center" width="100">
+                          <af:commandLink id="ot4" text="#{row.IdPuestoPorc}">
+                            <af:showPopupBehavior popupId=":::p1"
+                                                  triggerType="action"/>
+                          </af:commandLink>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.ToksCaPuestosPorcsView1.hints.Puesto.name}"
+                                   filterable="true" sortable="true"
+                                   headerText="Puesto"
+                                   id="c3" align="center" width="250">
+                          <af:outputText value="#{row.Puesto}" id="ot3"/>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.ToksCaPuestosPorcsView1.hints.PorcFondoAhorro.name}"
+                                   filterable="true" sortable="true"
+                                   headerText="Fondo Ahorro %"
+                                   id="c5" align="center">
+                          <af:outputText value="#{row.PorcFondoAhorro}"
+                                         id="ot2">
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.ToksCaPuestosPorcsView1.hints.PorcFondoAhorro.format}"/>
+                          </af:outputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.ToksCaPuestosPorcsView1.hints.NoDiasAguinaldo.name}"
+                                   filterable="true" sortable="true"
+                                   headerText="Días Aguinaldo"
+                                   id="c2" align="center">
+                          <af:outputText value="#{row.NoDiasAguinaldo}"
+                                         id="ot6">
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.ToksCaPuestosPorcsView1.hints.NoDiasAguinaldo.format}"/>
+                          </af:outputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.ToksCaPuestosPorcsView1.hints.NoDiasBono.name}"
+                                   filterable="true" sortable="true"
+                                   headerText="Días Bono"
+                                   id="c1" align="center">
+                          <af:outputText value="#{row.NoDiasBono}" id="ot5">
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.ToksCaPuestosPorcsView1.hints.NoDiasBono.format}"/>
+                          </af:outputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.ToksCaPuestosPorcsView1.hints.Calculo.name}"
+                                   filterable="true" sortable="true"
+                                   headerText="Calculo"
+                                   id="c4" align="center">
+                          <af:outputText value="#{row.Calculo}" id="ot1"/>
+                        </af:column>
+                      </af:table>
+                    </af:panelGroupLayout>
+                  </af:gridCell>
+                  <af:gridCell marginStart="5px" width="20%" marginEnd="20px"
+                               id="gc3"/>
+                </af:gridRow>
+              </af:panelGridLayout>
+            </af:panelBox>
+          </f:facet>
         </af:pageTemplate>
+        <af:popup id="p1" partialTriggers="pt1:t2">
+          <af:dialog id="d2">
+            <af:panelFormLayout id="pfl1"
+                                inlineStyle="width:322px; height:214px;"
+                                partialTriggers="pt1:t2">
+              <af:inputText value="#{bindings.IdPuestoPorc.inputValue}"
+                            label="Id"
+                            required="#{bindings.IdPuestoPorc.hints.mandatory}"
+                            columns="#{bindings.IdPuestoPorc.hints.displayWidth}"
+                            maximumLength="#{bindings.IdPuestoPorc.hints.precision}"
+                            shortDesc="#{bindings.IdPuestoPorc.hints.tooltip}"
+                            id="it4" readOnly="true">
+                <f:validator binding="#{bindings.IdPuestoPorc.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.IdPuestoPorc.format}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.Puesto.inputValue}"
+                            label="Puesto"
+                            required="#{bindings.Puesto.hints.mandatory}"
+                            columns="#{bindings.Puesto.hints.displayWidth}"
+                            maximumLength="#{bindings.Puesto.hints.precision}"
+                            shortDesc="#{bindings.Puesto.hints.tooltip}"
+                            id="it2" contentStyle="width:150px;">
+                <f:validator binding="#{bindings.Puesto.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.PorcFondoAhorro.inputValue}"
+                            label="Fondo Ahorro %"
+                            required="#{bindings.PorcFondoAhorro.hints.mandatory}"
+                            columns="#{bindings.PorcFondoAhorro.hints.displayWidth}"
+                            maximumLength="#{bindings.PorcFondoAhorro.hints.precision}"
+                            shortDesc="#{bindings.PorcFondoAhorro.hints.tooltip}"
+                            id="it3">
+                <f:validator binding="#{bindings.PorcFondoAhorro.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.PorcFondoAhorro.format}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.NoDiasAguinaldo.inputValue}"
+                            label="Días Aguinaldo"
+                            required="#{bindings.NoDiasAguinaldo.hints.mandatory}"
+                            columns="#{bindings.NoDiasAguinaldo.hints.displayWidth}"
+                            maximumLength="#{bindings.NoDiasAguinaldo.hints.precision}"
+                            shortDesc="#{bindings.NoDiasAguinaldo.hints.tooltip}"
+                            id="it6">
+                <f:validator binding="#{bindings.NoDiasAguinaldo.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.NoDiasAguinaldo.format}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.NoDiasBono.inputValue}"
+                            label="Días Bono"
+                            required="#{bindings.NoDiasBono.hints.mandatory}"
+                            columns="#{bindings.NoDiasBono.hints.displayWidth}"
+                            maximumLength="#{bindings.NoDiasBono.hints.precision}"
+                            shortDesc="#{bindings.NoDiasBono.hints.tooltip}"
+                            id="it1">
+                <f:validator binding="#{bindings.NoDiasBono.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.NoDiasBono.format}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.Calculo.inputValue}"
+                            label="Calculo"
+                            required="#{bindings.Calculo.hints.mandatory}"
+                            columns="#{bindings.Calculo.hints.displayWidth}"
+                            maximumLength="#{bindings.Calculo.hints.precision}"
+                            shortDesc="#{bindings.Calculo.hints.tooltip}"
+                            id="it5">
+                <f:validator binding="#{bindings.Calculo.validator}"/>
+              </af:inputText>
+            </af:panelFormLayout>
+          </af:dialog>
+        </af:popup>
       </af:form>
     </af:document>
   </f:view>

@@ -10,10 +10,12 @@
   DBObjectName="TOKS_CA_ANTIGUEDAD"
   AliasName="ToksCaAntiguedad"
   BindingStyle="OracleName"
-  UseGlueCode="false">
+  UseGlueCode="false"
+  RowClass="catalogo.ToksCaAntiguedadImpl">
   <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <Attr Name="_codeGenFlag2" Value="Init|Delete|Access"/>
     <AttrArray Name="_publishEvents"/>
+    <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
   <Attribute
     Name="IdAntiguedad"

@@ -43,4 +43,13 @@
   <ViewUsage
     Name="ContadorAntiguedad1"
     ViewObjectName="catalogo.ContadorAntiguedad"/>
+  <ViewUsage
+    Name="CA_Tasas_ID1"
+    ViewObjectName="catalogo.CA_Tasas_ID"/>
+  <ViewUsage
+    Name="CA_Periodo_ID1"
+    ViewObjectName="catalogo.CA_Periodo_ID"/>
+  <ViewUsage
+    Name="ToksCaPuestosPorcsView1"
+    ViewObjectName="catalogo.ToksCaPuestosPorcsView"/>
 </AppModule>

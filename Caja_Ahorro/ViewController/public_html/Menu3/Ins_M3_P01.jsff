@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1" inlineStyle="width:319px;">
+    <af:inputText value="#{bindings.NvlMaxIdTasa01.attributeValue}"
+                  label="#{bindings.IdTasa.hints.label}"
+                  required="#{bindings.IdTasa.hints.mandatory}"
+                  columns="#{bindings.IdTasa.hints.displayWidth}"
+                  maximumLength="#{bindings.IdTasa.hints.precision}"
+                  shortDesc="#{bindings.IdTasa.hints.tooltip}" id="it1"
+                  readOnly="true">
+      <f:validator binding="#{bindings.IdTasa.validator}"/>
+      <af:convertNumber groupingUsed="false"
+                        pattern="#{bindings.IdTasa.format}"/>
+    </af:inputText>
+    <af:inputText
+                  label="#{bindings.Tasa.hints.label}"
+                  required="#{bindings.Tasa.hints.mandatory}"
+                  columns="#{bindings.Tasa.hints.displayWidth}"
+                  maximumLength="#{bindings.Tasa.hints.precision}"
+                  shortDesc="#{bindings.Tasa.hints.tooltip}" id="it6"
+                  secret="false" readOnly="false">
+      <f:validator binding="#{bindings.Tasa.validator}"/>
+      <af:convertNumber groupingUsed="false" pattern="#{bindings.Tasa.format}"/>
+    </af:inputText>
+    <af:inputDate
+                  label="#{bindings.FechaInicio.hints.label}"
+                  required="#{bindings.FechaInicio.hints.mandatory}"
+                  shortDesc="#{bindings.FechaInicio.hints.tooltip}" id="id4"
+                  readOnly="false">
+      <f:validator binding="#{bindings.FechaInicio.validator}"/>
+      <af:convertDateTime pattern="#{bindings.FechaInicio.format}"/>
+    </af:inputDate>
+    <af:inputDate
+                  label="#{bindings.FechaFin.hints.label}"
+                  required="#{bindings.FechaFin.hints.mandatory}"
+                  shortDesc="#{bindings.FechaFin.hints.tooltip}" id="id3"
+                  readOnly="true">
+      <f:validator binding="#{bindings.FechaFin.validator}"/>
+      <af:convertDateTime pattern="#{bindings.FechaFin.format}"/>
+    </af:inputDate>
+    <af:inputText value="A"
+                  label="#{bindings.Estatus.hints.label}"
+                  required="#{bindings.Estatus.hints.mandatory}"
+                  columns="#{bindings.Estatus.hints.displayWidth}"
+                  maximumLength="#{bindings.Estatus.hints.precision}"
+                  shortDesc="#{bindings.Estatus.hints.tooltip}" id="it4"
+                  readOnly="true">
+      <f:validator binding="#{bindings.Estatus.validator}"/>
+    </af:inputText>
+    <af:inputText value="A"
+                  label="#{bindings.Periodo.hints.label}"
+                  required="#{bindings.Periodo.hints.mandatory}"
+                  columns="#{bindings.Periodo.hints.displayWidth}"
+                  maximumLength="#{bindings.Periodo.hints.precision}"
+                  shortDesc="#{bindings.Periodo.hints.tooltip}" id="it5"
+                  readOnly="true">
+      <f:validator binding="#{bindings.Periodo.validator}"/>
+    </af:inputText>
+    <af:commandButton actionListener="#{bindings.Commit.execute}"
+                      text="Insertar"
+                      disabled="#{!bindings.Commit.enabled}" id="cb1"
+                      action="#{backingBeanScope.M3P01_Insert.CommitAction}"/>
+    <af:inputText value="#{bindings.CreadoPor.inputValue}"
+                  label="#{bindings.CreadoPor.hints.label}"
+                  required="#{bindings.CreadoPor.hints.mandatory}"
+                  columns="#{bindings.CreadoPor.hints.displayWidth}"
+                  maximumLength="#{bindings.CreadoPor.hints.precision}"
+                  shortDesc="#{bindings.CreadoPor.hints.tooltip}" id="it3"
+                  visible="false">
+      <f:validator binding="#{bindings.CreadoPor.validator}"/>
+      <af:convertNumber groupingUsed="false"
+                        pattern="#{bindings.CreadoPor.format}"/>
+    </af:inputText>
+    <af:inputDate value="#{bindings.FechaCreacion.inputValue}"
+                  label="#{bindings.FechaCreacion.hints.label}"
+                  required="#{bindings.FechaCreacion.hints.mandatory}"
+                  shortDesc="#{bindings.FechaCreacion.hints.tooltip}" id="id2"
+                  visible="false">
+      <f:validator binding="#{bindings.FechaCreacion.validator}"/>
+      <af:convertDateTime pattern="#{bindings.FechaCreacion.format}"/>
+    </af:inputDate>
+    <af:inputText value="#{bindings.ActualizadoPor.inputValue}"
+                  label="#{bindings.ActualizadoPor.hints.label}"
+                  required="#{bindings.ActualizadoPor.hints.mandatory}"
+                  columns="#{bindings.ActualizadoPor.hints.displayWidth}"
+                  maximumLength="#{bindings.ActualizadoPor.hints.precision}"
+                  shortDesc="#{bindings.ActualizadoPor.hints.tooltip}" id="it2"
+                  visible="false">
+      <f:validator binding="#{bindings.ActualizadoPor.validator}"/>
+      <af:convertNumber groupingUsed="false"
+                        pattern="#{bindings.ActualizadoPor.format}"/>
+    </af:inputText>
+    <af:inputDate value="#{bindings.FechaActualizacion.inputValue}"
+                  label="#{bindings.FechaActualizacion.hints.label}"
+                  required="#{bindings.FechaActualizacion.hints.mandatory}"
+                  shortDesc="#{bindings.FechaActualizacion.hints.tooltip}"
+                  id="id1" visible="false">
+      <f:validator binding="#{bindings.FechaActualizacion.validator}"/>
+      <af:convertDateTime pattern="#{bindings.FechaActualizacion.format}"/>
+    </af:inputDate>
+  </af:panelFormLayout>
+  <!--oracle-jdev-comment:preferred-managed-bean-name:M3P01_Insert-->
+</jsp:root>

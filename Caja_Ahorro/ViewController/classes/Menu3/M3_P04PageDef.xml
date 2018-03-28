@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.66.73" id="M3_P04PageDef" Package="Menu3">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ToksCaCierresNominaView1" RangeSize="25"
+              DataControl="AppModuleDataControl"
+              id="ToksCaCierresNominaView1Iterator"/>
+    <searchRegion Binds="ToksCaCierresNominaView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="ToksCaCierresNominaView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="ToksCaCierresNominaView1Iterator"
+          id="ToksCaCierresNominaView1">
+      <nodeDefinition DefName="catalogo.ToksCaCierresNominaView"
+                      Name="ToksCaCierresNominaView10">
+        <AttrNames>
+          <Item Value="IdCierre"/>
+          <Item Value="FechaCierre"/>
+          <Item Value="FechaFinQuinc"/>
+          <Item Value="Estatus"/>
+          <Item Value="CreadoPor"/>
+          <Item Value="FechaCreacion"/>
+          <Item Value="ActualizadoPor"/>
+          <Item Value="FechaActualizacion"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="ToksCaCierresNominaView1Iterator"
+                     id="IdCierre">
+      <AttrNames>
+        <Item Value="IdCierre"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaCierresNominaView1Iterator"
+                     id="FechaCierre">
+      <AttrNames>
+        <Item Value="FechaCierre"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaCierresNominaView1Iterator"
+                     id="FechaFinQuinc">
+      <AttrNames>
+        <Item Value="FechaFinQuinc"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaCierresNominaView1Iterator"
+                     id="Estatus">
+      <AttrNames>
+        <Item Value="Estatus"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaCierresNominaView1Iterator"
+                     id="CreadoPor">
+      <AttrNames>
+        <Item Value="CreadoPor"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaCierresNominaView1Iterator"
+                     id="FechaCreacion">
+      <AttrNames>
+        <Item Value="FechaCreacion"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaCierresNominaView1Iterator"
+                     id="ActualizadoPor">
+      <AttrNames>
+        <Item Value="ActualizadoPor"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaCierresNominaView1Iterator"
+                     id="FechaActualizacion">
+      <AttrNames>
+        <Item Value="FechaActualizacion"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

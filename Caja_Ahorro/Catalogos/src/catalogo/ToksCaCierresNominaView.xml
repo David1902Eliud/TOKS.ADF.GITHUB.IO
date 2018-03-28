@@ -6,10 +6,19 @@
   Name="ToksCaCierresNominaView"
   Version="11.1.1.66.73"
   InheritPersonalization="merge"
-  SelectList="ToksCaCierresNomina.ID_CIERRE, 
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <SQLQuery>
+    <![CDATA[SELECT ToksCaCierresNomina.ID_CIERRE, 
        ToksCaCierresNomina.FECHA_CIERRE, 
        ToksCaCierresNomina.FECHA_FIN_QUINC, 
-       ToksCaCierresNomina.ESTATUS, 
+       decode(ToksCaCierresNomina.ESTATUS, 'C', 'CAPTURADO', 'NO CAPTURADO') ESTATUS, 
        ToksCaCierresNomina.CREADO_POR, 
        ToksCaCierresNomina.FECHA_CREACION, 
        ToksCaCierresNomina.ACTUALIZADO_POR, 
@@ -23,15 +32,10 @@
        ToksCaCierresNomina.XNUMBER2, 
        ToksCaCierresNomina.XNUMBER3, 
        ToksCaCierresNomina.XNUMBER4, 
-       ToksCaCierresNomina.XNUMBER5"
-  FromList="TOKS_CA_CIERRES_NOMINA ToksCaCierresNomina"
-  BindingStyle="OracleName"
-  CustomQuery="false"
-  PageIterMode="Full"
-  UseGlueCode="false">
-  <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
-  </DesignTime>
+       ToksCaCierresNomina.XNUMBER5
+FROM TOKS_CA_CIERRES_NOMINA ToksCaCierresNomina
+ORDER BY ToksCaCierresNomina.ID_CIERRE DESC]]>
+  </SQLQuery>
   <EntityUsage
     Name="ToksCaCierresNomina"
     Entity="catalogo.ToksCaCierresNomina"/>

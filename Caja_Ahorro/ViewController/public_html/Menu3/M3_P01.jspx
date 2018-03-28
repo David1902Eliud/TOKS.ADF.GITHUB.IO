@@ -15,14 +15,10 @@
                          inlineStyle="color:White;">
               <f:facet name="toolbar">
                 <af:group id="g1">
-                  <af:commandButton actionListener="#{bindings.CreateInsert.execute}"
-                                    text="Nuevo"
-                                    disabled="#{!bindings.CreateInsert.enabled}"
-                                    id="cb1"/>
-                  <af:commandButton actionListener="#{bindings.Delete.execute}"
-                                    text="Eliminar"
-                                    disabled="#{!bindings.Delete.enabled}"
-                                    id="cb2"/>
+                  <af:commandButton text="Nuevo" id="cb1">
+                    <af:showPopupBehavior popupId="p1" triggerType="action"
+                                          align="afterEnd"/>
+                  </af:commandButton>
                   <af:commandButton actionListener="#{bindings.Commit.execute}"
                                     text="Guardar"
                                     disabled="#{!bindings.Commit.enabled}"
@@ -205,9 +201,215 @@
                                id="gc1"/>
                 </af:gridRow>
               </af:panelGridLayout>
+=======
+              <af:table value="#{bindings.ToksCaCatTasasView1.collectionModel}"
+                        var="row"
+                        rows="#{bindings.ToksCaCatTasasView1.rangeSize}"
+                        emptyText="#{bindings.ToksCaCatTasasView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                        fetchSize="#{bindings.ToksCaCatTasasView1.rangeSize}"
+                        rowBandingInterval="0"
+                        filterModel="#{bindings.ToksCaCatTasasView1Query.queryDescriptor}"
+                        queryListener="#{bindings.ToksCaCatTasasView1Query.processQuery}"
+                        filterVisible="true" varStatus="vs"
+                        selectedRowKeys="#{bindings.ToksCaCatTasasView1.collectionModel.selectedRow}"
+                        selectionListener="#{bindings.ToksCaCatTasasView1.collectionModel.makeCurrent}"
+                        rowSelection="single" id="t1"
+                        inlineStyle="width:100.0%;">
+                <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.IdTasa.name}" sortable="true"
+                           headerText="ID"
+                           id="c1" width="105">
+                  <af:commandLink id="ot3" text="#{row.idTasa}">
+                    <af:showPopupBehavior popupId=":::p2" triggerType="action"/>
+                  </af:commandLink>
+                </af:column>
+                <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.Tasa.name}" sortable="true"
+                           headerText="Tasa"
+                           id="c10" width="105" showRequired="true">
+                  <af:outputText value="#{row.Tasa}" id="ot10">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.ToksCaCatTasasView1.hints.Tasa.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.FechaInicio.name}" sortable="true"
+                           headerText="Fecha de Inicio"
+                           id="c7" width="105">
+                  <af:outputText value="#{row.FechaInicio}" id="ot6">
+                    <af:convertDateTime pattern="#{bindings.ToksCaCatTasasView1.hints.FechaInicio.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.FechaFin.name}" sortable="true"
+                           headerText="Fecha de Fin"
+                           id="c5" width="105">
+                  <af:outputText value="#{row.FechaFin}" id="ot5">
+                    <af:convertDateTime pattern="#{bindings.ToksCaCatTasasView1.hints.FechaFin.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.Estatus.name}" sortable="true"
+                           headerText="Estatus"
+                           id="c4" width="106">
+                  <af:outputText value="#{row.Estatus}" id="ot2"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.Periodo.name}" sortable="true"
+                           headerText="Periodo"
+                           id="c2" width="104">
+                  <af:outputText value="#{row.Periodo}" id="ot8"/>
+                </af:column>
+                <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.CreadoPor.name}" sortable="true"
+                           headerText="#{bindings.ToksCaCatTasasView1.hints.CreadoPor.label}"
+                           id="c9" width="105" visible="false">
+                  <af:outputText value="#{row.CreadoPor}" id="ot4">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.ToksCaCatTasasView1.hints.CreadoPor.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.FechaCreacion.name}" sortable="true"
+                           headerText="#{bindings.ToksCaCatTasasView1.hints.FechaCreacion.label}"
+                           id="c8" width="36" visible="false">
+                  <af:outputText value="#{row.FechaCreacion}" id="ot1">
+                    <af:convertDateTime pattern="#{bindings.ToksCaCatTasasView1.hints.FechaCreacion.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.ActualizadoPor.name}"
+                           filterable="true" sortable="true"
+                           headerText="#{bindings.ToksCaCatTasasView1.hints.ActualizadoPor.label}"
+                           id="c3" visible="false">
+                  <af:outputText value="#{row.ActualizadoPor}" id="ot7">
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.ToksCaCatTasasView1.hints.ActualizadoPor.format}"/>
+                  </af:outputText>
+                </af:column>
+                <af:column sortProperty="#{bindings.ToksCaCatTasasView1.hints.FechaActualizacion.name}"
+                           filterable="true" sortable="true"
+                           headerText="#{bindings.ToksCaCatTasasView1.hints.FechaActualizacion.label}"
+                           id="c6" visible="false">
+                  <f:facet name="filter">
+                    <af:inputDate value="#{vs.filterCriteria.FechaActualizacion}"
+                                  id="id1"/>
+                  </f:facet>
+                  <af:outputText value="#{row.FechaActualizacion}" id="ot9">
+                    <af:convertDateTime pattern="#{bindings.ToksCaCatTasasView1.hints.FechaActualizacion.format}"/>
+                  </af:outputText>
+                </af:column>
+              </af:table>
+>>>>>>> f161f00865870e56d7ab8b0a336b71a9149ec79f
             </af:panelBox>
           </f:facet>
         </af:pageTemplate>
+        <af:popup id="p1">
+          <af:panelFormLayout id="pfl1">
+            <f:facet name="footer"/>
+            <af:region value="#{bindings.dynamicRegion1.regionModel}" id="r1"/>
+          </af:panelFormLayout>
+        </af:popup>
+        <af:popup id="p2">
+          <af:panelWindow id="pw1">
+            <af:panelFormLayout id="pfl2">
+              <af:inputText value="#{bindings.IdTasa.inputValue}"
+                            label="Registro número:"
+                            required="#{bindings.IdTasa.hints.mandatory}"
+                            columns="#{bindings.IdTasa.hints.displayWidth}"
+                            maximumLength="#{bindings.IdTasa.hints.precision}"
+                            shortDesc="#{bindings.IdTasa.hints.tooltip}"
+                            id="it2" readOnly="true">
+                <f:validator binding="#{bindings.IdTasa.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.IdTasa.format}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.Tasa.inputValue}"
+                            label="Valor de Tasa:"
+                            required="#{bindings.Tasa.hints.mandatory}"
+                            columns="#{bindings.Tasa.hints.displayWidth}"
+                            maximumLength="#{bindings.Tasa.hints.precision}"
+                            shortDesc="#{bindings.Tasa.hints.tooltip}" id="it3">
+                <f:validator binding="#{bindings.Tasa.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.Tasa.format}"/>
+              </af:inputText>
+              <af:inputDate value="#{bindings.FechaInicio.inputValue}"
+                            label="Fecha de Inicio:"
+                            required="#{bindings.FechaInicio.hints.mandatory}"
+                            shortDesc="#{bindings.FechaInicio.hints.tooltip}"
+                            id="id5" readOnly="true">
+                <f:validator binding="#{bindings.FechaInicio.validator}"/>
+                <af:convertDateTime pattern="#{bindings.FechaInicio.format}"/>
+              </af:inputDate>
+              <af:inputDate value="#{bindings.FechaFin.inputValue}"
+                            label="Fecha de Fin:"
+                            required="#{bindings.FechaFin.hints.mandatory}"
+                            shortDesc="#{bindings.FechaFin.hints.tooltip}"
+                            id="id3" readOnly="true">
+                <f:validator binding="#{bindings.FechaFin.validator}"/>
+                <af:convertDateTime pattern="#{bindings.FechaFin.format}"/>
+              </af:inputDate>
+              <af:inputText value="#{bindings.Estatus.inputValue}"
+                            label="Estatus:"
+                            required="#{bindings.Estatus.hints.mandatory}"
+                            columns="#{bindings.Estatus.hints.displayWidth}"
+                            maximumLength="#{bindings.Estatus.hints.precision}"
+                            shortDesc="#{bindings.Estatus.hints.tooltip}"
+                            id="it5" readOnly="true">
+                <f:validator binding="#{bindings.Estatus.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.Periodo.inputValue}"
+                            label="Periodo:"
+                            required="#{bindings.Periodo.hints.mandatory}"
+                            columns="#{bindings.Periodo.hints.displayWidth}"
+                            maximumLength="#{bindings.Periodo.hints.precision}"
+                            shortDesc="#{bindings.Periodo.hints.tooltip}"
+                            id="it6" readOnly="true">
+                <f:validator binding="#{bindings.Periodo.validator}"/>
+              </af:inputText>
+              <af:inputText value="#{bindings.CreadoPor.inputValue}"
+                            label="#{bindings.CreadoPor.hints.label}"
+                            required="#{bindings.CreadoPor.hints.mandatory}"
+                            columns="#{bindings.CreadoPor.hints.displayWidth}"
+                            maximumLength="#{bindings.CreadoPor.hints.precision}"
+                            shortDesc="#{bindings.CreadoPor.hints.tooltip}"
+                            id="it4" visible="false">
+                <f:validator binding="#{bindings.CreadoPor.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.CreadoPor.format}"/>
+              </af:inputText>
+              <af:inputDate value="#{bindings.FechaCreacion.inputValue}"
+                            label="#{bindings.FechaCreacion.hints.label}"
+                            required="#{bindings.FechaCreacion.hints.mandatory}"
+                            shortDesc="#{bindings.FechaCreacion.hints.tooltip}"
+                            id="id4" visible="false">
+                <f:validator binding="#{bindings.FechaCreacion.validator}"/>
+                <af:convertDateTime pattern="#{bindings.FechaCreacion.format}"/>
+              </af:inputDate>
+              <af:inputText value="#{bindings.ActualizadoPor.inputValue}"
+                            label="#{bindings.ActualizadoPor.hints.label}"
+                            required="#{bindings.ActualizadoPor.hints.mandatory}"
+                            columns="#{bindings.ActualizadoPor.hints.displayWidth}"
+                            maximumLength="#{bindings.ActualizadoPor.hints.precision}"
+                            shortDesc="#{bindings.ActualizadoPor.hints.tooltip}"
+                            id="it1" visible="false">
+                <f:validator binding="#{bindings.ActualizadoPor.validator}"/>
+                <af:convertNumber groupingUsed="false"
+                                  pattern="#{bindings.ActualizadoPor.format}"/>
+              </af:inputText>
+              <af:inputDate value="#{bindings.FechaActualizacion.inputValue}"
+                            label="#{bindings.FechaActualizacion.hints.label}"
+                            required="#{bindings.FechaActualizacion.hints.mandatory}"
+                            shortDesc="#{bindings.FechaActualizacion.hints.tooltip}"
+                            id="id2" visible="false">
+                <f:validator binding="#{bindings.FechaActualizacion.validator}"/>
+                <af:convertDateTime pattern="#{bindings.FechaActualizacion.format}"/>
+              </af:inputDate>
+              <af:commandButton actionListener="#{bindings.Commit.execute}"
+                                text="Guardar"
+                                disabled="#{!bindings.Commit.enabled}"
+                                id="cb2"/>
+              <af:commandButton actionListener="#{bindings.Rollback.execute}"
+                                text="Cancelar"
+                                disabled="#{!bindings.Rollback.enabled}"
+                                immediate="true" id="cb5">
+                <af:resetActionListener/>
+              </af:commandButton>
+            </af:panelFormLayout>
+          </af:panelWindow>
+        </af:popup>
       </af:form>
     </af:document>
   </f:view>

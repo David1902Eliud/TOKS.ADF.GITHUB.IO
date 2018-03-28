@@ -13,24 +13,24 @@
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">260.79883</property>
+         name="y">235.44824</property>
       <property
-         name="x">148.01465</property>
+         name="x">271.01465</property>
    </MethodCall>
    <View
       id="View3">
       <property
-         name="activityId">InsertarAntiguedad</property>
+         name="activityId">Ins_M3_P01</property>
       <property
-         name="page">/InsertarAntiguedad.jsff</property>
+         name="page">/Menu3/Ins_M3_P01.jsff</property>
       <property
-         name="description">&lt;html>&lt;p>&lt;b>InsertarAntiguedad&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+         name="description">&lt;html>&lt;p>&lt;b>Ins_M3_P01&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
          name="exceptionHandler">false</property>
       <property
-         name="y">262.7412</property>
+         name="y">232.14355</property>
       <property
-         name="x">441.0</property>
+         name="x">542.0</property>
       <property
          name="pageFragment">true</property>
    </View>
@@ -42,6 +42,6 @@
       <property
          name="fromOutcome">CreateInsert</property>
       <property
-         name="sdm:polyPoints">R50,189.01465,260.44824,400.0,262.39062,L50</property>
+         name="sdm:polyPoints">R50,312.01465,235.09766,501.0,231.79297,L50</property>
    </ControlFlowCase>
 </SDM>

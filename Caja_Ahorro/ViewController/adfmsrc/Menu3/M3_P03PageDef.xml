@@ -10,6 +10,8 @@
     <searchRegion Binds="ToksCaPeriodoCajaView1Iterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   id="ToksCaPeriodoCajaView1Query"/>
+    <iterator id="CA_Periodo_ID1Iterator" Binds="CA_Periodo_ID1"
+              DataControl="AppModuleDataControl" RangeSize="25"/>
   </executables>
   <bindings>
     <tree IterBinding="ToksCaPeriodoCajaView1Iterator"
@@ -28,5 +30,105 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <tree IterBinding="ToksCaPeriodoCajaView1Iterator"
+          id="ToksCaPeriodoCajaView11">
+      <nodeDefinition DefName="catalogo.ToksCaPeriodoCajaView"
+                      Name="ToksCaPeriodoCajaView110">
+        <AttrNames>
+          <Item Value="IdPeriodo"/>
+          <Item Value="RangoInicial"/>
+          <Item Value="RangoFinal"/>
+          <Item Value="Estatus"/>
+          <Item Value="CreadoPor"/>
+          <Item Value="FechaCreacion"/>
+          <Item Value="ActualizadoPor"/>
+          <Item Value="FechaActualizacion"/>
+          <Item Value="Xnumber1"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction"
+            DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false"
+            Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <attributeValues IterBinding="ToksCaPeriodoCajaView1Iterator"
+                     id="IdPeriodo">
+      <AttrNames>
+        <Item Value="IdPeriodo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaPeriodoCajaView1Iterator"
+                     id="RangoInicial">
+      <AttrNames>
+        <Item Value="RangoInicial"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaPeriodoCajaView1Iterator"
+                     id="RangoFinal">
+      <AttrNames>
+        <Item Value="RangoFinal"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaPeriodoCajaView1Iterator" id="Estatus">
+      <AttrNames>
+        <Item Value="Estatus"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaPeriodoCajaView1Iterator"
+                     id="CreadoPor">
+      <AttrNames>
+        <Item Value="CreadoPor"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaPeriodoCajaView1Iterator"
+                     id="FechaCreacion">
+      <AttrNames>
+        <Item Value="FechaCreacion"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaPeriodoCajaView1Iterator"
+                     id="ActualizadoPor">
+      <AttrNames>
+        <Item Value="ActualizadoPor"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="ToksCaPeriodoCajaView1Iterator"
+                     id="FechaActualizacion">
+      <AttrNames>
+        <Item Value="FechaActualizacion"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CA_Periodo_ID1Iterator"
+                     id="NvlMaxIdPeriodo01">
+      <AttrNames>
+        <Item Value="NvlMaxIdPeriodo01"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CA_Periodo_ID1Iterator" id="EstatusPerido">
+      <AttrNames>
+        <Item Value="EstatusPerido"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CA_Periodo_ID1Iterator"
+                     id="FechaCreacionPeriodo">
+      <AttrNames>
+        <Item Value="FechaCreacionPeriodo"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="ToksCaPeriodoCajaView1Iterator" id="CreateInsert"
+            InstanceName="AppModuleDataControl.ToksCaPeriodoCajaView1"
+            DataControl="AppModuleDataControl" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action IterBinding="ToksCaPeriodoCajaView1Iterator" id="Create"
+            InstanceName="AppModuleDataControl.ToksCaPeriodoCajaView1"
+            DataControl="AppModuleDataControl" RequiresUpdateModel="true"
+            Action="createRow"/>
+    <action IterBinding="ToksCaPeriodoCajaView1Iterator" id="Create1"
+            RequiresUpdateModel="true" Action="createRow"/>
+    <attributeValues IterBinding="ToksCaPeriodoCajaView1Iterator" id="Xnumber1">
+      <AttrNames>
+        <Item Value="Xnumber1"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>
