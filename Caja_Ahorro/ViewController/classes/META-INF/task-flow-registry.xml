@@ -2,7 +2,6 @@
 <task-flow-registry xmlns="http://xmlns.oracle.com/adf/controller/rc">
    <task-flow-descriptor path="WEB-INF/Menu3_Task_Insert_P1.xml" id="Menu3_Task_Insert_P1" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false"/>
    <task-flow-descriptor path="WEB-INF/task_menu2.xml" id="" type="" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="false"/>
-   <task-flow-descriptor path="WEB-INF/insertar_antiguedad_definition.xml" id="insertar_antiguedad_definition" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false"/>
    <task-flow-descriptor path="WEB-INF/task_menu1.xml" id="" type="" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="false"/>
    <task-flow-descriptor path="WEB-INF/Menu3_Task_Insert_P2.xml" id="Menu3_Task_Insert_P2" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false"/>
 </task-flow-registry>

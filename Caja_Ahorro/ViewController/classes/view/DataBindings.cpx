@@ -11,10 +11,6 @@
     <page path="/Menu3/M3_P01.jspx" usageId="view_M3_P01PageDef"/>
     <page path="/Menu3/M3_P02.jspx" usageId="view_M3_P02PageDef"/>
     <page path="/Menu3/M3_P05.jspx" usageId="view_M3_P05PageDef"/>
-    <page path="/WEB-INF/insertar_antiguedad_definition.xml#insertar_antiguedad_definition@CreateInsert"
-          usageId="view_insertar_antiguedad_definition_insertar_antiguedad_definition_CreateInsertPageDef"/>
-    <page path="/InsertarAntiguedad.jsff"
-          usageId="view_InsertarAntiguedadPageDef"/>
     <page path="/WEB-INF/Menu3_Task_Insert_P1.xml#Menu3_Task_Insert_P1@CreateInsert"
           usageId="view_Menu3_Task_Insert_P1_Menu3_Task_Insert_P1_CreateInsertPageDef"/>
     <page path="/Menu3/Ins_M3_P01.jsff" usageId="view_Ins_M3_P01PageDef"/>
@@ -22,6 +18,7 @@
           usageId="view_Menu3_Task_Insert_P2_Menu3_Task_Insert_P2_CreateInsertPageDef"/>
     <page path="/Menu3/Ins_M3_P02.jsff" usageId="view_Ins_M3_P02PageDef"/>
     <page path="/Menu3/M3_P03.jspx" usageId="view_M3_P03PageDef"/>
+    <page path="/Menu3/M3_P06.jspx" usageId="view_M3_P06PageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_M3_P01PageDef" path="Menu3.M3_P01PageDef"/>
@@ -38,6 +35,7 @@
           path="view.pageDefs.Menu3_Task_Insert_P2_Menu3_Task_Insert_P2_CreateInsertPageDef"/>
     <page id="view_Ins_M3_P02PageDef" path="Menu3.Ins_M3_P02PageDef"/>
     <page id="view_M3_P03PageDef" path="Menu3.M3_P03PageDef"/>
+    <page id="view_M3_P06PageDef" path="Menu3.M3_P06PageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="catalogo"

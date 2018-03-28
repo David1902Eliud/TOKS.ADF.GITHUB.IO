@@ -7,21 +7,23 @@
     <iterator Binds="ToksCaAntiguedadView1" RangeSize="25"
               DataControl="AppModuleDataControl"
               id="ToksCaAntiguedadView1Iterator"/>
-    <searchRegion Binds="ToksCaAntiguedadView1Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
-                  id="ToksCaAntiguedadView11Query"/>
-    <taskFlow id="dynamicRegion1"
-              taskFlowId="${CATAntiguedadBean.dynamicTaskFlowId}"
-              activation="deferred"
-              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
     <iterator id="ContadorAntiguedad1Iterator" Binds="ContadorAntiguedad1"
               DataControl="AppModuleDataControl" RangeSize="25"/>
+    <searchRegion Binds="ToksCaAntiguedadView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  id="ToksCaAntiguedadView1Query"/>
   </executables>
   <bindings>
+    <action IterBinding="ToksCaAntiguedadView1Iterator" id="CreateInsert"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action id="Commit" DataControl="AppModuleDataControl"
+            RequiresUpdateModel="true" Action="commitTransaction"/>
+    <action id="Rollback" DataControl="AppModuleDataControl"
+            RequiresUpdateModel="false" Action="rollbackTransaction"/>
     <tree IterBinding="ToksCaAntiguedadView1Iterator"
-          id="ToksCaAntiguedadView11">
+          id="ToksCaAntiguedadView1">
       <nodeDefinition DefName="catalogo.ToksCaAntiguedadView"
-                      Name="ToksCaAntiguedadView110">
+                      Name="ToksCaAntiguedadView10">
         <AttrNames>
           <Item Value="IdAntiguedad"/>
           <Item Value="DiasPrestacion"/>
@@ -30,12 +32,6 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <action IterBinding="ToksCaAntiguedadView1Iterator" id="CreateInsert"
-            RequiresUpdateModel="true" Action="createInsertRow"/>
-    <action id="Commit" DataControl="AppModuleDataControl"
-            RequiresUpdateModel="true" Action="commitTransaction"/>
-    <action id="Rollback" DataControl="AppModuleDataControl"
-            RequiresUpdateModel="false" Action="rollbackTransaction"/>
     <attributeValues IterBinding="ToksCaAntiguedadView1Iterator"
                      id="IdAntiguedad">
       <AttrNames>

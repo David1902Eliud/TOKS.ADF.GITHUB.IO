@@ -49,4 +49,7 @@
   <ViewUsage
     Name="CA_Periodo_ID1"
     ViewObjectName="catalogo.CA_Periodo_ID"/>
+  <ViewUsage
+    Name="ToksCaPuestosPorcsView1"
+    ViewObjectName="catalogo.ToksCaPuestosPorcsView"/>
 </AppModule>

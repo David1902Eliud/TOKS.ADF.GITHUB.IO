@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ToksCaPuestosPorcs"
+  Version="11.1.1.66.73"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="TOKS_CA_PUESTOS_PORCS"
+  AliasName="ToksCaPuestosPorcs"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+  </DesignTime>
+  <Attribute
+    Name="IdPuestoPorc"
+    IsNotNull="true"
+    ColumnName="ID_PUESTO_PORC"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_PUESTOS_PORCS"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="39"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="IdPuesto"
+    IsNotNull="true"
+    Precision="5"
+    Scale="0"
+    ColumnName="ID_PUESTO"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_PUESTOS_PORCS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="6"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Puesto"
+    IsNotNull="true"
+    Precision="100"
+    ColumnName="PUESTO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_PUESTOS_PORCS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="PorcFondoAhorro"
+    Precision="10"
+    Scale="3"
+    ColumnName="PORC_FONDO_AHORRO"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_PUESTOS_PORCS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="12"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="NoDiasAguinaldo"
+    Precision="5"
+    Scale="0"
+    ColumnName="NO_DIAS_AGUINALDO"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_PUESTOS_PORCS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="6"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="NoDiasBono"
+    Precision="5"
+    Scale="2"
+    ColumnName="NO_DIAS_BONO"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_PUESTOS_PORCS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Calculo"
+    Precision="1"
+    ColumnName="CALCULO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="TOKS_CA_PUESTOS_PORCS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreadoPor"
+    Precision="5"
+    Scale="0"
+    ColumnName="CREADO_POR"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_PUESTOS_PORCS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="6"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="FechaCreacion"
+    ColumnName="FECHA_CREACION"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="TOKS_CA_PUESTOS_PORCS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ActualizadoPor"
+    Precision="5"
+    Scale="0"
+    ColumnName="ACTUALIZADO_POR"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="TOKS_CA_PUESTOS_PORCS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="6"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="FechaActualizacion"
+    ColumnName="FECHA_ACTUALIZACION"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="TOKS_CA_PUESTOS_PORCS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="CheckPuestoPorcCalculo">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="CHECK_PUESTO_PORC_CALCULO"/>
+      <Attr Name="_checkCondition" Value="CALCULO  IN ('X')"/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaPuestosPorcs.Calculo"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC00435217">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C00435217"/>
+      <Attr Name="_checkCondition" Value='"ID_PUESTO_PORC" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaPuestosPorcs.IdPuestoPorc"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC00435218">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C00435218"/>
+      <Attr Name="_checkCondition" Value='"ID_PUESTO" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaPuestosPorcs.IdPuesto"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC00435219"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C00435219"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="catalogo.ToksCaPuestosPorcs.IdPuestoPorc"/>
+    </AttrArray>
+  </Key>
+</Entity>

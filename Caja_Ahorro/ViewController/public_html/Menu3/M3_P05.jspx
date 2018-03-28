@@ -16,9 +16,7 @@
                   <af:commandButton
                                     text="Nuevo"
                                     disabled="#{!bindings.CreateInsert.enabled}"
-                                    id="cb1">
-                    <af:showPopupBehavior popupId="::p2" triggerType="action"/>
-                  </af:commandButton>
+                                    id="cb1"/>
                 </af:toolbar>
               </f:facet>
               <af:panelGridLayout id="pgl1">
@@ -26,57 +24,58 @@
                             id="gr1">
                   <af:gridCell marginStart="20px" width="20%" id="gc1"/>
                   <af:gridCell marginStart="5px" width="60%" id="gc2">
-                    <af:table value="#{bindings.ToksCaAntiguedadView11.collectionModel}"
-                              var="row"
-                              rows="#{bindings.ToksCaAntiguedadView11.rangeSize}"
-                              emptyText="#{bindings.ToksCaAntiguedadView11.viewable ? 'No data to display.' : 'Access Denied.'}"
-                              fetchSize="#{bindings.ToksCaAntiguedadView11.rangeSize}"
-                              rowBandingInterval="0"
-                              filterModel="#{bindings.ToksCaAntiguedadView11Query.queryDescriptor}"
-                              queryListener="#{bindings.ToksCaAntiguedadView11Query.processQuery}"
-                              filterVisible="true" id="t2"
-                              binding="#{CATAntiguedadBean.tablaAntiguedadDescuentos}"
-                              width="1100" rowSelection="single" varStatus="vs"
-                              selectedRowKeys="#{bindings.ToksCaAntiguedadView11.collectionModel.selectedRow}"
-                              selectionListener="#{bindings.ToksCaAntiguedadView11.collectionModel.makeCurrent}"
-                              partialTriggers="::cb1">
-                      <af:column sortProperty="#{bindings.ToksCaAntiguedadView11.hints.IdAntiguedad.name}"
-                                 filterable="true" sortable="true"
-                                 headerText="Id "
-                                 id="c1" align="center" width="150">
-                        <af:commandLink id="ot4" text="#{row.IdAntiguedad}">
-                          <af:showPopupBehavior popupId=":::p1"
-                                                triggerType="action"/>
-                        </af:commandLink>
-                      </af:column>
-                      <af:column sortProperty="#{bindings.ToksCaAntiguedadView11.hints.DiasPrestacion.name}"
-                                 filterable="true" sortable="true"
-                                 headerText="Días Otorgados"
-                                 id="c3" align="center" width="150">
-                        <af:outputText value="#{row.DiasPrestacion}" id="ot3">
-                          <af:convertNumber groupingUsed="false"
-                                            pattern="#{bindings.ToksCaAntiguedadView11.hints.DiasPrestacion.format}"/>
-                        </af:outputText>
-                      </af:column>
-                      <af:column sortProperty="#{bindings.ToksCaAntiguedadView11.hints.RangoInicial.name}"
-                                 filterable="true" sortable="true"
-                                 headerText="De (Años)"
-                                 id="c4" align="center" width="150">
-                        <af:outputText value="#{row.RangoInicial}" id="ot2">
-                          <af:convertNumber groupingUsed="false"
-                                            pattern="#{bindings.ToksCaAntiguedadView11.hints.RangoInicial.format}"/>
-                        </af:outputText>
-                      </af:column>
-                      <af:column sortProperty="#{bindings.ToksCaAntiguedadView11.hints.RangoFinal.name}"
-                                 filterable="true" sortable="true"
-                                 headerText="Hasta (Años)"
-                                 id="c2" align="center" width="150">
-                        <af:outputText value="#{row.RangoFinal}" id="ot1">
-                          <af:convertNumber groupingUsed="false"
-                                            pattern="#{bindings.ToksCaAntiguedadView11.hints.RangoFinal.format}"/>
-                        </af:outputText>
-                      </af:column>
-                    </af:table>
+                    <af:panelGroupLayout id="pgl2" layout="horizontal">
+                      <af:table value="#{bindings.ToksCaAntiguedadView1.collectionModel}"
+                                var="row"
+                                rows="#{bindings.ToksCaAntiguedadView1.rangeSize}"
+                                emptyText="#{bindings.ToksCaAntiguedadView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                fetchSize="#{bindings.ToksCaAntiguedadView1.rangeSize}"
+                                rowBandingInterval="0"
+                                filterModel="#{bindings.ToksCaAntiguedadView1Query.queryDescriptor}"
+                                queryListener="#{bindings.ToksCaAntiguedadView1Query.processQuery}"
+                                filterVisible="true" varStatus="vs"
+                                selectedRowKeys="#{bindings.ToksCaAntiguedadView1.collectionModel.selectedRow}"
+                                selectionListener="#{bindings.ToksCaAntiguedadView1.collectionModel.makeCurrent}"
+                                rowSelection="single" id="t2" width="1000"
+                                binding="#{CATAntiguedadBean.tablaAntiguedadDescuentos}">
+                        <af:column sortProperty="#{bindings.ToksCaAntiguedadView1.hints.IdAntiguedad.name}"
+                                   filterable="true" sortable="true"
+                                   headerText="Id Antiguedad"
+                                   id="c2" align="center" width="150">
+                          <af:commandLink id="ot2" text="#{row.IdAntiguedad}">
+                            <af:showPopupBehavior popupId=":::p1"
+                                                  triggerType="action"/>
+                          </af:commandLink>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.ToksCaAntiguedadView1.hints.DiasPrestacion.name}"
+                                   filterable="true" sortable="true"
+                                   headerText="Días Otorgados"
+                                   id="c1" align="center" width="150">
+                          <af:outputText value="#{row.DiasPrestacion}" id="ot4">
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.ToksCaAntiguedadView1.hints.DiasPrestacion.format}"/>
+                          </af:outputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.ToksCaAntiguedadView1.hints.RangoInicial.name}"
+                                   filterable="true" sortable="true"
+                                   headerText="De (Años)"
+                                   id="c4" align="center" width="150">
+                          <af:outputText value="#{row.RangoInicial}" id="ot3">
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.ToksCaAntiguedadView1.hints.RangoInicial.format}"/>
+                          </af:outputText>
+                        </af:column>
+                        <af:column sortProperty="#{bindings.ToksCaAntiguedadView1.hints.RangoFinal.name}"
+                                   filterable="true" sortable="true"
+                                   headerText="Hasta (Años)"
+                                   id="c3" width="150" align="center">
+                          <af:outputText value="#{row.RangoFinal}" id="ot1">
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.ToksCaAntiguedadView1.hints.RangoFinal.format}"/>
+                          </af:outputText>
+                        </af:column>
+                      </af:table>
+                    </af:panelGroupLayout>
                   </af:gridCell>
                   <af:gridCell marginStart="5px" width="20%" marginEnd="20px"
                                id="gc3"/>
@@ -85,21 +84,18 @@
             </af:panelBox>
           </f:facet>
         </af:pageTemplate>
-        <af:popup id="p1"
-                  popupFetchListener="#{CATAntiguedadBean.editPopupFetchListener}"
-                  contentDelivery="lazyUncached"
-                  popupCanceledListener="#{CATAntiguedadBean.editPopupCancelListener}">
-          <af:dialog id="d2" modal="true"
+        <af:popup id="p1" partialTriggers="pt1:t2">
+          <af:dialog id="d2" modal="true" resize="off"
                      dialogListener="#{CATAntiguedadBean.editDialogListener}">
             <af:panelFormLayout id="pfl1" partialTriggers="pt1:t2"
-                                inlineStyle="width:333px; height:182px;">
+                                inlineStyle="width:300px; height:100px;">
               <af:inputText value="#{bindings.IdAntiguedad.inputValue}"
-                            label="Id"
+                            label="Id "
                             required="#{bindings.IdAntiguedad.hints.mandatory}"
                             columns="#{bindings.IdAntiguedad.hints.displayWidth}"
                             maximumLength="#{bindings.IdAntiguedad.hints.precision}"
                             shortDesc="#{bindings.IdAntiguedad.hints.tooltip}"
-                            id="it4">
+                            id="it3" readOnly="true">
                 <f:validator binding="#{bindings.IdAntiguedad.validator}"/>
                 <af:convertNumber groupingUsed="false"
                                   pattern="#{bindings.IdAntiguedad.format}"/>
@@ -110,7 +106,7 @@
                             columns="#{bindings.DiasPrestacion.hints.displayWidth}"
                             maximumLength="#{bindings.DiasPrestacion.hints.precision}"
                             shortDesc="#{bindings.DiasPrestacion.hints.tooltip}"
-                            id="it2">
+                            id="it1">
                 <f:validator binding="#{bindings.DiasPrestacion.validator}"/>
                 <af:convertNumber groupingUsed="false"
                                   pattern="#{bindings.DiasPrestacion.format}"/>
@@ -121,7 +117,7 @@
                             columns="#{bindings.RangoInicial.hints.displayWidth}"
                             maximumLength="#{bindings.RangoInicial.hints.precision}"
                             shortDesc="#{bindings.RangoInicial.hints.tooltip}"
-                            id="it3">
+                            id="it2">
                 <f:validator binding="#{bindings.RangoInicial.validator}"/>
                 <af:convertNumber groupingUsed="false"
                                   pattern="#{bindings.RangoInicial.format}"/>
@@ -132,23 +128,13 @@
                             columns="#{bindings.RangoFinal.hints.displayWidth}"
                             maximumLength="#{bindings.RangoFinal.hints.precision}"
                             shortDesc="#{bindings.RangoFinal.hints.tooltip}"
-                            id="it1">
+                            id="it4">
                 <f:validator binding="#{bindings.RangoFinal.validator}"/>
                 <af:convertNumber groupingUsed="false"
                                   pattern="#{bindings.RangoFinal.format}"/>
               </af:inputText>
             </af:panelFormLayout>
           </af:dialog>
-        </af:popup>
-        <af:popup id="p2"
-                  popupFetchListener="#{CATAntiguedadBean.calcularIndice}">
-          <af:panelWindow id="pw1" modal="true">
-            <af:panelFormLayout id="pfl2">
-              <f:facet name="footer"/>
-              <af:region value="#{bindings.dynamicRegion1.regionModel}"
-                         id="r1"/>
-            </af:panelFormLayout>
-          </af:panelWindow>
         </af:popup>
       </af:form>
     </af:document>

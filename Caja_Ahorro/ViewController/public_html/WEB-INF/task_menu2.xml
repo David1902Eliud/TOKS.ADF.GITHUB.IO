@@ -259,4 +259,9 @@
     <managed-bean-class id="__128">view.M3P02_Class</managed-bean-class>
     <managed-bean-scope id="__126">backingBean</managed-bean-scope>
   </managed-bean>
+  <managed-bean id="__129">
+    <managed-bean-name id="__132">CATPorcentajeDescuentoBean</managed-bean-name>
+    <managed-bean-class id="__131">view.CatalogoPorcentajeDescuentos</managed-bean-class>
+    <managed-bean-scope id="__130">request</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

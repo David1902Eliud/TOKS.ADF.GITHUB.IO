@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ToksCaPuestosPorcsView"
+  Version="11.1.1.66.73"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
+    <Attr Name="_isExpertMode" Value="true"/>
+  </DesignTime>
+  <SQLQuery>
+    <![CDATA[SELECT ToksCaPuestosPorcs.ID_PUESTO_PORC, 
+       ToksCaPuestosPorcs.ID_PUESTO, 
+       ToksCaPuestosPorcs.PUESTO, 
+       ToksCaPuestosPorcs.PORC_FONDO_AHORRO, 
+       ToksCaPuestosPorcs.NO_DIAS_AGUINALDO, 
+       ToksCaPuestosPorcs.NO_DIAS_BONO, 
+       ToksCaPuestosPorcs.CALCULO, 
+       ToksCaPuestosPorcs.CREADO_POR, 
+       ToksCaPuestosPorcs.FECHA_CREACION, 
+       ToksCaPuestosPorcs.ACTUALIZADO_POR, 
+       ToksCaPuestosPorcs.FECHA_ACTUALIZACION
+FROM TOKS_CA_PUESTOS_PORCS ToksCaPuestosPorcs ORDER BY 
+ToksCaPuestosPorcs.ID_PUESTO_PORC]]>
+  </SQLQuery>
+  <EntityUsage
+    Name="ToksCaPuestosPorcs"
+    Entity="catalogo.ToksCaPuestosPorcs"/>
+  <ViewAttribute
+    Name="IdPuestoPorc"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="IdPuestoPorc"
+    EntityUsage="ToksCaPuestosPorcs"
+    AliasName="ID_PUESTO_PORC"/>
+  <ViewAttribute
+    Name="IdPuesto"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="IdPuesto"
+    EntityUsage="ToksCaPuestosPorcs"
+    AliasName="ID_PUESTO"/>
+  <ViewAttribute
+    Name="Puesto"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Puesto"
+    EntityUsage="ToksCaPuestosPorcs"
+    AliasName="PUESTO"/>
+  <ViewAttribute
+    Name="PorcFondoAhorro"
+    PrecisionRule="true"
+    EntityAttrName="PorcFondoAhorro"
+    EntityUsage="ToksCaPuestosPorcs"
+    AliasName="PORC_FONDO_AHORRO"/>
+  <ViewAttribute
+    Name="NoDiasAguinaldo"
+    PrecisionRule="true"
+    EntityAttrName="NoDiasAguinaldo"
+    EntityUsage="ToksCaPuestosPorcs"
+    AliasName="NO_DIAS_AGUINALDO"/>
+  <ViewAttribute
+    Name="NoDiasBono"
+    PrecisionRule="true"
+    EntityAttrName="NoDiasBono"
+    EntityUsage="ToksCaPuestosPorcs"
+    AliasName="NO_DIAS_BONO"/>
+  <ViewAttribute
+    Name="Calculo"
+    PrecisionRule="true"
+    EntityAttrName="Calculo"
+    EntityUsage="ToksCaPuestosPorcs"
+    AliasName="CALCULO"/>
+  <ViewAttribute
+    Name="CreadoPor"
+    PrecisionRule="true"
+    EntityAttrName="CreadoPor"
+    EntityUsage="ToksCaPuestosPorcs"
+    AliasName="CREADO_POR"/>
+  <ViewAttribute
+    Name="FechaCreacion"
+    PrecisionRule="true"
+    EntityAttrName="FechaCreacion"
+    EntityUsage="ToksCaPuestosPorcs"
+    AliasName="FECHA_CREACION"/>
+  <ViewAttribute
+    Name="ActualizadoPor"
+    PrecisionRule="true"
+    EntityAttrName="ActualizadoPor"
+    EntityUsage="ToksCaPuestosPorcs"
+    AliasName="ACTUALIZADO_POR"/>
+  <ViewAttribute
+    Name="FechaActualizacion"
+    PrecisionRule="true"
+    EntityAttrName="FechaActualizacion"
+    EntityUsage="ToksCaPuestosPorcs"
+    AliasName="FECHA_ACTUALIZACION"/>
+</ViewObject>

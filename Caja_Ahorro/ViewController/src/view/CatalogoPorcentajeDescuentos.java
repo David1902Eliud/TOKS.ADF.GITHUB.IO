@@ -1,6 +1,8 @@
 package view;
 
-import oracle.adf.controller.TaskFlowId;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
+
 import oracle.adf.model.BindingContext;
 import oracle.adf.model.binding.DCBindingContainer;
 import oracle.adf.model.binding.DCIteratorBinding;
@@ -15,14 +17,12 @@ import oracle.binding.OperationBinding;
 
 import oracle.jbo.ViewObject;
 
-public class CatalogoAntiguedad {
+public class CatalogoPorcentajeDescuentos {
+    
+    private RichTable tablaPorcentajeDescuentos;
 
-    private RichTable tablaAntiguedadDescuentos;
-    private String taskFlowId =
-        "/WEB-INF/insertar_antiguedad_definition.xml#insertar_antiguedad_definition";
-
-    public CatalogoAntiguedad() {
-
+    public CatalogoPorcentajeDescuentos() {
+    
     }
 
     public void editPopupFetchListener(PopupFetchEvent popupFetchEvent) {
@@ -35,6 +35,11 @@ public class CatalogoAntiguedad {
         }
     }
 
+ /*   public void callMethodIndice(PopupFetchEvent popupFetchEvent) {
+        InsertPuesto puesto = new InsertPuesto();
+        puesto.obtenerIndice();
+    } */
+
 
     public void editDialogListener(DialogEvent dialogEvent) {
         if (dialogEvent.getOutcome().name().equals("ok")) {
@@ -43,15 +48,22 @@ public class CatalogoAntiguedad {
             OperationBinding operationBinding =
                 bindings.getOperationBinding("Commit");
             operationBinding.execute();
+
+            FacesContext con = FacesContext.getCurrentInstance();
+            FacesMessage message =
+                new FacesMessage(FacesMessage.SEVERITY_INFO, "Registro Modificado",
+                                 "");
+            con.addMessage("", message);
             backFromPopup();
-            clearCache();
         } else if (dialogEvent.getOutcome().name().equals("cancel")) {
+            System.out.println("Cancelar");
             BindingContainer bindings =
                 BindingContext.getCurrent().getCurrentBindingsEntry();
             OperationBinding operationBinding =
                 bindings.getOperationBinding("Rollback");
             operationBinding.execute();
         }
+        clearCache();
     }
 
     public void editPopupCancelListener(PopupCanceledEvent popupCanceledEvent) {
@@ -61,6 +73,7 @@ public class CatalogoAntiguedad {
             bindings.getOperationBinding("Rollback");
         operationBinding.execute();
         clearCache();
+
     }
 
     public void clearCache() {
@@ -68,30 +81,31 @@ public class CatalogoAntiguedad {
             (DCBindingContainer)BindingContext.getCurrent().getCurrentBindingsEntry();
 
         DCIteratorBinding orderItemIterator =
-            bindings.findIteratorBinding("ToksCaAntiguedadView1Iterator");
+            bindings.findIteratorBinding("ToksCaPuestosPorcsView1Iterator");
+
         ViewObject viewObject = orderItemIterator.getViewObject();
         viewObject.clearCache();
         viewObject.executeQuery();
     }
 
-    public void calcularIndice(PopupFetchEvent popupFetchEvent) {
-        Antiguedad ins = new Antiguedad();
-        ins.obtenerIndice();
-    }
-
     public void backFromPopup() {
-        AdfFacesContext.getCurrentInstance().addPartialTarget(tablaAntiguedadDescuentos);
+        AdfFacesContext.getCurrentInstance().addPartialTarget(tablaPorcentajeDescuentos);
     }
 
-    public void setTablaAntiguedadDescuentos(RichTable tablaAntiguedadDescuentos) {
-        this.tablaAntiguedadDescuentos = tablaAntiguedadDescuentos;
+
+    public void settablaPorcentajeDescuentos(RichTable tablaPorcentajeDescuentos) {
+        this.tablaPorcentajeDescuentos = tablaPorcentajeDescuentos;
     }
 
-    public RichTable getTablaAntiguedadDescuentos() {
-        return tablaAntiguedadDescuentos;
+    public RichTable gettablaPorcentajeDescuentos() {
+        return tablaPorcentajeDescuentos;
     }
 
-    public TaskFlowId getDynamicTaskFlowId() {
-        return TaskFlowId.parse(taskFlowId);
+
+    public BindingContainer getBindings() {
+        return BindingContext.getCurrent().getCurrentBindingsEntry();
     }
+    
+    
+    
 }
