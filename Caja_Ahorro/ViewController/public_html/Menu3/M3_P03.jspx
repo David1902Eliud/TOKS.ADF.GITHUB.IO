@@ -38,25 +38,20 @@
                         selectedRowKeys="#{bindings.ToksCaPeriodoCajaView11.collectionModel.selectedRow}"
                         selectionListener="#{bindings.ToksCaPeriodoCajaView11.collectionModel.makeCurrent}"
                         rowSelection="single" id="t1"
-                        partialTriggers="::cb1 ::cb4 ::cb5">
+                        partialTriggers="::cb1 ::cb4 ::cb5"
+                        inlineStyle="width:100.0%;">
                 <af:column sortProperty="#{bindings.ToksCaPeriodoCajaView11.hints.IdPeriodo.name}" sortable="true"
                            headerText="ID"
-                           id="c8">
-                  <af:inputText value="#{row.bindings.IdPeriodo.inputValue}"
-                                label="#{bindings.ToksCaPeriodoCajaView11.hints.IdPeriodo.label}"
-                                required="#{bindings.ToksCaPeriodoCajaView11.hints.IdPeriodo.mandatory}"
-                                columns="#{bindings.ToksCaPeriodoCajaView11.hints.IdPeriodo.displayWidth}"
-                                maximumLength="#{bindings.ToksCaPeriodoCajaView11.hints.IdPeriodo.precision}"
-                                shortDesc="#{bindings.ToksCaPeriodoCajaView11.hints.IdPeriodo.tooltip}"
-                                id="it1" readOnly="true">
-                    <f:validator binding="#{row.bindings.IdPeriodo.validator}"/>
-                    <af:convertNumber groupingUsed="false"
-                                      pattern="#{bindings.ToksCaPeriodoCajaView11.hints.IdPeriodo.format}"/>
-                  </af:inputText>
+                           id="c8" width="200">
+                  <af:commandLink shortDesc="#{bindings.ToksCaPeriodoCajaView11.hints.IdPeriodo.tooltip}"
+                                  id="it1"
+                                  text="#{row.IdPeriodo}">
+                    <af:showPopupBehavior popupId="::p2" triggerType="action"/>
+                  </af:commandLink>
                 </af:column>
                 <af:column sortProperty="#{bindings.ToksCaPeriodoCajaView11.hints.RangoInicial.name}" sortable="true"
                            headerText="Rango Inicial"
-                           id="c2">
+                           id="c2" width="200">
                   <af:inputDate value="#{row.bindings.RangoInicial.inputValue}"
                                 label="#{bindings.ToksCaPeriodoCajaView11.hints.RangoInicial.label}"
                                 required="#{bindings.ToksCaPeriodoCajaView11.hints.RangoInicial.mandatory}"
@@ -68,7 +63,7 @@
                 </af:column>
                 <af:column sortProperty="#{bindings.ToksCaPeriodoCajaView11.hints.RangoFinal.name}" sortable="true"
                            headerText="Rango Final"
-                           id="c6">
+                           id="c6" width="200">
                   <af:inputDate value="#{row.bindings.RangoFinal.inputValue}"
                                 label="#{bindings.ToksCaPeriodoCajaView11.hints.RangoFinal.label}"
                                 required="#{bindings.ToksCaPeriodoCajaView11.hints.RangoFinal.mandatory}"
@@ -80,7 +75,7 @@
                 </af:column>
                 <af:column sortProperty="#{bindings.ToksCaPeriodoCajaView11.hints.Estatus.name}" sortable="true"
                            headerText="Estatus"
-                           id="c5">
+                           id="c5" width="200">
                   <af:inputText value="#{row.bindings.Estatus.inputValue}"
                                 label="#{bindings.ToksCaPeriodoCajaView11.hints.Estatus.label}"
                                 required="#{bindings.ToksCaPeriodoCajaView11.hints.Estatus.mandatory}"
@@ -156,6 +151,22 @@
                     <f:validator binding="#{row.bindings.FechaActualizacion.validator}"/>
                     <af:convertDateTime pattern="#{bindings.ToksCaPeriodoCajaView11.hints.FechaActualizacion.format}"/>
                   </af:inputDate>
+                </af:column>
+                <af:column sortProperty="#{bindings.ToksCaPeriodoCajaView11.hints.Xnumber1.name}"
+                           sortable="false"
+                           headerText="Numero de Reingresos"
+                           id="c9" width="200">
+                  <af:inputText value="#{row.bindings.Xnumber1.inputValue}"
+                                label="#{bindings.ToksCaPeriodoCajaView11.hints.Xnumber1.label}"
+                                required="#{bindings.ToksCaPeriodoCajaView11.hints.Xnumber1.mandatory}"
+                                columns="#{bindings.ToksCaPeriodoCajaView11.hints.Xnumber1.displayWidth}"
+                                maximumLength="#{bindings.ToksCaPeriodoCajaView11.hints.Xnumber1.precision}"
+                                shortDesc="#{bindings.ToksCaPeriodoCajaView11.hints.Xnumber1.tooltip}"
+                                id="it14" readOnly="true">
+                    <f:validator binding="#{row.bindings.IdPeriodo.validator}"/>
+                    <af:convertNumber groupingUsed="false"
+                                      pattern="#{bindings.ToksCaPeriodoCajaView11.hints.IdPeriodo.format}"/>
+                  </af:inputText>
                 </af:column>
               </af:table>
               <af:popup id="p1">
@@ -251,6 +262,98 @@
                     </af:group>
                   </f:facet>
                 </af:panelFormLayout>
+              </af:popup>
+              <af:popup id="p2">
+                <af:dialog id="d2"
+                           dialogListener="#{backingBeanScope.M3P03.editDialogListener}">
+                  <af:panelFormLayout id="pfl2">
+                    <af:inputText value="#{bindings.IdPeriodo.inputValue}"
+                                  label="ID Periodo:"
+                                  required="#{bindings.IdPeriodo.hints.mandatory}"
+                                  columns="#{bindings.IdPeriodo.hints.displayWidth}"
+                                  maximumLength="#{bindings.IdPeriodo.hints.precision}"
+                                  shortDesc="#{bindings.IdPeriodo.hints.tooltip}"
+                                  id="it11" readOnly="true">
+                      <f:validator binding="#{bindings.IdPeriodo.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.IdPeriodo.format}"/>
+                    </af:inputText>
+                    <af:inputDate value="#{bindings.RangoInicial.inputValue}"
+                                  label="Rango Inicial:"
+                                  required="#{bindings.RangoInicial.hints.mandatory}"
+                                  shortDesc="#{bindings.RangoInicial.hints.tooltip}"
+                                  id="id14">
+                      <f:validator binding="#{bindings.RangoInicial.validator}"/>
+                      <af:convertDateTime pattern="#{bindings.RangoInicial.format}"/>
+                    </af:inputDate>
+                    <af:inputDate value="#{bindings.RangoFinal.inputValue}"
+                                  label="Rango Final:"
+                                  required="#{bindings.RangoFinal.hints.mandatory}"
+                                  shortDesc="#{bindings.RangoFinal.hints.tooltip}"
+                                  id="id12">
+                      <f:validator binding="#{bindings.RangoFinal.validator}"/>
+                      <af:convertDateTime pattern="#{bindings.RangoFinal.format}"/>
+                    </af:inputDate>
+                    <af:inputText value="#{bindings.Estatus.inputValue}"
+                                  label="Estatus:"
+                                  required="#{bindings.Estatus.hints.mandatory}"
+                                  columns="#{bindings.Estatus.hints.displayWidth}"
+                                  maximumLength="#{bindings.Estatus.hints.precision}"
+                                  shortDesc="#{bindings.Estatus.hints.tooltip}"
+                                  id="it10" readOnly="true">
+                      <f:validator binding="#{bindings.Estatus.validator}"/>
+                    </af:inputText>
+                    <af:inputText value="#{bindings.CreadoPor.inputValue}"
+                                  label="#{bindings.CreadoPor.hints.label}"
+                                  required="#{bindings.CreadoPor.hints.mandatory}"
+                                  columns="#{bindings.CreadoPor.hints.displayWidth}"
+                                  maximumLength="#{bindings.CreadoPor.hints.precision}"
+                                  shortDesc="#{bindings.CreadoPor.hints.tooltip}"
+                                  id="it9" visible="false">
+                      <f:validator binding="#{bindings.CreadoPor.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.CreadoPor.format}"/>
+                    </af:inputText>
+                    <af:inputDate value="#{bindings.FechaCreacion.inputValue}"
+                                  label="#{bindings.FechaCreacion.hints.label}"
+                                  required="#{bindings.FechaCreacion.hints.mandatory}"
+                                  shortDesc="#{bindings.FechaCreacion.hints.tooltip}"
+                                  id="id11" visible="false">
+                      <f:validator binding="#{bindings.FechaCreacion.validator}"/>
+                      <af:convertDateTime pattern="#{bindings.FechaCreacion.format}"/>
+                    </af:inputDate>
+                    <af:inputText value="#{bindings.ActualizadoPor.inputValue}"
+                                  label="#{bindings.ActualizadoPor.hints.label}"
+                                  required="#{bindings.ActualizadoPor.hints.mandatory}"
+                                  columns="#{bindings.ActualizadoPor.hints.displayWidth}"
+                                  maximumLength="#{bindings.ActualizadoPor.hints.precision}"
+                                  shortDesc="#{bindings.ActualizadoPor.hints.tooltip}"
+                                  id="it12" visible="false">
+                      <f:validator binding="#{bindings.ActualizadoPor.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.ActualizadoPor.format}"/>
+                    </af:inputText>
+                    <af:inputDate value="#{bindings.FechaActualizacion.inputValue}"
+                                  label="#{bindings.FechaActualizacion.hints.label}"
+                                  required="#{bindings.FechaActualizacion.hints.mandatory}"
+                                  shortDesc="#{bindings.FechaActualizacion.hints.tooltip}"
+                                  id="id13" visible="false">
+                      <f:validator binding="#{bindings.FechaActualizacion.validator}"/>
+                      <af:convertDateTime pattern="#{bindings.FechaActualizacion.format}"/>
+                    </af:inputDate>
+                    <af:inputText value="#{bindings.Xnumber1.inputValue}"
+                                  label="Numero de:"
+                                  required="#{bindings.Xnumber1.hints.mandatory}"
+                                  columns="#{bindings.Xnumber1.hints.displayWidth}"
+                                  maximumLength="#{bindings.Xnumber1.hints.precision}"
+                                  shortDesc="#{bindings.Xnumber1.hints.tooltip}"
+                                  id="it13">
+                      <f:validator binding="#{bindings.Xnumber1.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.Xnumber1.format}"/>
+                    </af:inputText>
+                  </af:panelFormLayout>
+                </af:dialog>
               </af:popup>
             </af:panelBox>
           </f:facet>

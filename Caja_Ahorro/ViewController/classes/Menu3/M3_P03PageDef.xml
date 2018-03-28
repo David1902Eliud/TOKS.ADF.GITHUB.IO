@@ -43,6 +43,7 @@
           <Item Value="FechaCreacion"/>
           <Item Value="ActualizadoPor"/>
           <Item Value="FechaActualizacion"/>
+          <Item Value="Xnumber1"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -124,5 +125,10 @@
             Action="createRow"/>
     <action IterBinding="ToksCaPeriodoCajaView1Iterator" id="Create1"
             RequiresUpdateModel="true" Action="createRow"/>
+    <attributeValues IterBinding="ToksCaPeriodoCajaView1Iterator" id="Xnumber1">
+      <AttrNames>
+        <Item Value="Xnumber1"/>
+      </AttrNames>
+    </attributeValues>
   </bindings>
 </pageDefinition>

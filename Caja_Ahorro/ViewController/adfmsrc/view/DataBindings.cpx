@@ -19,6 +19,7 @@
     <page path="/Menu3/Ins_M3_P02.jsff" usageId="view_Ins_M3_P02PageDef"/>
     <page path="/Menu3/M3_P03.jspx" usageId="view_M3_P03PageDef"/>
     <page path="/Menu3/M3_P06.jspx" usageId="view_M3_P06PageDef"/>
+    <page path="/Menu3/M3_P04.jspx" usageId="view_M3_P04PageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_M3_P01PageDef" path="Menu3.M3_P01PageDef"/>
@@ -36,6 +37,7 @@
     <page id="view_Ins_M3_P02PageDef" path="Menu3.Ins_M3_P02PageDef"/>
     <page id="view_M3_P03PageDef" path="Menu3.M3_P03PageDef"/>
     <page id="view_M3_P06PageDef" path="Menu3.M3_P06PageDef"/>
+    <page id="view_M3_P04PageDef" path="Menu3.M3_P04PageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="catalogo"
