@@ -14,44 +14,63 @@
                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
                              id="gc1">
                   <af:panelGroupLayout id="pgl2"
-                                       valign="bottom" halign="center">
-                    <af:panelGroupLayout id="pgl3" layout="horizontal">
-                      <af:outputText value="Fecha:" id="ot1"
+                                       valign="bottom" halign="center"
+                                       inlineStyle="border-color:transparent;">
+                    <af:panelGroupLayout id="pgl3" layout="horizontal"
+                                         inlineStyle="border-color:transparent;">
+                      <af:outputText value="FECHA:" id="ot1"
                                      inlineStyle="font-size:medium;"/>
-                      <af:spacer width="10" height="10" id="s1"/>
+                      <af:spacer width="10" height="10" id="s1"
+                                 inlineStyle="border-color:transparent;"/>
                       <af:inputText label="Label 1" id="it1" simple="true"
                                     columns="15"/>
-                      <af:spacer width="40" height="10" id="s2"/>
-                      <af:outputText value="Movimientos:" id="ot2"
+                      <af:spacer width="40" height="10" id="s2"
+                                 inlineStyle="border-color:transparent;"/>
+                      <af:outputText value="MOVIMIENTOS:" id="ot2"
                                      inlineStyle="font-size:medium;"/>
-                      <af:spacer width="10" height="10" id="s3"/>
+                      <af:spacer width="10" height="10" id="s3"
+                                 inlineStyle="border-color:transparent;"/>
                       <af:selectBooleanRadio text=" PRESTAMOS" id="sbr1"
-                                             contentStyle="font-size:medium;"/>
-                      <af:spacer width="10" height="10" id="s4"/>
+                                             contentStyle="font-size:medium;"
+                                             inlineStyle="font-size:medium;"/>
+                      <af:spacer width="10" height="10" id="s4"
+                                 inlineStyle="border-color:transparent;"/>
                       <af:selectBooleanRadio text=" BAJAS" id="sbr2"
-                                             contentStyle="font-size:medium;"/>
-                      <af:spacer width="10" height="10" id="s5"/>
+                                             contentStyle="font-size:medium;"
+                                             inlineStyle="font-size:medium;"/>
+                      <af:spacer width="10" height="10" id="s5"
+                                 inlineStyle="border-color:transparent;"/>
                       <af:selectBooleanRadio text=" FINIQUITOS" id="sbr3"
-                                             contentStyle="font-size:medium;"/>
-                      <af:spacer width="10" height="10" id="s6"/>
+                                             contentStyle="font-size:medium;"
+                                             inlineStyle="font-size:medium;"/>
+                      <af:spacer width="10" height="10" id="s6"
+                                 inlineStyle="border-color:transparent;"/>
                       <af:selectBooleanRadio text=" LIQUIDACION CAJA DE AHORRO" id="sbr4"
-                                             contentStyle="font-size:medium;"/>
-                      <af:spacer width="10" height="10" id="s7"/>
+                                             contentStyle="font-size:medium;"
+                                             inlineStyle="font-size:medium;"/>
+                      <af:spacer width="10" height="10" id="s7"
+                                 inlineStyle="border-color:transparent;"/>
                       <af:selectBooleanRadio text=" RETIROS" id="sbr5"
-                                             contentStyle="font-size:medium;"/>
-                      <af:spacer width="100" height="10" id="s11"/>
+                                             contentStyle="font-size:medium;"
+                                             inlineStyle="font-size:medium;"/>
+                      <af:spacer width="100" height="10" id="s11"
+                                 inlineStyle="border-color:transparent;"/>
                     </af:panelGroupLayout>
-                    <af:panelGroupLayout id="pgl4" layout="vertical">
-                      <af:spacer width="10" height="10" id="s8"/>
+                    <af:panelGroupLayout id="pgl4" layout="vertical"
+                                         inlineStyle="border-color:transparent;">
+                      <af:spacer width="10" height="10" id="s8"
+                                 inlineStyle="border-color:transparent;"/>
                     </af:panelGroupLayout>
-                    <af:panelGroupLayout id="pgl13" layout="horizontal">
+                    <af:panelGroupLayout id="pgl13" layout="horizontal"
+                                         inlineStyle="border-color:transparent;">
                       <af:outputText value="TEF - CHEQUES (DETALLE)" id="ot3"
                                      inlineStyle="font-size:medium;"/>
-                      <af:spacer width="10" height="20" id="s12"/>
+                      <af:spacer width="10" height="20" id="s12"
+                                 inlineStyle="border-color:transparent;"/>
                     </af:panelGroupLayout>
                     <af:panelGroupLayout id="pgl5" layout="horizontal"
                                          valign="baseline"
-                                         inlineStyle="height:172px;">
+                                         inlineStyle="height:172px; border-color:transparent;">
                       <af:table var="row" rowBandingInterval="0" id="t1"
                                 width="935" inlineStyle="height:178px;">
                         <af:column sortable="false" headerText="N°" id="c4"
@@ -101,7 +120,8 @@
                                    align="center"
                                    inlineStyle="font-size:medium;"/>
                       </af:table>
-                      <af:panelGroupLayout id="pgl6">
+                      <af:panelGroupLayout id="pgl6"
+                                           inlineStyle="border-color:transparent;">
                         <af:panelGridLayout id="pgl7">
                           <af:gridRow marginTop="5px" height="auto"
                                       marginBottom="5px" id="gr5">
@@ -147,28 +167,36 @@
                         </af:panelGridLayout>
                       </af:panelGroupLayout>
                     </af:panelGroupLayout>
-                    <af:panelGroupLayout id="pgl14" layout="vertical">
-                      <af:spacer width="10" height="10" id="s13"/>
+                    <af:panelGroupLayout id="pgl14" layout="vertical"
+                                         inlineStyle="border-color:transparent;">
+                      <af:spacer width="10" height="10" id="s13"
+                                 inlineStyle="border-color:transparent;"/>
                     </af:panelGroupLayout>
-                    <af:panelGroupLayout id="pgl8" layout="horizontal">
+                    <af:panelGroupLayout id="pgl8" layout="horizontal"
+                                         inlineStyle="border-color:transparent;">
                       <af:commandButton text="Renovaciones" id="cb1"
                                         inlineStyle="font-size:medium;"/>
-                      <af:spacer width="150" height="10" id="s9"/>
+                      <af:spacer width="150" height="10" id="s9"
+                                 inlineStyle="border-color:transparent;"/>
                       <af:commandButton text="Generar Reporte" id="cb2"
                                         inlineStyle="font-size:medium;"/>
-                      <af:spacer width="420" height="10" id="s10"/>
+                      <af:spacer width="420" height="10" id="s10"
+                                 inlineStyle="border-color:transparent;"/>
                       <af:commandButton text="Importar Facturas" id="cb3"
                                         inlineStyle="font-size:medium;"/>
                     </af:panelGroupLayout>
-                    <af:panelGroupLayout id="pgl15" layout="vertical">
-                      <af:spacer width="10" height="10" id="s14"/>
+                    <af:panelGroupLayout id="pgl15" layout="vertical"
+                                         inlineStyle="border-color:transparent;">
+                      <af:spacer width="10" height="10" id="s14"
+                                 inlineStyle="border-color:transparent;"/>
                     </af:panelGroupLayout>
-                    <af:panelGroupLayout id="pgl9" layout="horizontal">
+                    <af:panelGroupLayout id="pgl9" layout="horizontal"
+                                         inlineStyle="border-color:transparent;">
                       <af:outputText value="TEF - CHEQUES (TOTAL)" id="ot13"
                                      inlineStyle="font-size:medium;"/>
                     </af:panelGroupLayout>
                     <af:panelGroupLayout id="pgl10" layout="horizontal"
-                                         inlineStyle="height:158px;">
+                                         inlineStyle="height:158px; border-color:transparent;">
                       <af:table var="row" rowBandingInterval="0" id="t2"
                                 inlineStyle="height:150px;" width="935">
                         <af:column sortable="false" headerText="N°" id="c9"
@@ -203,7 +231,8 @@
                           <af:outputText value="#{row.col6}" id="ot14"/>
                         </af:column>
                       </af:table>
-                      <af:panelGroupLayout id="pgl11">
+                      <af:panelGroupLayout id="pgl11"
+                                           inlineStyle="border-color:transparent;">
                         <af:panelGridLayout id="panelGridLayout1">
                           <af:gridRow marginTop="5px" height="auto"
                                       marginBottom="5px" id="gridRow1">
@@ -241,10 +270,13 @@
                         </af:panelGridLayout>
                       </af:panelGroupLayout>
                     </af:panelGroupLayout>
-                    <af:panelGroupLayout id="pgl16" layout="vertical">
-                      <af:spacer width="10" height="10" id="s15"/>
+                    <af:panelGroupLayout id="pgl16" layout="vertical"
+                                         inlineStyle="border-color:transparent;">
+                      <af:spacer width="10" height="10" id="s15"
+                                 inlineStyle="border-color:transparent;"/>
                     </af:panelGroupLayout>
-                    <af:panelGroupLayout id="pgl12" layout="horizontal">
+                    <af:panelGroupLayout id="pgl12" layout="horizontal"
+                                         inlineStyle="border-color:transparent;">
                       <af:commandButton text="Genera Total por Empleado" id="cb4"
                                         inlineStyle="font-size:medium;"/>
                     </af:panelGroupLayout>

@@ -9,50 +9,113 @@
       <af:form id="f1">
         <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
           <f:facet name="Body_Menus">
-            <af:panelGridLayout id="pgl1">
+          <af:panelGridLayout id="pgl1">
               <af:gridRow marginTop="5px" height="auto" id="gr1">
-                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
-                             id="gc1">
-                  <af:table var="row" rowBandingInterval="0" id="t1"
-                            width="743" inlineStyle="height:109px;">
-                    <af:column sortable="false" headerText="No Unidad" id="c3">
-                      <af:outputText value="#{row.col1}" id="ot6"/>
+                             <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                             id="gc1" halign="center">
+                  <af:table value="#{bindings.ViewObjBuActualizaciones1.collectionModel}"
+                            var="row"
+                            rows="#{bindings.ViewObjBuActualizaciones1.rangeSize}"
+                            emptyText="#{bindings.ViewObjBuActualizaciones1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            fetchSize="#{bindings.ViewObjBuActualizaciones1.rangeSize}"
+                            rowBandingInterval="0"
+                            selectedRowKeys="#{bindings.ViewObjBuActualizaciones1.collectionModel.selectedRow}"
+                            selectionListener="#{bindings.ViewObjBuActualizaciones1.collectionModel.makeCurrent}"
+                            rowSelection="single" id="t1" width="1240">
+                    <af:column sortProperty="#{bindings.ViewObjBuActualizaciones1.hints.ClaveSucursal.name}"
+                               sortable="false" headerText="No. Unidad" id="c4"
+                               width="150" inlineStyle="font-size:medium;">
+                      <af:commandLink id="ot7" text="#{row.ClaveSucursal}"/>
                     </af:column>
-                    <af:column sortable="false" headerText="Unidad" id="c4">
-                      <af:outputText value="#{row.col2}" id="ot4"/>
+                    <af:column sortProperty="#{bindings.ViewObjBuActualizaciones1.hints.NombreSucursal.name}"
+                               sortable="false" headerText="Unidad" id="c8"
+                               width="150" inlineStyle="font-size:medium;">
+                      <af:commandLink id="ot6" text="#{row.NombreSucursal}"/>
                     </af:column>
-                    <af:column sortable="false" headerText="Estafeta" id="c1">
-                      <af:outputText value="#{row.col3}" id="ot7"/>
+                    <af:column sortProperty="#{bindings.ViewObjBuActualizaciones1.hints.NoEmpleado.name}"
+                               sortable="false" headerText="Estafeta" id="c5"
+                               width="150" inlineStyle="font-size:medium;">
+                      <af:commandLink id="ot4" text="#{row.NoEmpleado}"/>
                     </af:column>
-                    <af:column sortable="false" headerText="Nombre" id="c2">
-                      <af:outputText value="#{row.col4}" id="ot1"/>
+                    <af:column sortProperty="#{bindings.ViewObjBuActualizaciones1.hints.NombreEmpleado.name}"
+                               sortable="false" headerText="Nombre" id="c7"
+                               width="150" inlineStyle="font-size:medium;">
+                      <af:commandLink id="ot1" text="#{row.NombreEmpleado}"/>
                     </af:column>
-                    <af:column sortable="false" headerText="Beneficiario"
-                               id="c7">
-                      <af:outputText value="#{row.col5}" id="ot3"/>
+                    <af:column sortProperty="#{bindings.ViewObjBuActualizaciones1.hints.ClaveEmpresa.name}"
+                               sortable="false" headerText="Empresa" id="c2"
+                               width="150" inlineStyle="font-size:medium;">
+                      <af:commandLink id="ot8" text="#{row.ClaveEmpresa}"/>
                     </af:column>
-                    <af:column sortable="false" headerText="Parentesco" id="c6">
-                      <af:outputText value="#{row.col6}" id="ot2"/>
+                    <af:column sortProperty="#{bindings.ViewObjBuActualizaciones1.hints.Nombre.name}"
+                               sortable="false" headerText="Beneficiario"
+                               id="c1" width="150"
+                               inlineStyle="font-size:medium;">
+                      <af:commandLink id="ot2" text="#{row.Nombre}"/>
                     </af:column>
-                    <af:column sortable="false" headerText="%" id="c5">
-                      <af:outputText value="#{row.col7}" id="ot5"/>
+                    <af:column sortProperty="#{bindings.ViewObjBuActualizaciones1.hints.Parentesco.name}"
+                               sortable="false" headerText="Parentesco" id="c3"
+                               width="150" inlineStyle="font-size:medium;">
+                      <af:commandLink id="ot3" text="#{row.Parentesco}"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.ViewObjBuActualizaciones1.hints.Porcentaje.name}"
+                               sortable="false" headerText="      %" id="c6"
+                               width="150" inlineStyle="font-size:medium;">
+                      <af:commandLink id="ot5" text="#{row.Porcentaje}"/>
                     </af:column>
                   </af:table>
-                </af:gridCell>
-              </af:gridRow>
-              <af:gridRow marginTop="5px" height="auto" marginBottom="5px"
-                          id="gr2">
-                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
-                             id="gc2">
-                  <af:panelGroupLayout id="pgl2"
-                                       inlineStyle="border-color:transparent; width:716px;"
-                                       layout="horizontal">
-                    <af:activeCommandToolbarButton text="Guardar"
-                                                   id="actb1"
-                                                   inlineStyle="width:25%;"/>
-                    <af:activeCommandToolbarButton text="Autorizar" id="actb2"
-                                                   inlineStyle="width:25%;"/>
-                  </af:panelGroupLayout>
+                  <af:popup id="p1">
+                    <af:panelWindow id="pw1">
+                      <af:panelFormLayout id="pfl1">
+                        <af:panelLabelAndMessage label="#{bindings.ClaveSucursal.hints.label}"
+                                                 id="plam2">
+                          <af:outputText value="#{bindings.ClaveSucursal.inputValue}"
+                                         id="ot16">
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.ClaveSucursal.format}"/>
+                          </af:outputText>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.NombreSucursal.hints.label}"
+                                                 id="plam5">
+                          <af:outputText value="#{bindings.NombreSucursal.inputValue}"
+                                         id="ot14"/>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.NoEmpleado.hints.label}"
+                                                 id="plam6">
+                          <af:outputText value="#{bindings.NoEmpleado.inputValue}"
+                                         id="ot13"/>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.NombreEmpleado.hints.label}"
+                                                 id="plam7">
+                          <af:outputText value="#{bindings.NombreEmpleado.inputValue}"
+                                         id="ot9"/>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.ClaveEmpresa.hints.label}"
+                                                 id="plam3">
+                          <af:outputText value="#{bindings.ClaveEmpresa.inputValue}"
+                                         id="ot11"/>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.Nombre.hints.label}"
+                                                 id="plam1">
+                          <af:outputText value="#{bindings.Nombre.inputValue}"
+                                         id="ot15"/>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.Parentesco.hints.label}"
+                                                 id="plam4">
+                          <af:outputText value="#{bindings.Parentesco.inputValue}"
+                                         id="ot12"/>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.Porcentaje.hints.label}"
+                                                 id="plam8">
+                          <af:outputText value="#{bindings.Porcentaje.inputValue}"
+                                         id="ot10">
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.Porcentaje.format}"/>
+                          </af:outputText>
+                        </af:panelLabelAndMessage>
+                      </af:panelFormLayout>
+                    </af:panelWindow>
+                  </af:popup>
                 </af:gridCell>
               </af:gridRow>
             </af:panelGridLayout>

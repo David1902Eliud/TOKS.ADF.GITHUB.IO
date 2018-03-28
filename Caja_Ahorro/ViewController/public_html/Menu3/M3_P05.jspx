@@ -35,7 +35,7 @@
                               queryListener="#{bindings.ToksCaAntiguedadView11Query.processQuery}"
                               filterVisible="true" id="t2"
                               binding="#{CATAntiguedadBean.tablaAntiguedadDescuentos}"
-                              width="1100" rowSelection="single" varStatus="vs"
+                              width="1074" rowSelection="single" varStatus="vs"
                               selectedRowKeys="#{bindings.ToksCaAntiguedadView11.collectionModel.selectedRow}"
                               selectionListener="#{bindings.ToksCaAntiguedadView11.collectionModel.makeCurrent}"
                               partialTriggers="::cb1">
@@ -51,7 +51,7 @@
                       <af:column sortProperty="#{bindings.ToksCaAntiguedadView11.hints.DiasPrestacion.name}"
                                  filterable="true" sortable="true"
                                  headerText="Días Otorgados"
-                                 id="c3" align="center" width="150">
+                                 id="c3" align="center" width="300">
                         <af:outputText value="#{row.DiasPrestacion}" id="ot3">
                           <af:convertNumber groupingUsed="false"
                                             pattern="#{bindings.ToksCaAntiguedadView11.hints.DiasPrestacion.format}"/>
@@ -60,7 +60,7 @@
                       <af:column sortProperty="#{bindings.ToksCaAntiguedadView11.hints.RangoInicial.name}"
                                  filterable="true" sortable="true"
                                  headerText="De (Años)"
-                                 id="c4" align="center" width="150">
+                                 id="c4" align="center" width="300">
                         <af:outputText value="#{row.RangoInicial}" id="ot2">
                           <af:convertNumber groupingUsed="false"
                                             pattern="#{bindings.ToksCaAntiguedadView11.hints.RangoInicial.format}"/>
@@ -69,7 +69,7 @@
                       <af:column sortProperty="#{bindings.ToksCaAntiguedadView11.hints.RangoFinal.name}"
                                  filterable="true" sortable="true"
                                  headerText="Hasta (Años)"
-                                 id="c2" align="center" width="150">
+                                 id="c2" align="center" width="300">
                         <af:outputText value="#{row.RangoFinal}" id="ot1">
                           <af:convertNumber groupingUsed="false"
                                             pattern="#{bindings.ToksCaAntiguedadView11.hints.RangoFinal.format}"/>

@@ -9,7 +9,155 @@
       <af:form id="f1">
         <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
           <f:facet name="Body_Menus">
-            
+             <af:panelGridLayout id="pgl1">
+          <af:gridRow marginTop="5px" height="auto" id="gr3">
+            <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                         id="gc1">
+                <af:activeOutputText value="Datos del Empleado" id="aot1"
+                                       inlineStyle="color:Black; font-size:medium; font-style:normal; font-weight:bold;"/>
+                  <af:separator id="s2"/>
+                  <af:panelGroupLayout id="pgl6" layout="horizontal"
+                                       inlineStyle="border-color:transparent;">
+                    <af:inputText label="No. Empleado " id="it5">
+                    </af:inputText>
+                    <af:commandButton id="cb2" icon="/lupa.png"
+                                      inlineStyle="background-color:transparent;"/>
+                  </af:panelGroupLayout>
+                  <af:spacer width="10" height="10" id="s10"
+                             inlineStyle="border-color:transparent;"/>
+                  <af:panelGroupLayout id="pgl7" layout="horizontal"
+                                       inlineStyle="border-color:transparent;">
+                <af:spacer width="50" height="10" id="s29"
+                           inlineStyle="border-color:transparent;"/>
+                <af:inputText label="Nombre" id="it3">
+                      </af:inputText>
+                    <af:spacer width="13" height="10" id="s13"
+                               inlineStyle="border-color:transparent;"/>
+                    <af:spacer width="10" height="10" id="s15"
+                               inlineStyle="border-color:transparent;"/>
+                    <af:inputText label="Sucursal" id="it7">
+                    </af:inputText>
+                    <af:spacer width="10" height="10" id="s14"
+                               inlineStyle="border-color:transparent;"/>
+                    <af:spacer width="10" height="10" id="s16"
+                               inlineStyle="border-color:transparent;"/>
+                      <af:inputText label="Clave Sucursal" id="it1">
+                      </af:inputText>
+                    </af:panelGroupLayout>
+                  <af:spacer width="10" height="10" id="s11"
+                             inlineStyle="border-color:transparent;"/>
+                  <af:panelGroupLayout id="pgl8" layout="horizontal"
+                                       inlineStyle="border-color:transparent;">
+                <af:spacer width="45" height="10" id="s30"
+                           inlineStyle="border-color:transparent;"/>
+                <af:inputText label="Empresa" id="it2">
+                    </af:inputText>
+                    <af:spacer width="34" height="10" id="s17"
+                               inlineStyle="border-color:transparent;"/>
+                    <af:inputText label="Puesto" id="it6">
+                    </af:inputText>
+                    <af:spacer width="27" height="22" id="s19"
+                               inlineStyle="border-color:transparent;"/>
+                      <af:inputText label="Departamento" id="inputText1"> 
+                      </af:inputText>
+                  </af:panelGroupLayout>
+                  <af:spacer width="10" height="10" id="s12"
+                             inlineStyle="border-color:transparent;"/>
+                  <af:panelGroupLayout id="pgl9" layout="horizontal"
+                                       inlineStyle="border-color:transparent;">
+                      <af:inputText label="Correo Electrónico"
+                                    id="it4">
+                     </af:inputText>
+                    </af:panelGroupLayout>
+                  <p>
+                     
+                  </p>
+                  <af:separator id="s1"/>
+         </af:gridCell>
+          </af:gridRow>
+          <af:gridRow marginTop="5px" height="auto" id="gr1">
+            <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                         id="gc2">
+              <af:activeOutputText value="Aportaciones" id="aot2"
+                                   inlineStyle="color:Black; font-size:medium; font-weight:bold;"/>
+              <af:panelGroupLayout id="pgl4" layout="scroll"
+                                   inlineStyle="border-color:transparent;">
+                <af:spacer width="10" height="10" id="s3"
+                           inlineStyle="border-color:transparent;"/>
+                <af:spacer width="10" height="10" id="s4"
+                           inlineStyle="border-color:transparent;"/>
+              </af:panelGroupLayout>
+              <af:panelGroupLayout id="pgl3" layout="horizontal"
+                                   inlineStyle="border-color:transparent;">
+                <af:spacer width="165" height="10" id="s21"
+                           inlineStyle="border-color:transparent;"/>
+                <af:activeOutputText value="Aportaciones" id="aot3"/>
+                <af:spacer width="130" height="10" id="s22"
+                           inlineStyle="border-color:transparent;"/>
+                <af:activeOutputText value="% Aport Base" id="aot4"/>
+                <af:spacer width="119" height="10" id="s23"
+                           inlineStyle="border-color:transparent;"/>
+                <af:activeOutputText value="Cant Aport Base" id="aot5"/>
+                <af:spacer width="111" height="10" id="s24"
+                           inlineStyle="border-color:transparent;"/>
+                <af:activeOutputText value="Cant Aport Extra" id="aot6"/>
+                <af:spacer width="125" height="10" id="s25"
+                           inlineStyle="border-color:transparent;"/>
+                <af:activeOutputText value="Fecha Alta" id="aot7"/>
+              </af:panelGroupLayout>
+              <af:panelGroupLayout id="pgl2" layout="horizontal"
+                                   inlineStyle="border-color:transparent;">
+                <af:spacer width="118" height="10" id="s5"
+                           inlineStyle="border-color:transparent;"/>
+                <af:inputText id="it9"/>
+                <af:spacer width="51" height="10" id="s7"
+                           inlineStyle="border-color:transparent;"/>
+                <af:inputText id="it10"/>
+                <af:spacer width="51" height="10" id="s6"
+                           inlineStyle="border-color:transparent;"/>
+                <af:inputText id="it11"/>
+                <af:spacer width="51" height="10" id="s8"
+                           inlineStyle="border-color:transparent;"/>
+                <af:inputText id="it12"/>
+                <af:spacer width="51" height="10" id="s9"
+                           inlineStyle="border-color:transparent;"/>
+                <af:inputText id="it8" value="#{managedBean1.nuevaFecha}"/>
+              </af:panelGroupLayout>
+              <af:panelGroupLayout id="pgl5"
+                                   inlineStyle="border-color:transparent;">
+                <af:spacer width="10" height="35" id="s27"
+                           inlineStyle="border-color:transparent;"/>
+              </af:panelGroupLayout>
+              <af:separator id="s26"/>
+            </af:gridCell>
+          </af:gridRow>
+          <af:gridRow marginTop="5px" height="auto" marginBottom="5px" id="gr2">
+            <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                         id="gc3">
+              <af:activeOutputText value="Beneficiarios" id="aot8"
+                                   inlineStyle="color:Black; font-size:medium; font-style:normal; font-weight:bold;"/>
+              <af:panelGroupLayout id="pgl10" layout="scroll"
+                                   inlineStyle="border-color:transparent;">
+                <af:spacer width="10" height="20" id="s28"
+                           inlineStyle="border-color:transparent;"/>
+              </af:panelGroupLayout>
+              <af:table var="row" rowBandingInterval="0" id="t1" width="1212">
+                <af:column sortable="false" headerText="Nombre" id="c2"
+                           width="400">
+                  <af:outputText value="#{row.col1}" id="ot3"/>
+                </af:column>
+                <af:column sortable="false" headerText="Parentesco" id="c1"
+                           width="400">
+                  <af:outputText value="#{row.col2}" id="ot2"/>
+                </af:column>
+                <af:column sortable="false" headerText="Porcentaje" id="c3"
+                           width="400">
+                  <af:outputText value="#{row.col3}" id="ot1"/>
+                </af:column>
+              </af:table>
+            </af:gridCell>
+          </af:gridRow>
+        </af:panelGridLayout>
           </f:facet>
         </af:pageTemplate>
       </af:form>
