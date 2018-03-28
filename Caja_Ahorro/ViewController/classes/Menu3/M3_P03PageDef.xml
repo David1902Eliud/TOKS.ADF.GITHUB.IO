@@ -124,7 +124,5 @@
             Action="createRow"/>
     <action IterBinding="ToksCaPeriodoCajaView1Iterator" id="Create1"
             RequiresUpdateModel="true" Action="createRow"/>
-    <action IterBinding="ToksCaPeriodoCajaView1Iterator" id="CreateInsert1"
-            RequiresUpdateModel="true" Action="createInsertRow"/>
   </bindings>
 </pageDefinition>

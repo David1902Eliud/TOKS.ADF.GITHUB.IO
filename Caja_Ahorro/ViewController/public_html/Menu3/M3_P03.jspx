@@ -18,10 +18,6 @@
                     <af:showPopupBehavior popupId="p1" align="afterEnd"
                                           triggerType="action"/>
                   </af:commandButton>
-                  <af:commandButton actionListener="#{bindings.Commit.execute}"
-                                    text="Commit"
-                                    disabled="#{!bindings.Commit.enabled}"
-                                    id="cb2"/>
                   <af:commandButton actionListener="#{bindings.Rollback.execute}"
                                     text="Rollback"
                                     disabled="#{!bindings.Rollback.enabled}"
@@ -248,9 +244,9 @@
                                         text="Create1"
                                         disabled="#{!bindings.Create1.enabled}"
                                         id="cb4"/>
-                      <af:commandButton actionListener="#{bindings.CreateInsert1.execute}"
-                                        text="CreateInsert1"
-                                        disabled="#{!bindings.CreateInsert1.enabled}"
+                      <af:commandButton actionListener="#{bindings.Commit.execute}"
+                                        text="Commit"
+                                        disabled="#{!bindings.Commit.enabled}"
                                         id="cb5"/>
                     </af:group>
                   </f:facet>
