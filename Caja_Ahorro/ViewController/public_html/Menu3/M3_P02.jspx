@@ -40,7 +40,8 @@
                 <af:gridRow marginTop="20px" height="auto" marginBottom="20px"
                             id="gr1">
                   <af:gridCell marginStart="20px" width="20%" id="gc1"/>
-                  <af:gridCell marginStart="5px" width="60%" id="gc2">
+                  <af:gridCell marginStart="5px" width="60%" id="gc2"
+                               halign="center">
                     <af:table value="#{bindings.ToksCaDescuentosView1.collectionModel}"
                               var="row"
                               rows="#{bindings.ToksCaDescuentosView1.rangeSize}"
@@ -54,10 +55,11 @@
                               selectionListener="#{bindings.ToksCaDescuentosView1.collectionModel.makeCurrent}"
                               rowSelection="single" id="t2"
                               inlineStyle="width:100.0%;"
-                              partialTriggers="::cb1 ::cb2">
+                              partialTriggers="::cb1 ::cb2" width="765">
                       <af:column sortProperty="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.name}"
                                  filterable="true" sortable="true"
-                                 headerText="Número de Descuento" id="c5">
+                                 headerText="Número de Descuento" id="c5"
+                                 width="200">
                         <af:inputText value="#{row.bindings.NoDescuento.inputValue}"
                                       label="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.label}"
                                       required="#{bindings.ToksCaDescuentosView1.hints.NoDescuento.mandatory}"
@@ -73,7 +75,7 @@
                       <af:column sortProperty="#{bindings.ToksCaDescuentosView1.hints.Descuento.name}"
                                  filterable="true" sortable="true"
                                  headerText="Nombre de Descuento" id="c4"
-                                 minimumWidth="60" width="400">
+                                 minimumWidth="60" width="600">
                         <af:inputText value="#{row.bindings.Descuento.inputValue}"
                                       label="#{bindings.ToksCaDescuentosView1.hints.Descuento.label}"
                                       required="#{bindings.ToksCaDescuentosView1.hints.Descuento.mandatory}"

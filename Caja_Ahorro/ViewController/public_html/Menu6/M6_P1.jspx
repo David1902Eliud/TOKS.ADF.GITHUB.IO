@@ -9,96 +9,99 @@
       <af:form id="f1">
         <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
           <f:facet name="Body_Menus">
-            <af:panelGroupLayout id="pgl1">
-              <af:table
-                        var="row"
-                        rows="#{bindings.ToksCaEmpleadosCierreVView1_1.rangeSize}"
-                        rowBandingInterval="0"
-                        filterVisible="true" varStatus="vs"
-                        rowSelection="multiple" id="t1" width="495"
-                        inlineStyle="height:100px; width:100%;">
-                <af:column sortProperty="#{bindings.ToksCaEmpleadosCierreVView1_1.hints.ClaveSucursal.name}"
-                           filterable="true" sortable="true"
-                           headerText="Clave Empresa" id="c3"
-                           inlineStyle="height:100%;">
-                  <af:inputText
-                                id="it5">
-                    <f:validator/>
-                    <af:convertNumber groupingUsed="false"
-                                      pattern="#{bindings.ToksCaEmpleadosCierreVView1_1.hints.ClaveSucursal.format}"/>
-                  </af:inputText>
-                </af:column>
-                <af:column sortProperty="#{bindings.ToksCaEmpleadosCierreVView1_1.hints.Idemp.name}"
-                           filterable="true" sortable="true"
-                           headerText="Unidad" id="c1"
-                           inlineStyle="height:100%;">
-                  <af:inputText
-                                id="it1">
-                    <f:validator/>
-                    <af:convertNumber groupingUsed="false"
-                                      pattern="#{bindings.ToksCaEmpleadosCierreVView1_1.hints.Idemp.format}"/>
-                  </af:inputText>
-                </af:column>
-                <af:column sortProperty="#{bindings.ToksCaEmpleadosCierreVView1_1.hints.NombreSucursal.name}"
-                           filterable="true" sortable="true"
-                           headerText="Nombre Sucursal " id="c5"
-                           inlineStyle="height:100%;">
-                  <af:inputText
-                                id="it2">
-                    <f:validator binding="#{row.bindings.NombreSucursal.validator}"/>
-                  </af:inputText>
-                </af:column>
-                <af:column sortProperty="#{bindings.ToksCaEmpleadosCierreVView1_1.hints.NoEmpleado.name}"
-                           filterable="true" sortable="true"
-                           headerText="No. Empleado " id="c4"
-                           inlineStyle="height:100%;">
-                  <af:inputText
-                                id="it4">
-                    <f:validator/>
-                  </af:inputText>
-                </af:column>
-                <af:column sortProperty="#{bindings.ToksCaEmpleadosCierreVView1_1.hints.NombreEmpleado.name}"
-                           filterable="true" sortable="true"
-                           headerText="Nombre" id="c2"
-                           inlineStyle="height:100%;">
-                  <af:inputText
-                                id="it3">
-                    <f:validator/>
-                  </af:inputText>
-                </af:column>
-              </af:table>
-              <af:panelGroupLayout id="pgl2">
-                <af:panelGroupLayout id="pgl3" layout="horizontal">
+            <af:group id="g1">
+              <af:panelGroupLayout id="pgl1" halign="center"
+                                   layout="horizontal"
+                                   inlineStyle="border-color:transparent;">
+                <af:spacer width="21" height="10" id="s1"
+                           inlineStyle="border-color:transparent;"/>
+                <af:table var="row"
+                          rows="#{bindings.ToksCaEmpleadosCierreVView1_1.rangeSize}"
+                          rowBandingInterval="0" filterVisible="true"
+                          varStatus="vs" rowSelection="multiple" id="t1"
+                          width="1214" inlineStyle="height:100px; width:100%;">
+                  <af:column sortProperty="#{bindings.ToksCaEmpleadosCierreVView1_1.hints.ClaveSucursal.name}"
+                             filterable="true" sortable="true"
+                             headerText="Clave Empresa" id="c3"
+                             inlineStyle="height:100%;" width="180">
+                    <af:inputText id="it5">
+                      <f:validator/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.ToksCaEmpleadosCierreVView1_1.hints.ClaveSucursal.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaEmpleadosCierreVView1_1.hints.Idemp.name}"
+                             filterable="true" sortable="true"
+                             headerText="Unidad" id="c1"
+                             inlineStyle="height:100%;" width="250">
+                    <af:inputText id="it1">
+                      <f:validator/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.ToksCaEmpleadosCierreVView1_1.hints.Idemp.format}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaEmpleadosCierreVView1_1.hints.NombreSucursal.name}"
+                             filterable="true" sortable="true"
+                             headerText="Nombre Sucursal " id="c5"
+                             inlineStyle="height:100%;" width="250">
+                    <af:inputText id="it2">
+                      <f:validator binding="#{row.bindings.NombreSucursal.validator}"/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaEmpleadosCierreVView1_1.hints.NoEmpleado.name}"
+                             filterable="true" sortable="true"
+                             headerText="No. Empleado " id="c4"
+                             inlineStyle="height:100%;" width="250">
+                    <af:inputText id="it4">
+                      <f:validator/>
+                    </af:inputText>
+                  </af:column>
+                  <af:column sortProperty="#{bindings.ToksCaEmpleadosCierreVView1_1.hints.NombreEmpleado.name}"
+                             filterable="true" sortable="true"
+                             headerText="Nombre" id="c2"
+                             inlineStyle="height:100%;" width="250">
+                    <af:inputText id="it3">
+                      <f:validator/>
+                    </af:inputText>
+                  </af:column>
+                </af:table>
+              </af:panelGroupLayout>
+              <af:spacer height="30" id="s2"
+                         inlineStyle="border-color:transparent;" width="30"/>
+              <af:panelGroupLayout id="pgl2" layout="horizontal"
+                                   inlineStyle="border-color:transparent;">
+                <af:panelGroupLayout id="pgl3" layout="horizontal"
+                                     inlineStyle="border-color:transparent;">
+                  <af:spacer width="575" height="10" id="s3"
+                             inlineStyle="border-color:transparent;"/>
                   <af:activeCommandToolbarButton text="Copia de Seguridad"
                                                  id="actb1"
                                                  inlineStyle="height:50%; width:100%;"/>
-                     
+                    
                   <af:activeCommandToolbarButton text="Restaurar Información"
                                                  id="actb2"
                                                  inlineStyle="height:50%; width:100%;"/>
-                     
+                    
                   <af:activeCommandToolbarButton text="Eliminar Respaldo "
                                                  id="actb3"
                                                  inlineStyle="height:50%; width:100%;"/>
-                     
+                    
                   <af:activeCommandToolbarButton text="Acumulado al Cierre"
                                                  id="actb4"
                                                  inlineStyle="height:50%; width:100%;"/>
-                     
+                    
                   <af:activeCommandToolbarButton text="Calculo Previo"
                                                  id="actb5"
                                                  inlineStyle="height:50%; width:100%;"/>
-                     
-                  <af:activeCommandToolbarButton text="Aceptar"
-                                                 id="actb6"
+                    
+                  <af:activeCommandToolbarButton text="Aceptar" id="actb6"
                                                  inlineStyle="height:50%; width:100%;"/>
-                     
-                  <af:activeCommandToolbarButton text="Salir"
-                                                 id="actb7"
+                    
+                  <af:activeCommandToolbarButton text="Salir" id="actb7"
                                                  inlineStyle="height:50%; width:100%;"/>
                 </af:panelGroupLayout>
               </af:panelGroupLayout>
-            </af:panelGroupLayout>
+            </af:group>
           </f:facet>
         </af:pageTemplate>
       </af:form>

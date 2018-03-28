@@ -9,39 +9,53 @@
       <af:form id="f1">
         <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
           <f:facet name="Body_Menus">
-            <af:panelGridLayout id="pgl3">
-              <af:gridRow marginTop="5px" height="auto" marginBottom="5px"
-                          id="gr1">
-                <af:gridCell marginStart="5px" width="20%" id="gc5"
-                             halign="stretch">
-                  <af:inputDate label="Fecha Aumento de Prestamo (DD/MM/YYYY)" id="id1"/>
-                  <af:table var="row" rowBandingInterval="0" id="t1"
-                            inlineStyle="height:67px;" width="640">
-                    <af:column sortable="false" headerText="Num.  Empleado "
-                               id="c3" width="115">
-                      <af:outputText value="#{row.col1}" id="ot1"/>
-                    </af:column>
-                    <af:column sortable="false" headerText="Nombre" id="c1"
-                               width="265">
-                      <af:outputText value="#{row.col2}" id="ot4"/>
-                    </af:column>
-                    <af:column sortable="false" headerText="Monto Aumentar"
-                               id="c4" width="102">
-                      <af:outputText value="#{row.col3}" id="ot2"/>
-                    </af:column>
-                    <af:column sortable="false" headerText="No. Prestamo"
-                               id="c2" width="128">
-                      <af:outputText value="#{row.col4}" id="ot3"/>
-                    </af:column>
-                  </af:table>
-                  <af:panelGroupLayout id="pgl2">
-                    <af:activeCommandToolbarButton text="Actualiza"
-                                                   id="actb1"
-                                                   inlineStyle="width:20%;"/>
-                  </af:panelGroupLayout>
-                </af:gridCell>
-              </af:gridRow>
-            </af:panelGridLayout>
+             <af:panelGridLayout id="pgl5">
+                <af:gridRow marginTop="5px" height="auto" marginBottom="5px"
+                            id="gr1">
+                  <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                               id="gc1" halign="stretch">
+                    <af:inputDate label="FECHA AUMENTO PRÉSTAMO  (DD/MM/YYYY)" id="id1"
+                                  inlineStyle="font-size:medium; color:Black; font-weight:bold; border-color:Black;"/>
+                    <af:spacer width="10" height="15" id="s1"
+                               inlineStyle="border-color:transparent;"/>
+                    <af:panelGroupLayout id="pgl3" layout="horizontal"
+                                         halign="center"
+                                         inlineStyle="border-color:transparent;">
+                      <af:panelGroupLayout id="pgl2"
+                                           inlineStyle="border-color:transparent;">
+                        <af:table var="row" rowBandingInterval="0" id="t1"
+                                  inlineStyle="height:68px;" width="807">
+                          <af:column sortable="false" headerText="Num. Empleado"
+                                     id="c3" width="200">
+                            <af:outputText value="#{row.col1}" id="ot1"/>
+                          </af:column>
+                          <af:column sortable="false" headerText="Nombre"
+                                     id="c2" width="400">
+                            <af:outputText value="#{row.col2}" id="ot3"/>
+                          </af:column>
+                          <af:column sortable="false"
+                                     headerText="Monto Aumentar" id="c1"
+                                     width="200">
+                            <af:outputText value="#{row.col3}" id="ot2"/>
+                          </af:column>
+                        </af:table>
+                      </af:panelGroupLayout>
+                      <af:spacer width="230" height="15" id="s3"
+                                 inlineStyle="border-color:transparent;"/>
+                      <af:panelGroupLayout id="pgl4"
+                                           inlineStyle="border-color:transparent;">
+                        <af:table var="row" rowBandingInterval="0" id="t2"
+                                  inlineStyle="height:67px;" width="321">
+                          <af:column sortable="false" headerText="No. Préstamo"
+                                     id="c4" width="300">
+                            <af:outputText value="#{row.col1}" id="ot4"/>
+                          </af:column>
+                        </af:table>
+                      </af:panelGroupLayout>
+                    </af:panelGroupLayout>
+                  </af:gridCell>
+                </af:gridRow>
+              </af:panelGridLayout>
           </f:facet>
         </af:pageTemplate>
       </af:form>

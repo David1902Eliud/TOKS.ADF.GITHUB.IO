@@ -321,10 +321,10 @@ public class ToksCaAntiguedadImpl extends EntityImpl {
      * @param attributeList list of attribute names/values to initialize the row
      */
     protected void create(AttributeList attributeList) {
-        super.create(attributeList);
         setDiasPrestacion(null);
         setRangoInicial(null);
         setRangoFinal(null);
+        super.create(attributeList);
     }
 
     /**

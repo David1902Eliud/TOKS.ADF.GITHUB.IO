@@ -185,6 +185,7 @@
             <hash>
                <url n="content-folder-url" path="adfmsrc/view/"/>
                <list n="pattern-filters">
+                  <string v="+view/FechaA.java"/>
                   <string v="+view/Puesto.java"/>
                   <string v="+view/CatalogoAntiguedad.java"/>
                </list>

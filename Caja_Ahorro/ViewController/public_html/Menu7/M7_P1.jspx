@@ -12,34 +12,42 @@
             <af:panelGridLayout id="pgl1">
               <af:gridRow marginTop="5px" height="auto" id="gr2">
                 <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
-                             id="gc2">
+                             id="gc2" halign="center">
+                  <af:panelGroupLayout id="pgl4" halign="left"
+                                       layout="horizontal"
+                                       inlineStyle="width:1213px; border-color:transparent;">
+                    <af:inputDate label="Fecha Deposito (DD/MM/YYYY)" id="id1"/>
+                    <af:spacer width="407" height="9" id="s1"
+                               inlineStyle="border-color:transparent;"/>
+                  </af:panelGroupLayout>
                   <af:panelGroupLayout id="pgl2"
                                        inlineStyle="border-color:transparent;">
-                    <af:inputDate label="Fecha Deposito (DD/MM/YYYY)" id="id1"/>
                     <af:table var="row" rowBandingInterval="0" id="t1"
-                              width="625">
+                              width="1210">
                       <af:column sortable="false" headerText="Num Empleado "
-                                 id="c4">
+                                 id="c4" width="180">
                         <af:outputText value="#{row.col1}" id="ot6"/>
                       </af:column>
-                      <af:column sortable="false" headerText="Nombre " id="c3">
+                      <af:column sortable="false" headerText="Nombre " id="c3"
+                                 width="200">
                         <af:outputText value="#{row.col2}" id="ot2"/>
                       </af:column>
                       <af:column sortable="false"
-                                 headerText="Importe del Deposito " id="c1">
+                                 headerText="Importe del Deposito " id="c1"
+                                 width="200">
                         <af:outputText value="#{row.col3}" id="ot5"/>
                       </af:column>
                       <af:column sortable="false" headerText="Aport Voluntario "
-                                 id="c2" align="center">
+                                 id="c2" align="center" width="200">
                         <af:selectBooleanRadio value="#{row.col4}" id="ot1"/>
                       </af:column>
                       <af:column sortable="false" headerText="Abono a Prestamo"
-                                 id="c6" align="center">
+                                 id="c6" align="center" width="200">
                         <af:selectBooleanRadio value="#{row.col5}" id="ot3"
                                                label="Label 1"/>
                       </af:column>
                       <af:column sortable="false" headerText="No.Prestamo "
-                                 id="c5">
+                                 id="c5" width="200">
                         <af:outputText value="#{row.col6}" id="ot4"/>
                       </af:column>
                     </af:table>

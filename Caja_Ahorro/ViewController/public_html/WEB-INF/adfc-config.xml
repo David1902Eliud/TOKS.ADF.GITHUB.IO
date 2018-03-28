@@ -2,4 +2,9 @@
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
   <metadata-resource>/WEB-INF/task_menu1.xml</metadata-resource>
   <metadata-resource>/WEB-INF/task_menu2.xml</metadata-resource>
+  <managed-bean id="__1">
+    <managed-bean-name id="__2">managedBean1</managed-bean-name>
+    <managed-bean-class id="__3">view.FechaA</managed-bean-class>
+    <managed-bean-scope id="__4">request</managed-bean-scope>
+  </managed-bean>
 </adfc-config>

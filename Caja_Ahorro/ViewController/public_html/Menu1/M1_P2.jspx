@@ -8,7 +8,267 @@
     <af:document id="d1">
       <af:form id="f1">
         <af:pageTemplate viewId="/Template_Menus.jspx" id="pt1">
-          <f:facet name="Body_Menus"/>
+          <f:facet name="Body_Menus">
+             <af:panelGridLayout id="pgl1">
+              <af:gridRow marginTop="5px" height="auto" id="gr2">
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                             id="gc2">
+                  <af:activeOutputText value="Datos del Empleado" id="aot1" 
+                                       inlineStyle="color:Black; font-size:medium; font-style:normal; font-weight:bold;"/>
+                  <af:separator id="s2"/>
+                  <af:panelGroupLayout id="pgl5" layout="horizontal"
+                                       inlineStyle="border-color:transparent; font-size:medium;">
+                    <af:inputText label="No. Empleado "
+                                  required="#{bindings.NoEmpleado.hints.mandatory}"
+                                  maximumLength="#{bindings.NoEmpleado.hints.precision}"
+                                  shortDesc="#{bindings.NoEmpleado.hints.tooltip}"
+                                  id="it5"
+                                  inlineStyle="font-family:'Arabic Typesetting'; font-size:medium;">
+                      <f:validator binding="#{bindings.NoEmpleado.validator}"/>
+                    </af:inputText>
+                    <af:commandButton id="cb2" icon="/lupa.png"
+                                      inlineStyle="background-color:transparent;"/>
+                  </af:panelGroupLayout>
+                  <af:spacer width="10" height="10" id="s10"
+                             inlineStyle="border-color:transparent;"/>
+                  <af:panelGroupLayout id="pgl6" layout="horizontal"
+                                       inlineStyle="border-color:transparent;">
+                    <af:inputText label="Clave Sucursal"
+                                  required="#{bindings.ClaveSucursal.hints.mandatory}"
+                                  maximumLength="#{bindings.ClaveSucursal.hints.precision}"
+                                  shortDesc="#{bindings.ClaveSucursal.hints.tooltip}"
+                                  id="it1" inlineStyle="font-size:medium;">
+                      <f:validator binding="#{bindings.ClaveSucursal.validator}"/>
+                      <af:convertNumber groupingUsed="false"
+                                        pattern="#{bindings.ClaveSucursal.format}"/>
+                    </af:inputText>
+                    <af:spacer width="10" height="10" id="s13"
+                               inlineStyle="border-color:transparent;"/>
+                    <af:spacer width="10" height="10" id="s15"
+                               inlineStyle="border-color:transparent;"/>
+                    <af:inputText label="Sucursal"
+                                  required="#{bindings.NombreSucursal.hints.mandatory}"
+                                  maximumLength="#{bindings.NombreSucursal.hints.precision}"
+                                  shortDesc="#{bindings.NombreSucursal.hints.tooltip}"
+                                  id="it7" inlineStyle="font-size:medium;">
+                      <f:validator binding="#{bindings.NombreSucursal.validator}"/>
+                    </af:inputText>
+                    <af:spacer width="10" height="10" id="s14"
+                               inlineStyle="border-color:transparent;"/>
+                    <af:spacer width="10" height="10" id="s16"
+                               inlineStyle="border-color:transparent;"/>
+                    <af:inputText label="Departamento"
+                                  required="#{bindings.Depto.hints.mandatory}"
+                                  maximumLength="#{bindings.Depto.hints.precision}"
+                                  shortDesc="#{bindings.Depto.hints.tooltip}"
+                                  id="it10" inlineStyle="font-size:medium;">
+                      <f:validator binding="#{bindings.Depto.validator}"/>
+                    </af:inputText>
+                  </af:panelGroupLayout>
+                  <af:spacer width="10" height="10" id="s11"
+                             inlineStyle="border-color:transparent;"/>
+                  <af:panelGroupLayout id="pgl7" layout="horizontal"
+                                       inlineStyle="border-color:transparent;">
+                    <af:panelGroupLayout id="pgl3" layout="horizontal"
+                                         inlineStyle="border-color:transparent;">
+                      <af:spacer width="25" height="10" id="s4"
+                                 inlineStyle="border-color:transparent;"/>
+                    </af:panelGroupLayout>
+                    <af:inputText label="Empresa"
+                                  required="#{bindings.EmpresaLabora.hints.mandatory}"
+                                  maximumLength="#{bindings.EmpresaLabora.hints.precision}"
+                                  shortDesc="#{bindings.EmpresaLabora.hints.tooltip}"
+                                  id="it2" inlineStyle="font-size:medium;">
+                      <f:validator binding="#{bindings.EmpresaLabora.validator}"/>
+                    </af:inputText>
+                    <af:spacer width="29" height="10" id="s17"
+                               inlineStyle="border-color:transparent;"/>
+                    <af:inputText label="Puesto"
+                                  required="#{bindings.Puesto.hints.mandatory}"
+                                  maximumLength="#{bindings.Puesto.hints.precision}"
+                                  shortDesc="#{bindings.Puesto.hints.tooltip}"
+                                  id="it6" inlineStyle="font-size:medium;">
+                      <f:validator binding="#{bindings.Puesto.validator}"/>
+                    </af:inputText>
+                    <af:spacer width="15" height="12" id="s19"
+                               inlineStyle="border-color:transparent;"/>
+                    <af:inputText label="Tipo de Nomina"
+                                  required="#{bindings.TipNom.hints.mandatory}"
+                                  maximumLength="#{bindings.TipNom.hints.precision}"
+                                  shortDesc="#{bindings.TipNom.hints.tooltip}"
+                                  id="it4" inlineStyle="font-size:medium;">
+                      <f:validator binding="#{bindings.TipNom.validator}"/>
+                    </af:inputText>
+                  </af:panelGroupLayout>
+                  <af:spacer width="10" height="10" id="s12"
+                             inlineStyle="border-color:transparent;"/>
+                  <af:panelGroupLayout id="pgl8" layout="horizontal"
+                                       inlineStyle="border-color:transparent;">
+                    <af:panelGroupLayout id="pgl4" layout="horizontal"
+                                         inlineStyle="border-color:transparent;">
+                      <af:spacer width="28" height="10" id="s7"
+                                 inlineStyle="border-color:transparent;"/>
+                    </af:panelGroupLayout>
+                    <af:inputText label="Nombre"
+                                  required="#{bindings.NombreEmpleado.hints.mandatory}"
+                                  maximumLength="#{bindings.NombreEmpleado.hints.precision}"
+                                  shortDesc="#{bindings.NombreEmpleado.hints.tooltip}"
+                                  id="it3" inlineStyle="font-size:medium;">
+                      <f:validator binding="#{bindings.NombreEmpleado.validator}"/>
+                    </af:inputText>
+                    <af:spacer width="42" height="10" id="s21"
+                               inlineStyle="border-color:transparent;"/>
+                    <af:inputText label="    RFC"
+                                  required="#{bindings.Rfc.hints.mandatory}"
+                                  maximumLength="#{bindings.Rfc.hints.precision}"
+                                  shortDesc="#{bindings.Rfc.hints.tooltip}"
+                                  id="it8" inlineStyle="font-size:medium;">
+                      <f:validator binding="#{bindings.Rfc.validator}"/>
+                    </af:inputText>
+                    <af:spacer width="47" height="10" id="s24"
+                               inlineStyle="border-color:transparent;"/>
+                    <af:inputText label="Direccion"
+                                  required="#{bindings.Diremp.hints.mandatory}"
+                                  maximumLength="#{bindings.Diremp.hints.precision}"
+                                  shortDesc="#{bindings.Diremp.hints.tooltip}"
+                                  id="it9" inlineStyle="font-size:medium;">
+                      <f:validator binding="#{bindings.Diremp.validator}"/>
+                    </af:inputText>
+                  </af:panelGroupLayout>
+                  <p>
+                     
+                  </p>
+                  <af:separator id="s1"/>
+                </af:gridCell>
+              </af:gridRow>
+              <af:gridRow marginTop="5px" height="auto" id="gr3">
+                <af:gridCell marginStart="5px" width="100%" marginEnd="5px"
+                             id="gc1" halign="stretch">
+                  <af:activeOutputText value="Aportaciones" id="aot2"
+                                       inlineStyle="font-size:medium; color:Black; font-weight:bold; font-style:normal;"/>
+                  <af:table value="#{bindings.ToksCaAportAsignadasView1.collectionModel}"
+                            var="row"
+                            rows="#{bindings.ToksCaAportAsignadasView1.rangeSize}"
+                            emptyText="#{bindings.ToksCaAportAsignadasView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            fetchSize="#{bindings.ToksCaAportAsignadasView1.rangeSize}"
+                            rowBandingInterval="0"
+                            selectionListener="#{bindings.ToksCaAportAsignadasView1.collectionModel.makeCurrent}"
+                            rowSelection="multiple" id="t1"
+                            inlineStyle="height:89px;" width="1203">
+                    <af:column sortProperty="#{bindings.ToksCaAportAsignadasView1.hints.AportName.name}"
+                               sortable="false" headerText="Aportacion" id="c1"
+                               width="200">
+                      <af:inputText
+                                    id="it11">
+                        <f:validator binding="#{row.bindings.AportName.validator}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.ToksCaAportAsignadasView1.hints.PorcAportBase.name}"
+                               sortable="false" headerText="% Aport Base"
+                               id="c2" width="200">
+                      <af:inputText
+                                    id="it15">
+                        <f:validator binding="#{row.bindings.PorcAportBase.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.ToksCaAportAsignadasView1.hints.PorcAportBase.format}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.ToksCaAportAsignadasView1.hints.CantAportBase.name}"
+                               sortable="false" headerText="Cant Aport Base"
+                               id="c4" width="200">
+                      <af:inputText
+                                    id="it12">
+                        <f:validator binding="#{row.bindings.CantAportBase.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.ToksCaAportAsignadasView1.hints.CantAportBase.format}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.ToksCaAportAsignadasView1.hints.CantExtra.name}"
+                               sortable="false" headerText="Cant Aport Extra"
+                               id="c3" width="200">
+                      <af:inputText
+                                    id="it13">
+                        <f:validator binding="#{row.bindings.CantExtra.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.ToksCaAportAsignadasView1.hints.CantExtra.format}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.ToksCaAportAsignadasView1.hints.FechaAlta.name}"
+                               sortable="false" headerText="Fecha Alta" id="c5"
+                               width="200">
+                      <af:inputDate
+                                    id="id1">
+                        <f:validator binding="#{row.bindings.FechaAlta.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.ToksCaAportAsignadasView1.hints.FechaAlta.format}"/>
+                      </af:inputDate>
+                    </af:column>
+                    <af:column id="c3" align="center" headerText="Retener"
+                               width="200">
+                      <af:panelGroupLayout id="pgl2" layout="scroll"
+                                           inlineStyle="width:25px; border-color:transparent;"
+                                           halign="center">
+                        <af:selectBooleanRadio id="sbr1"/>
+                      </af:panelGroupLayout>
+                    </af:column>
+                  </af:table>
+                  <p>
+                     
+                  </p>
+                </af:gridCell>
+              </af:gridRow>
+              <af:gridRow marginTop="5px" height="auto" marginBottom="5px"
+                          id="gr1">
+                <af:gridCell marginStart="5px" width="auto" marginEnd="5px"
+                             id="gc3">
+                  <af:separator id="s3"/>
+                  <af:activeOutputText value="Beneficiarios" id="aot3"
+                                       inlineStyle="font-size:medium; color:Black; font-style:normal; font-weight:bold;"/>
+                  <af:table value="#{bindings.ToksCaBenavalesView1.collectionModel}"
+                            var="row"
+                            rows="#{bindings.ToksCaBenavalesView1.rangeSize}"
+                            emptyText="#{bindings.ToksCaBenavalesView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                            fetchSize="#{bindings.ToksCaBenavalesView1.rangeSize}"
+                            rowBandingInterval="0"
+                            filterModel="#{bindings.ToksCaBenavalesView1Query.queryDescriptor}"
+                            queryListener="#{bindings.ToksCaBenavalesView1Query.processQuery}"
+                            filterVisible="true" varStatus="vs"
+                            selectionListener="#{bindings.ToksCaBenavalesView1.collectionModel.makeCurrent}"
+                            rowSelection="multiple" id="t2"
+                            inlineStyle="height:86px;" width="1222">
+                    <af:column sortProperty="#{bindings.ToksCaBenavalesView1.hints.Nombre.name}"
+                               filterable="true" sortable="true"
+                               headerText="Nombre" id="c8" width="400">
+                      <af:inputText
+                                    id="it14">
+                        <f:validator binding="#{row.bindings.Nombre.validator}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.ToksCaBenavalesView1.hints.Parentesco.name}"
+                               filterable="true" sortable="true"
+                               headerText="Parentesco" id="c9" width="400">
+                      <af:inputText
+                                    id="it17">
+                        <f:validator binding="#{row.bindings.Parentesco.validator}"/>
+                      </af:inputText>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.ToksCaBenavalesView1.hints.Porcentaje.name}"
+                               filterable="true" sortable="true"
+                               headerText="Porcentaje " id="c7" width="400">
+                      <af:inputText
+                                    id="it16">
+                        <f:validator binding="#{row.bindings.Porcentaje.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.ToksCaBenavalesView1.hints.Porcentaje.format}"/>
+                      </af:inputText>
+                    </af:column>
+                  </af:table>
+                  <af:panelGroupLayout id="pgl4">
+                    <af:commandButton text="Autorizar Alta" id="cb1"/>
+                  </af:panelGroupLayout>
+                </af:gridCell>
+              </af:gridRow>
+            </af:panelGridLayout>
+          </f:facet>
         </af:pageTemplate>
       </af:form>
     </af:document>
