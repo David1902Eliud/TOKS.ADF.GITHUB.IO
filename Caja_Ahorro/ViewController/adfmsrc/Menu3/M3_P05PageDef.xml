@@ -14,8 +14,6 @@
                   id="ToksCaAntiguedadView1Query"/>
   </executables>
   <bindings>
-    <action IterBinding="ToksCaAntiguedadView1Iterator" id="CreateInsert"
-            RequiresUpdateModel="true" Action="createInsertRow"/>
     <action id="Commit" DataControl="AppModuleDataControl"
             RequiresUpdateModel="true" Action="commitTransaction"/>
     <action id="Rollback" DataControl="AppModuleDataControl"
@@ -54,6 +52,14 @@
                      id="RangoFinal">
       <AttrNames>
         <Item Value="RangoFinal"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="ToksCaAntiguedadView1Iterator" id="Create"
+            RequiresUpdateModel="true" Action="createRow"/>
+    <attributeValues IterBinding="ContadorAntiguedad1Iterator"
+                     id="Contadorantiguedad">
+      <AttrNames>
+        <Item Value="Contadorantiguedad"/>
       </AttrNames>
     </attributeValues>
   </bindings>

@@ -1,10 +1,14 @@
 package view;
 
+
+import javax.faces.component.UIComponent;
+
 import oracle.adf.controller.TaskFlowId;
 import oracle.adf.model.BindingContext;
 import oracle.adf.model.binding.DCBindingContainer;
 import oracle.adf.model.binding.DCIteratorBinding;
 import oracle.adf.view.rich.component.rich.data.RichTable;
+import oracle.adf.view.rich.component.rich.input.RichInputText;
 import oracle.adf.view.rich.context.AdfFacesContext;
 import oracle.adf.view.rich.event.DialogEvent;
 import oracle.adf.view.rich.event.PopupCanceledEvent;
@@ -18,21 +22,19 @@ import oracle.jbo.ViewObject;
 public class CatalogoAntiguedad {
 
     private RichTable tablaAntiguedadDescuentos;
-    private String taskFlowId =
-        "/WEB-INF/insertar_antiguedad_definition.xml#insertar_antiguedad_definition";
+    private RichInputText inputDias = new RichInputText();
+    private RichInputText inputRangoInicial = new RichInputText();
+    private RichInputText inputRangoFin = new RichInputText();
+    
+
 
     public CatalogoAntiguedad() {
 
     }
 
     public void editPopupFetchListener(PopupFetchEvent popupFetchEvent) {
-        if (popupFetchEvent.getLaunchSourceClientId().contains("cbInsert")) {
-            BindingContainer bindings =
-                BindingContext.getCurrent().getCurrentBindingsEntry();
-            OperationBinding operationBinding =
-                bindings.getOperationBinding("CreateInsert");
-            operationBinding.execute();
-        }
+          UIComponent comp = popupFetchEvent.getComponent();
+        oracle.adf.view.rich.util.ResetUtils.reset(comp);
     }
 
 
@@ -91,7 +93,28 @@ public class CatalogoAntiguedad {
         return tablaAntiguedadDescuentos;
     }
 
-    public TaskFlowId getDynamicTaskFlowId() {
-        return TaskFlowId.parse(taskFlowId);
+
+    public void setInputDias(RichInputText inputDias) {
+        this.inputDias = inputDias;
+    }
+
+    public RichInputText getInputDias() {
+        return inputDias;
+    }
+
+    public void setInputRangoInicial(RichInputText inputRangoInicial) {
+        this.inputRangoInicial = inputRangoInicial;
+    }
+
+    public RichInputText getInputRangoInicial() {
+        return inputRangoInicial;
+    }
+
+    public void setInputRangoFin(RichInputText inputRangoFin) {
+        this.inputRangoFin = inputRangoFin;
+    }
+
+    public RichInputText getInputRangoFin() {
+        return inputRangoFin;
     }
 }
